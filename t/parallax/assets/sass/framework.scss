@@ -1,0 +1,17 @@
+@import "setting";
+@import "edge";
+
+// This file contains style that can be re-used for other website.
+
+@include button {
+  display: inline-block;
+  cursor: pointer;
+  // write your button style here
+}
+
+@include input {
+  display: block;
+  width: 100%;
+  outline: none;
+  // write your input styling here
+}

@@ -1,0 +1,131 @@
+// Override EDGE variables here
+// To override, uncomment the variable and set the new value
+
+$perspective: 300px;
+
+// target IE 9/10 only
+@mixin ie {
+  @media screen and (min-width:0\0) {
+    @content;
+  }
+}
+
+// calculate parallax scaling
+@function parallax($layer, $p: $perspective) {
+  $z: $layer * 1px;
+  $scale: 1 + ($z * -1) / $p;
+
+  @return translateZ($z) scale($scale);
+}
+
+// transform origin
+@mixin tr-origin($value) {
+  -webkit-transform-origin: $value;
+  transform-origin: $value;
+}
+
+@mixin parallax($layer) {
+  -webkit-transform: parallax($layer) translateX(-3px);
+  transform: parallax($layer) translateX(-3px);
+  
+  // firefox bug, it has white space on the left
+  -moz-transform: parallax($layer) translateX(-8px);
+}
+
+// --------
+
+@mixin panel() {
+  background-color: white;
+  border-radius: $g-radius;
+  box-shadow: 0 1px 1px #d4d4d4;
+}
+
+// -------
+// FONT
+// -------
+$header-font-family : Helvetica, Arial, "sans-serif";
+$body-font-family   : Helvetica, Arial, "sans-serif";
+// $code-font-family   : Consolas, Courier, "monospace";
+
+// -----------
+// COLORS
+// -----------
+
+$main-color : #2a71e3;
+$sub-color  : #d7d7d7;
+// $link-color : $main-color;
+
+// -------------------
+// MEDIA QUERIES
+// -------------------
+// $mini-size   : 480px;
+// $small-size  : 767px;
+// $medium-size : 1120px;
+// $large-size  : 1440px;
+// $retina-size : 192dpi;
+
+$mac-size: 1280px;
+
+// ----------------
+// RESPONSIVE
+// ----------------
+// $responsive : true;
+// $adaptive   : false;
+// $adaptive-breakpoints : $medium-size, $small-size, $mini-size;
+
+// ---------------
+// GLOBAL VALUE
+// ---------------
+// $g-radius     : 3px;
+// $g-transition : all .2s ease-in-out;
+
+// --------
+// GRID
+// --------
+// $row-max-width : $medium-size;
+// $total-columns : 12;
+// $column-gutter : 20px;
+
+// ------------
+// TILE
+// ------------
+// $max-tiles   : 12;
+// $tile-gutter : 20px;
+
+// ------
+// BODY
+// ------
+$body-background  : #edece4;
+// $body-font-color  : #222;
+// $body-font-weight : 400;
+
+$sub-font: #aaa;
+$sub-font-hover: #eee;
+
+// $body-font-size   : 16px;
+// $body-line-height : 1.5;
+
+// ---------------
+// TYPOGRAPHY
+// ---------------
+// $h1-font-size : 44px;
+// $h2-font-size : 38px;
+// $h3-font-size : 30px;
+// $h4-font-size : 24px;
+// $h5-font-size : 20px;
+// $h6-font-size : 16px;
+
+// $header-font-color  : $body-font-color;
+// $header-font-weight : 700;
+// $header-line-height : 1;
+
+// ---------
+// PRINT
+// ---------
+// $include-print  : false;
+// $override-color : true;   // Override all text color to #000 black
+
+// ------------------
+// TEXT DIRECTION
+// ------------------
+// $text-direction   : ltr;  // Global text direction, 'rtl' or 'ltr'
