@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=""> <!-- use Hex color -->
+
+  <!-- WEBSITE DETAIL -->
+  <title>Page Title | Edje Framework</title>
+  <meta name="description" content="Edje is a Functional CSS framework. Instead of writing semantic class name, we use many single-purpose classes like 'ta-center' to center text.">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrapper">
+
+<aside class="sidebar"></aside>
+
+<main> <h-grid> <div class="col-12">
+
+
+<h2>Border Width</h2>
+
+<article>
+  <p>Customizable in variable <code>$border-width-classes</code>. </p>
+  
+  <p>Every new item in the list will add 5 classes to cover all direction. <code>b-x</code>, <code>bt-x</code>, <code>bb-x</code>, <code>bl-x</code>, and <code>br-x</code> </p>
+</article>
+
+<table class="demo-border">
+  <script>
+    [
+      [ '.b-1 / .b-2', '<div class="b-1"></div>', [
+        'border: 1px solid',
+        'border: 2px solid'
+      ] ],
+      [ '.bt-1 / .bt-2 ', '<div class="bt-1"></div>', [
+        'border-top: 1px solid',
+        'border-top: 2px solid',
+      ] ],
+      [ '.bb-1 / .bb-2', '<div class="bb-1"></div>', [
+        'border-bottom: 1px solid',
+        'border-bottom: 2px solid',
+      ] ],
+      [ '.br-1 / .br-2', '<div class="br-1"></div>', [
+        'border-right: 1px solid',
+        'border-right: 2px solid',
+      ] ],
+      [ '.bl-1 / .bl-2', '<div class="bl-1"></div>', [
+        'border-left: 1px solid',
+        'border-left: 2px solid',
+      ] ],
+    ]
+  </script>
+</table>
+
+<h2>Border Style</h2>
+
+<article>
+  <p>Must be used in conjuction with Border Width class.</p>
+</article>
+
+<table class="demo-border">
+  <script>
+    [
+      [ '.b--dashed', '<div class="b-2 b--dashed"></div>', [
+        'border-style: dashed',
+      ] ],
+      [ '.b--dotted', '<div class="b-2 b--dotted"></div>', [
+        'border-style: dotted',
+      ] ],
+    ]
+  </script>
+</table>
+
+<h2>Border Color</h2>
+
+<article>
+  <p>Customizable in variable <code>$border-color-classes</code>. Must be used in conjuction with Border Width class.</p>
+</article>
+
+<table class="demo-border">
+  <script>
+    [
+      [ '.b--main', '<div class="b-2 b--main"></div>', [
+        'border-color: $color-main',
+      ] ],
+      [ '.b--sub', '<div class="b-2 b--sub"></div>', [
+        'border-color: $color-sub',
+      ] ],
+      [ '.b--transparent', '<div class="b-2 b--transparent"></div>', [
+        'border-color: transparent',
+      ] ],
+      [ '.b--black-75 / .b--black-50 / .b--black-25 / .b--black-10 / .b--black-025 / .b--black-01',
+      '<div class="b-2 b--black-50"></div>', [
+        'border-color: rgba(black, .75)',
+        'border-color: rgba(black, .50)',
+        'border-color: rgba(black, .25)',
+        'border-color: rgba(black, .10)',
+        'border-color: rgba(black, .025)',
+        'border-color: rgba(black, .01)',
+      ] ],
+      [ '.b--white-75 / .b--white-50 / .b--white-25 / .b--white-10 / .b--white-025 / .b--white-01',
+      '<div class="b-2 b--white-50 shadow-2"></div> (Shadow is added to make the white border visible)', [
+        'border-color: rgba(white, .75)',
+        'border-color: rgba(white, .50)',
+        'border-color: rgba(white, .25)',
+        'border-color: rgba(white, .10)',
+        'border-color: rgba(white, .025)',
+        'border-color: rgba(white, .01)',
+      ] ],
+    ]
+  </script>
+</table>
+
+
+<h2>Border Radius</h2>
+
+<table class="demo-border-radius">
+  <script>
+    [
+      [ '.br', '<div class="b-2 br"></div>', [
+        'border-radius: $g-radius',
+      ] ],
+      [ '.br-circle', '<div class="b-2 br-circle"></div>', [
+        'border-radius: 50%',
+      ] ],
+      [ '.br-pill', '<div class="b-2 br-pill"></div>', [
+        'border-radius: 9999px',
+      ] ]
+    ]
+  </script>
+</table>
+
+
+<h2>Shadow</h2>
+
+<table class="demo-border-radius">
+  <script>
+    [
+      [ '.shadow-0', '<div class="shadow-0"></div>', [
+        'box-shadow: $shadow-z0',
+      ] ],
+      [ '.shadow-1', '<div class="shadow-1"></div>', [
+        'box-shadow: $shadow-z1',
+      ] ],
+      [ '.shadow-2', '<div class="shadow-2"></div>', [
+        'box-shadow: $shadow-z2',
+      ] ],
+      [ '.shadow-3', '<div class="shadow-3"></div>', [
+        'box-shadow: $shadow-z3',
+      ] ],
+    ]
+  </script>
+</table>
+    
+
+</div> </h-grid> </main>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+    

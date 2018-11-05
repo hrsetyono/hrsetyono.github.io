@@ -1,0 +1,179 @@
+// Put styles that are unique for this project here
+@import "setting";
+@import "edje-v21";
+
+@mixin highlight {
+  display: block;
+  padding: 0.25em 0.5em;
+  background-color: rgba(black, .1);
+}
+
+main {
+  padding: 2em 0;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+code {
+  padding: .2em .4em;
+  background-color: rgba(27,31,35,.05);
+}
+
+table {
+  width: 100%;
+  margin: 2em 0;
+}
+
+th {
+  border-bottom: 2px solid rgba(black, .75);
+  padding: 0.25em 0;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+td {
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(black, .05);
+  vertical-align: top;
+}
+
+td.separator {
+  padding: 0.5em 0;
+  background-color: rgba(black, .05);
+}
+
+th:first-child { width: 15%; }
+th:nth-child(2) { width: 35%; }
+
+td:first-child,
+td:nth-child(2) {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+td:first-child {
+  font-weight: 600;
+}
+
+td:nth-child(2) {
+  letter-spacing: -0.0375em;
+}
+
+td:nth-child(3) {
+  padding-left: 0.5em;
+}
+
+.functional-demo article {
+  * + * {
+    margin-top: 1em;
+  }
+}
+
+.demo-bg {
+  div {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.demo-display {
+  span, p {
+    @include highlight;
+  }
+}
+
+.demo-display--flex {
+  span {    
+    margin: 0.25em;
+  }
+
+  .demo-flex-wrap span {
+    width: calc(33.333% - 0.5em);
+  }
+
+  .flex--boxed div {
+    position: relative;
+    border: 1px solid rgba(black, .5);
+    width: calc(33.333% - 0.5em);
+    height: 90px;
+    margin: 1.5em 0.5em 0.5em 0;
+
+    &::before {
+      content: attr(data-title);
+      position: absolute;
+      top: -1.5em;
+      left: 0;
+    }
+  }
+
+  .flex--boxed-2 div {
+    width: calc(50% - 0.5em);
+  }
+
+  .ai-baseline {
+    span:nth-child(1) {
+      height: 3rem;
+    }
+
+    span:nth-child(2) {
+      height: 3rem;
+      font-size: 1.25em;
+    }
+
+    span:nth-child(3) {
+      height: 4rem;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.demo-display--grid {
+  
+}
+
+// TILE DEMO
+.demo-display--tile {
+  h-tile {
+    margin-bottom: 1em;
+  }
+}
+
+
+.demo-border {
+  div {
+    width: 100px;
+    height: 25px;
+    background-color: rgba(black, .1);
+  }
+}
+
+.demo-border-radius {
+  div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .br-pill {
+    width: 100px;
+  }
+}
+
+.demo-visibility {
+  span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 1em;
+    border: 2px solid rgba(black, .5);
+    vertical-align: middle;
+  }
+}
+
+.demo-spacing {
+  span {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=""> <!-- use Hex color -->
+
+  <!-- WEBSITE DETAIL -->
+  <title>Display & Flexbox | Edje Framework</title>
+  <meta name="description" content="Edje is a Functional CSS framework. Instead of writing semantic class name, we use many single-purpose classes like 'ta-center' to center text.">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrapper">
+
+<aside class="sidebar"></aside>
+
+<main> <h-grid> <div class="col-12">
+
+<h1>Display</h1>
+
+<table class="demo-display">
+  <script>
+    [
+      [ '.d-block', '<span class="d-block"> This span becomes a block </span>', [
+        'display: block'
+      ] ],
+      [ '.d-iblock', '<p class="d-iblock">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
+        'display: inline-block'
+      ] ],
+      [ '.d-none', '<div class="d-none">Hello there!</div>', [
+        'display: none'
+      ] ],
+    ]
+  </script>
+</table>
+
+<h1>Visibility</h1>
+
+<article>
+  <p>Hide / Show an element depending on the screen size</p>
+</article>
+
+<table class="demo-visibility">
+  <script>
+    [
+      [ '.hide-for-l / .hide-for-s / .hide-for-xs', `<pre>                     L      S     XS
+
+.hide-for-large      -      ✓     ✓
+.hide-for-small      ✓      -     -
+.hide-for-mini       ✓      ✓     -</pre>`, [
+        '✓ = displayed',
+        '- = hidden',
+        '',
+        'L = Large screen >768px',
+        'S = Small screen <=768px',
+        'XS = Extra small screen <=480px'
+      ] ],
+      [ '.show-for-l / .show-for-s / .show-for-xs', `<pre>                     L      S     XS
+
+.show-for-large      ✓      -     -
+.show-for-small      -      ✓     ✓
+.show-for-mini       -      -     ✓</pre>`],
+    ]
+  </script>
+</table>
+
+<h2>Flex Wrapper</h2>
+
+<table class="demo-display demo-display--flex">
+  <script>
+    [
+      [ '.flex', '<div class="flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+        'display: -ms-flexbox',
+        'display: -webkit-flex',
+        'display: flex',
+        'flex-wrap: wrap'
+      ] ],
+      [ '.flex--column', '<div class="flex flex--column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+          'flex-direction: column',
+        ]
+      ],
+      [ '.flex--row-r', '<div class="flex flex--row-r"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+        'flex-direction: row-reverse',
+      ] ],
+      [ '.flex--column-r', '<div class="flex flex--column-r"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+        'flex-direction: column-reverse',
+      ] ],
+      [ '.flex--wrap', '<div class="demo-flex-wrap flex flex--wrap"> <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span>  </div> Check out <a target="_blank" href="https://github.com/hrsetyono/edje/wiki/Tile-System">TILE LAYOUT</a> to achieve this format properly', [
+        'flex-wrap: wrap',
+      ] ],
+      [ '.ai-start / .ai-end / .ai-center / .ai-baseline / .ai-stretch', '<section class="flex flex--wrap flex--boxed"><div class="flex ai-start" data-title=".ai-start"> <span>.</span><span>.</span><span>.</span></div> <div class="flex ai-end" data-title=".ai-end"><span>.</span><span>.</span><span>.</span></div> <div class="flex ai-center" data-title=".ai-center"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex ai-baseline" data-title=".ai-baseline"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex ai-stretch" data-title=".ai-stretch (default)"> <span>.</span><span>.</span><span>.</span> </div> </section>', [
+        'align-items: flex-start',
+        'align-items: flex-end',
+        'align-items: center',
+        'align-items: baseline',
+        'align-items: stretch',
+      ] ],
+      [ '.jc-start / .jc-end / .jc-center / .jc-baseline / .jc-stretch', '<section class="flex flex--wrap flex--boxed flex--boxed-2"><div class="flex jc-start" data-title=".jc-start (default)"> <span>.</span><span>.</span><span>.</span></div> <div class="flex jc-end" data-title=".jc-end"><span>.</span><span>.</span><span>.</span></div> <div class="flex jc-center" data-title=".jc-center"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex jc-between" data-title=".jc-between"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex jc-around" data-title=".jc-around"> <span>.</span><span>.</span><span>.</span> </div> </section>', [
+        'justify-content: flex-start',
+        'justify-content: flex-end',
+        'justify-content: center',
+        'justify-content: space-between',
+        'justify-content: space-around',
+      ] ],
+    ]
+  </script>
+</table>
+
+
+<h2>Flex Items</h2>
+
+<table class="demo-display demo-display--flex">
+  <script>
+    [
+      [ '.flex-1 / .flex-2 / .flex-3 / .flex-4 / .flex-5', '<div class="flex"> <span class="flex-2">.flex-2</span> <span class="flex-3">.flex-3</span> </div> <div class="flex"> <span class="flex-1">.flex-1</span> <span class="flex-4">.flex-4</span> </div>', [
+        'flex: 1',
+        'flex: 2',
+        'flex: 3',
+        'flex: 4',
+        'flex: 5',
+      ] ],
+
+      [ '.flex-1-s / .flex-2-s / .flex-3-s / .flex-4-s / .flex-5-s', '<div class="flex"> <span class="flex-2 flex-1-s">.flex-2 .flex-1-s</span> <span class="flex-3 flex-1-s">.flex-3 .flex-1-s</span> </div> On <768px, the width become 1:1 ratio', [
+        '@include below(s) {',
+        '&nbsp; flex: 1',
+        '&nbsp; flex: 2',
+        '&nbsp; flex: 3',
+        '&nbsp; flex: 4',
+        '&nbsp; flex: 5',
+        '}'
+      ] ],
+      [ '.as-start / .as-end / .as-center / .as-baseline / .as-stretch', '<section class="flex flex--wrap flex--boxed flex--boxed-2"> <div class="flex" data-title=".as-end"> <span>.</span><span class="as-end">.as-end</span><span>.</span></div> <div class="flex" data-title=".as-center"> <span>.</span><span class="as-center">.as-center</span><span>.</span></div> </section>', [
+        'align-self: flex-start',
+        'align-self: flex-end',
+        'align-self: center',
+        'align-self: baseline',
+        'align-self: stretch',
+      ] ],
+
+      [ '.order-last / .order-1 / .order-2 / .order-3 / .order-4 / .order-5', '<section class="flex flex--boxed flex--boxed-2"><div class="flex"> <span class="order-last">.order-last</span> <span>.</span> </div> <div class="flex"> <span class="order-2">.order-2</span> <span class="order-1">.order-1</span> </div>', [
+        'flex: 9999',
+        'flex: 1',
+        'flex: 2',
+        'flex: 3',
+        'flex: 4',
+        'flex: 5',
+      ] ],
+
+      [ ' / .order-last-s / .order-1-s / .order-2-s / .order-3-s / .order-4-s / .order-5-s', '', [
+        '@include below(s) {',
+        '&nbsp; flex: 9999',
+        '&nbsp; flex: 1',
+        '&nbsp; flex: 2',
+        '&nbsp; flex: 3',
+        '&nbsp; flex: 4',
+        '&nbsp; flex: 5',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>
+
+
+</div> </h-grid> </main>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+    

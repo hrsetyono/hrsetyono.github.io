@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=""> <!-- use Hex color -->
+
+  <!-- WEBSITE DETAIL -->
+  <title>CSS3 Grid System | Edje Framework</title>
+  <meta name="description" content="Edje is a Functional CSS framework. Our grid system uses latest technology with 'display: grid'.">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrapper">
+
+<aside class="sidebar"></aside>
+
+<main> <h-grid> <div class="col-12">
+
+<h2>Grid Wrapper</h2>
+
+<article>
+  <p>Using CSS3 Grid to create page layout</p>
+</article>
+
+<table class="demo-display demo-display--grid">
+  <script>
+    [
+      [ '&lt;h-grid&gt;', '<h-grid> <span class="col-4">.</span><span class="col-8">.</span> </h-grid> To customize the sizing, look for <code>$grid-</code> variable in setting', [
+        'display: -ms-grid',
+        'display: grid',
+        'grid-template-columns: repeat( 12, 1fr )',
+        'grid-column-gap: 20px',
+        'max-width: 1140px',
+        'padding: 0 10px'
+      ] ],
+      [ '.grid-collapse', '<h-grid class="grid-collapse"> <span class="col-4">.</span><span class="col-8">.</span> </h-grid>', [
+        'grid-column-gap: 0',
+      ] ],
+    ]
+  </script>
+</table>
+
+<h2>Grid Items</h2>
+
+<table class="demo-display demo-display--grid">
+  <script>
+    [
+      [ '.col-1 / .col-2 / .col-3 / … / .col-12', '<h-grid> <span class="col-4">.col-4</span><span class="col-8">.col-8</span> </h-grid> Grid divided into 12 portions.', [
+        'grid-column: span 1',
+        'grid-column: span 2',
+        'grid-column: span 3',
+        '…',
+        'grid-column: span 12',
+      ] ],
+      [ '/ .col-1-s / .col-2-s / .col-3-s / … / .col-12-s', '<h-grid> <span class="col-4 col-6-s">.col-4 .col-6-s</span><span class="col-8 col-6-s">.col-8 .col-6-s</span> </h-grid> Responsive column, will take effect when the screen is <768px. Without specifying small column, the column become 12 on <768px screen.', [
+        '@include below(s) {',
+        '&nbsp; grid-column: span 1',
+        '&nbsp; grid-column: span 2',
+        '&nbsp; grid-column: span 3 ',
+        '&nbsp; …',
+        '&nbsp; grid-column: span 12',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>
+
+<h2>Tile</h2>
+
+<article>
+  <p>Using CSS3 Grid to create list that stack horizontally. Will wrap to next line when overflowing.</p>
+</article>
+
+<table class="demo-display demo-display--tile">
+  <script>
+    [
+      [ '&lt;h-tile&gt;', '<h-tile class="tile-2"> <span>.</span><span>.</span><span>.</span><span>.</span>  </h-tile> <code>$per_row</code> defines how many items in one row. Set with the class <code>.tile-x</code>', [
+        'display: -ms-grid',
+        'display: grid',
+        'grid-template-columns: repeat( $per_row, 1fr )',
+        'grid-column-gap: 20px',
+        'grid-row-gap: 20px',
+      ] ],
+      [ '.tile-collapse', '<h-tile class="tile-2 tile-collapse"> <span>.</span><span>.</span><span>.</span><span>.</span>  </h-tile>', [
+        'grid-column-gap: 0',
+      ] ],
+      [ '.tile-2 / .tile-3 / .tile-4 / … / .tile-8', '<h-tile class="tile-4"> <span>.tile-4</span><span>.</span><span>.</span><span>.</span> </h-tile>', [
+        'grid-template-columns: repeat( 2, 1fr )',
+        'grid-template-columns: repeat( 3, 1fr )',
+        'grid-template-columns: repeat( 4, 1fr )',
+        '…',
+        'grid-template-columns: repeat( 8, 1fr )',
+      ] ],
+      [ '/ .tile-2-s / .tile-3-s / .tile-4-s / … / .tile-8-s', '<h-tile class="tile-3 tile-2-s"> <span>.tile-3 .tile-2-s</span><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span> </h-tile> Without specifying small tile, each item will become 100% width on <768px screen', [
+        '@include below(s) {',
+        '&nbsp; grid-template-columns: repeat( 2, 1fr )',
+        '&nbsp; grid-template-columns: repeat( 3, 1fr )',
+        '&nbsp; grid-template-columns: repeat( 4, 1fr )',
+        '&nbsp; …',
+        '&nbsp; grid-template-columns: repeat( 8, 1fr )',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>
+    
+
+</div> </h-grid> </main>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+    

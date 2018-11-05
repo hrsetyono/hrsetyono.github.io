@@ -1,0 +1,159 @@
+// Customize the framework by changing these variables
+// Put your custom variables and mixins here too
+
+// ----- FONT -----
+$font-family : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-header : "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times","Source Serif Pro", serif;
+
+// ----- COLORS -----
+$color-main : #00aadc;
+$color-sub  : #607d8b;
+
+// $color-main-dark : #008ab3;
+// $color-main-light : #78dcfa;
+
+$color-link : $color-main;
+// $color-link-hover : lighten($color-main, 10%);
+
+$color-passive : #c8d7e1;
+$color-passive-light: #f3f6f8;
+
+// $color-red : #f45b4f;
+// $color-yellow : #ffeb3b;
+// $color-green : #4caf50;
+// $color-blue: #2196f3;
+
+// $body-background: #fff;
+// $text-highlight: null;
+
+// ----- SIZING -----
+// $size-xs : 480px;
+// $size-s  : 767px;
+// $size-m  : 960px;
+// $size-l  : 1120px;
+
+
+// ----- RESPONSIVE -----
+// $responsive : true;
+// $adaptive   : false;
+// $adaptive-breakpoints : l, m, s, xs;
+
+// ----- Z INDEX -----
+$z-nav: 1000;
+
+// ----- GLOBAL VALUE -----
+$g-radius     : 4px;
+// $g-transition : all .25s ease-in-out;
+
+
+// ----- GRID -----
+// $grid-max-width : $size-l;
+// $grid-columns   : 12;
+// $grid-gap       : 20px; // distance between columns
+// $grid-rim       : 10px; // min distance from edge of screen
+
+// ----- TILE -----
+// $tile-max    : 8;
+// $tile-gap : 20px;
+
+
+// ----- TYPOGRAPHY -----
+$font-color  : #2e4453;
+// $font-color-passive : #888;
+
+// $font-weight : 400;
+// $font-line : 1.65;
+$font-size : 16px;
+// $font-size-s : 14px;
+
+
+// ----- HEADER -----
+// $header-color  : $font-color;
+// $header-weight : 700;
+// $header-line   : 1.25;
+// $header-spacing : 0;
+// $header-transform : none;
+
+$h1 : 42px;
+$h2 : 36px;
+$h3 : 30px;
+$h4 : 24px;
+$h5 : 20px;
+$h6 : $font-size;
+
+// FONT SIZES (f-x) -----
+// only pixel
+
+// $font-size-classes: (
+//   h1: (base: 42px, s: 30px),
+//   h2: (base: 36px, s: 26px),
+//   h3: (base: 30px, s: 22px),
+//   h4: (base: 24px, s: 20px),
+//   h5: (base: 20px, s: 18px),
+//   h6: (base: $font-size, s: $font-size),
+//   body: $font-size,
+//   body-s: $font-size-s,
+// );
+
+
+// ----- SHADOW -----
+// $shadow-z0: 0 0.5px 2px rgba(black, .18), 0 1.5px 6px rgba(black, .08);
+// $shadow-z1: 0 1.5px 4px rgba(black, .24), 0 1.5px 6px rgba(black, .12);
+// $shadow-z2: 0 3px 12px rgba(black, .23), 0 3px 12px rgba(black, .16);
+// $shadow-z3: 0 6px 12px rgba(black, .23), 0 10px 40px rgba(black, .19);
+
+
+// -----------
+// BACKGROUND (bg-x)
+// Can also accept url() and linear-gradient()
+
+// $background-classes: (
+//   main: $color-main,
+//   sub: $color-sub,
+//   main-dark: $color-main-dark,
+//   main-light: $color-main-light,
+
+//   red: $color-red,
+//   blue: $color-blue,
+//   yellow: $color-yellow,
+//   green: $color-green,
+// );
+
+// ---------------
+// BORDER WIDTH (b-x, b-top-x, b-left-x, b-right-x, b-bottom-x)
+
+// $border-width-classes: (
+//   1: 1px,
+//   2: 2px,
+// );
+
+// -------------
+// BORDER COLOR (b--x)
+
+// $border-color-classes: (
+//   main: $color-main,
+//   sub: $color-sub,
+//   transparent: transparent,
+
+//   black-75: rgba(black, .75),
+//   black-50: rgba(black, .50),
+//   black-25: rgba(black, .25),
+//   black-10: rgba(black, .10),
+//   black-025: rgba(black, .025),
+//   black-01: rgba(black, .01),
+
+//   white-75: rgba(white, .75),
+//   white-50: rgba(white, .50),
+//   white-25: rgba(white, .25),
+//   white-10: rgba(white, .10),
+//   white-025: rgba(white, .025),
+//   white-01: rgba(white, .01),
+// );
+
+
+$spinner_path: '../../../../../wp-admin/images/spinner.gif';
+
+
+///// CUSTOM MIXIN
+
+@mixin your-custom-mixin() { }

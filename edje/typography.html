@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=""> <!-- use Hex color -->
+
+  <!-- WEBSITE DETAIL -->
+  <title>Page Title | Edje Framework</title>
+  <meta name="description" content="Edje is a Functional CSS framework. Instead of writing semantic class name, we use many single-purpose classes like 'ta-center' to center text.">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrapper">
+
+<aside class="sidebar"></aside>
+
+<main> <h-grid> <div class="col-12">
+
+
+<h2>Font Sizes</h2>
+<article>
+  <p> Customizable in variable <code>$font-size-classes</code>. It accepts map and pixel. </p>
+
+  <p>Providing a map will create responsive font sizes. It must contain "base" key, followed by the screen sizes breakpoint. For example: <code>(base: 26px, medium: 22px, small: 18px, mini: 16px)</code> </p>
+</article>
+
+<table>
+  <script>
+    [
+      [ '.f-h1', '<p class="f-h1">Heading 1</p>', [
+        'font-size: 42px',
+        '@include below(s) { font-size: 30px }'
+      ] ],
+      [ '.f-h2', '<p class="f-h2">Heading 2</p>', [
+        'font-size: 36px',
+        '@include below(s) { font-size: 26px }'
+      ] ],
+      [ '.f-h3', '<p class="f-h3">Heading 3</p>', [
+        'font-size: 30px',
+        '@include below(s) { font-size: 22px }'
+      ] ],
+      [ '.f-h4', '<p class="f-h4">Heading 4</p>', [
+        'font-size: 25px',
+        '@include below(s) { font-size: 20px }'
+      ] ],
+      [ '.f-h5', '<p class="f-h5">Heading 5</p>', [
+        'font-size: 20px',
+        '@include below(s) { font-size: 18px }'
+      ] ],
+      [ '.f-h6', '<p class="f-h6">Heading 6</p>', [
+        'font-size: $font-size',
+        '@include below(s) { font-size: $font-size }'
+      ] ],
+      [ '.f-body', '<h1 class="f-body">This H1 size become default body font size</h1>', [
+        'font-size: $font-size'
+      ] ],
+      [ '.f-small', '<p class="f-small">Smaller font specified in $font-size-small</p>', [
+        'font-size: $font-size-small'
+      ] ],
+    ]  
+  </script>
+</table>
+
+
+
+<h2>Typography</h2>
+
+<table>
+  <script>
+    [
+      [ '.i', '<p class="i"> Italic text</p>', [
+        'font-style: italic'
+      ] ],
+      [ '.b', '<p class="b"> Bold text</p>', [
+        'font-weight: bold'
+      ] ],
+      [ '.u', '<p class="u"> Underlined text</p>', [
+        'text-decoration: underline'
+      ] ],
+      [],
+      [ '.tt-uppercase', '<p class="tt-uppercase">Hello World</p>', [
+        'text-transform: uppercase'
+      ] ],
+      [ '.tt-lowercase', '<p class="tt-lowercase">Hello World</p>', [
+        'text-transform: lowercase'
+      ] ],
+      [ '.tt-capitalize', '<p class="tt-capitalize">hello world</p>', [
+        'text-transform: capitalize'
+      ] ],
+      [],
+      [ '.ta-center', '<p class="ta-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
+        'text-align: center'
+      ] ],
+      [ '.ta-left', '<p class="ta-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
+        'text-align: left'
+      ] ],
+      [ '.ta-right', '<p class="ta-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
+        'text-align: right'
+      ] ],
+      [],
+      [ '.ff-body', '<h4 class="ff-body">This is a H4 and we apply Body font here</h4>', [
+        'font-family: $font-family'
+      ] ],
+      [ '.ff-header', '<p class="ff-header">This is a paragraph and we apply Header font here</p>', [
+        'font-family: $font-family-header'
+      ] ]
+    ]  
+  </script>
+</table>
+
+
+</div> </h-grid> </main>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+    

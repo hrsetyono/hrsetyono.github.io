@@ -1,0 +1,49 @@
+
+/* ---------
+  BLOG
+---------- */
+.post-grid { grid-template-columns: repeat(4, 1fr); max-width: 670px; }
+
+.post-content { font-size: 1.125em; }
+
+article { letter-spacing: 0.16px; }
+
+article h1, article h2, article h3, article h4, article h5, article h6 { margin-top: 2rem; margin-bottom: 1.25rem; }
+
+article a { text-decoration: underline; }
+
+article p, article ul, article ol, article blockquote, article pre, article table, article figure { margin-bottom: 1.5em; }
+
+article hr { display: block; height: 1px; border: 0; border-top: 1px solid #c8d7e1; margin: 2.5em auto; padding: 0; }
+
+article ul, article ol { padding-left: 1.5em; }
+
+article ul ul, article ol ol { margin-bottom: 0; }
+
+article img { border-radius: 4px; }
+
+blockquote { padding: 1em 1em 1em 2em; background-color: #f3f6f8; border-left: 4px solid #c8d7e1; }
+
+blockquote p { margin-bottom: 0; }
+
+blockquote cite { display: block; margin-top: 1em; font-size: 14px; }
+
+blockquote.alignleft, blockquote.align-right { margin-left: 0; }
+
+.wp-block-pullquote { padding: 1em 0; border-top: 2px solid #c8d7e1; border-bottom: 2px solid #c8d7e1; background-color: #f3f6f8; font-size: 1.5em; text-align: center; }
+
+@media only screen and (max-width: 767px) { .wp-block-pullquote { font-size: 1.25em; } }
+
+.wp-block-pullquote cite { text-align: center; }
+
+article table { width: 100%; }
+
+article table tr { background-color: #fff; }
+
+article table tr:nth-child(odd) { background-color: #f6f6f6; }
+
+article table th, article table td { padding: 0.375em 0.5em; border: 1px solid #efefef; text-align: left; }
+
+article table p { margin-bottom: 0; }
+
+pre { padding: 1em; background-color: #f3f6f8; border: 1px solid #c8d7e1; border-radius: 4px; }

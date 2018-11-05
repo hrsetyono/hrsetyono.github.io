@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=""> <!-- use Hex color -->
+
+  <!-- WEBSITE DETAIL -->
+  <title>Page Title | Edje Framework</title>
+  <meta name="description" content="Edje is a Functional CSS framework. Instead of writing semantic class name, we use many single-purpose classes like 'ta-center' to center text.">
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="css/framework.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="wrapper">
+
+<aside class="sidebar"></aside>
+
+<main> <h-grid> <div class="col-12">
+
+<h2>Position</h2>
+
+<table>
+  <script>
+    [
+      [ '.relative', '', [ 'position: relative' ] ],
+      [ '.absolute', '', [ 'position: absolute' ] ],
+      [ '.absolute-fill', '', [
+        'position: absolute',
+        'top: 0',
+        'right: 0',
+        'bottom: 0',
+        'left: 0'
+      ] ],
+      [ '.top-0 / .right-0 / .bottom-0 / .left-0', '', [
+        'top: 0',
+        'right: 0',
+        'bottom: 0',
+        'left: 0'
+      ] ]
+    ]  
+  </script>
+</table>
+
+<h2>Float</h2>
+
+<table>
+  <script>
+    [
+      [ '.f-left', '<img class="f-left" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>', [
+        'float: left'
+      ] ],
+      [ '.f-right', '<img class="f-right" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>', [
+        'float: right'
+      ] ],
+      [ '.clearfix', 'Apply to the wrapper that has floated element inside', [
+        '::before, ::after {',
+        '&nbsp&nbspcontent: " "; display: table;',
+        '}',
+        '::after { clear: both; }'
+      ] ]
+    ]  
+  </script>
+</table>
+
+</div> </h-grid> </main>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
+    
