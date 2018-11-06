@@ -1,6 +1,6 @@
 // Put styles that are unique for this project here
 @import "setting";
-@import "edje-v21";
+@import "edje-v20";
 
 @mixin highlight {
   display: block;
@@ -71,12 +71,6 @@ td:nth-child(3) {
   }
 }
 
-.demo-bg {
-  div {
-    width: 100px;
-    height: 50px;
-  }
-}
 
 .demo-display {
   span, p {

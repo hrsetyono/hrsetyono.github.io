@@ -26,8 +26,6 @@ td:nth-child(3) { padding-left: 0.5em; }
 
 .functional-demo article * + * { margin-top: 1em; }
 
-.demo-bg div { width: 100px; height: 50px; }
-
 .demo-display span, .demo-display p { display: block; padding: 0.25em 0.5em; background-color: rgba(0, 0, 0, 0.1); }
 
 .demo-display--flex span { margin: 0.25em; }

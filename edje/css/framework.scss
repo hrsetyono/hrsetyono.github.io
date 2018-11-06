@@ -1,17 +1,14 @@
 // Put styles that you might reuse in other projects here
 @import "setting";
 $output-framework: true;
-@import "edje-v21";
+@import "edje-v20";
 
 @import "blog";
 
-
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-
-#main-wrapper {
-  overflow-x: hidden;
+@mixin apply( $classes... ) {
+  @each $c in $classes {
+    @extend .#{ $c };
+  }
 }
 
 ///// FONT /////
@@ -25,6 +22,21 @@ $output-framework: true;
 */
 
 ///// BUTTON /////
+
+.demo-bg {
+  div {
+    @include apply( flex, ai-center, jc-center );
+    width: 75px;
+    height: 50px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+  }
+
+  div[class*="bg-black"] {
+    color: white;
+  }
+}
+
 
 %button {
   display: inline-block;

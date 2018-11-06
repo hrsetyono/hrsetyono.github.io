@@ -11,8 +11,8 @@ $( document ).ready( function() {
       'index': 'Home',
       'grid': 'Grid & Tile',
       'display': 'Display & Flexbox',
-      'spacing': 'Spacing (Padding & Margin)',
-      'typography': 'Font & Typography',
+      'spacing': 'Spacing',
+      'typography': 'Typography',
       'background': 'Background',
       'border-shadow': 'Border & Shadow',
       'position': 'Positioning'

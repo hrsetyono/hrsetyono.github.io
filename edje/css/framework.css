@@ -1,7 +1,7 @@
 /* --------------------
   EDJE Framework
   http://github.com/hrsetyono/edje
-  v2.1.0 (Morphling)
+  v2.0.0 (Morphling)
 --------------------- */
 /* ----------
   Normalize
@@ -347,7 +347,91 @@ h-tile > * { grid-column: span 1; }
 
 .bg-main { background-color: #00aadc; }
 
+.bg-main-90 { background-color: rgba(0, 170, 220, 0.9); }
+
+.bg-main-80 { background-color: rgba(0, 170, 220, 0.8); }
+
+.bg-main-70 { background-color: rgba(0, 170, 220, 0.7); }
+
+.bg-main-60 { background-color: rgba(0, 170, 220, 0.6); }
+
+.bg-main-50 { background-color: rgba(0, 170, 220, 0.5); }
+
+.bg-main-40 { background-color: rgba(0, 170, 220, 0.4); }
+
+.bg-main-30 { background-color: rgba(0, 170, 220, 0.3); }
+
+.bg-main-20 { background-color: rgba(0, 170, 220, 0.2); }
+
+.bg-main-10 { background-color: rgba(0, 170, 220, 0.1); }
+
+.bg-main-05 { background-color: rgba(0, 170, 220, 0.05); }
+
 .bg-sub { background-color: #607d8b; }
+
+.bg-sub-90 { background-color: rgba(96, 125, 139, 0.9); }
+
+.bg-sub-80 { background-color: rgba(96, 125, 139, 0.8); }
+
+.bg-sub-70 { background-color: rgba(96, 125, 139, 0.7); }
+
+.bg-sub-60 { background-color: rgba(96, 125, 139, 0.6); }
+
+.bg-sub-50 { background-color: rgba(96, 125, 139, 0.5); }
+
+.bg-sub-40 { background-color: rgba(96, 125, 139, 0.4); }
+
+.bg-sub-30 { background-color: rgba(96, 125, 139, 0.3); }
+
+.bg-sub-20 { background-color: rgba(96, 125, 139, 0.2); }
+
+.bg-sub-10 { background-color: rgba(96, 125, 139, 0.1); }
+
+.bg-sub-05 { background-color: rgba(96, 125, 139, 0.05); }
+
+.bg-black { background-color: black; }
+
+.bg-black-90 { background-color: rgba(0, 0, 0, 0.9); }
+
+.bg-black-80 { background-color: rgba(0, 0, 0, 0.8); }
+
+.bg-black-70 { background-color: rgba(0, 0, 0, 0.7); }
+
+.bg-black-60 { background-color: rgba(0, 0, 0, 0.6); }
+
+.bg-black-50 { background-color: rgba(0, 0, 0, 0.5); }
+
+.bg-black-40 { background-color: rgba(0, 0, 0, 0.4); }
+
+.bg-black-30 { background-color: rgba(0, 0, 0, 0.3); }
+
+.bg-black-20 { background-color: rgba(0, 0, 0, 0.2); }
+
+.bg-black-10 { background-color: rgba(0, 0, 0, 0.1); }
+
+.bg-black-05 { background-color: rgba(0, 0, 0, 0.05); }
+
+.bg-white { background-color: white; }
+
+.bg-white-90 { background-color: rgba(255, 255, 255, 0.9); }
+
+.bg-white-80 { background-color: rgba(255, 255, 255, 0.8); }
+
+.bg-white-70 { background-color: rgba(255, 255, 255, 0.7); }
+
+.bg-white-60 { background-color: rgba(255, 255, 255, 0.6); }
+
+.bg-white-50 { background-color: rgba(255, 255, 255, 0.5); }
+
+.bg-white-40 { background-color: rgba(255, 255, 255, 0.4); }
+
+.bg-white-30 { background-color: rgba(255, 255, 255, 0.3); }
+
+.bg-white-20 { background-color: rgba(255, 255, 255, 0.2); }
+
+.bg-white-10 { background-color: rgba(255, 255, 255, 0.1); }
+
+.bg-white-05 { background-color: rgba(255, 255, 255, 0.05); }
 
 .bg-main-dark { background-color: #0083a9; }
 
@@ -377,9 +461,21 @@ h-tile > * { grid-column: span 1; }
 
 .ff-header { font-family: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif; }
 
+.ls--100 { letter-spacing: -0.1em; }
+
+.ls--75 { letter-spacing: -0.075em; }
+
+.ls--50 { letter-spacing: -0.05em; }
+
+.ls--25 { letter-spacing: -0.025em; }
+
+.ls-0 { letter-spacing: 0; }
+
 .ls-25 { letter-spacing: 0.025em; }
 
 .ls-50 { letter-spacing: 0.05em; }
+
+.ls-75 { letter-spacing: 0.075em; }
 
 .ls-100 { letter-spacing: 0.1em; }
 
@@ -387,39 +483,49 @@ h-tile > * { grid-column: span 1; }
 
 .ls-150 { letter-spacing: 0.15em; }
 
-.b, .fw-bold { font-weight: bold; }
+.fw-300 { font-weight: 300; }
 
-.i, .fw-italic { font-weight: italic; }
+.fw-400 { font-weight: 400; }
 
-.u, .underline { text-decoration: underline; }
+.fw-600 { font-weight: 600; }
 
-.f-h1 { font-size: 2.625em; }
+.b, .fw-700 { font-weight: 700; }
 
-@media only screen and (max-width: 767px) { .f-h1 { font-size: 1.875em; } }
+.fw-900 { font-weight: 900; }
 
-.f-h2 { font-size: 2.25em; }
+.i { font-style: italic; }
 
-@media only screen and (max-width: 767px) { .f-h2 { font-size: 1.625em; } }
+.u, .td-underline { text-decoration: underline; }
 
-.f-h3 { font-size: 1.875em; }
+.td-strike { text-decoration: line-through; }
 
-@media only screen and (max-width: 767px) { .f-h3 { font-size: 1.375em; } }
+.fs-h1 { font-size: 2.625em; }
 
-.f-h4 { font-size: 1.5em; }
+@media only screen and (max-width: 767px) { .fs-h1 { font-size: 1.875em; } }
 
-@media only screen and (max-width: 767px) { .f-h4 { font-size: 1.25em; } }
+.fs-h2 { font-size: 2.25em; }
 
-.f-h5 { font-size: 1.25em; }
+@media only screen and (max-width: 767px) { .fs-h2 { font-size: 1.625em; } }
 
-@media only screen and (max-width: 767px) { .f-h5 { font-size: 1.125em; } }
+.fs-h3 { font-size: 1.875em; }
 
-.f-h6 { font-size: 1em; }
+@media only screen and (max-width: 767px) { .fs-h3 { font-size: 1.375em; } }
 
-@media only screen and (max-width: 767px) { .f-h6 { font-size: 1em; } }
+.fs-h4 { font-size: 1.5em; }
 
-.f-body { font-size: 1em; }
+@media only screen and (max-width: 767px) { .fs-h4 { font-size: 1.25em; } }
 
-.f-body-s { font-size: 0.875em; }
+.fs-h5 { font-size: 1.25em; }
+
+@media only screen and (max-width: 767px) { .fs-h5 { font-size: 1.125em; } }
+
+.fs-h6 { font-size: 1em; }
+
+@media only screen and (max-width: 767px) { .fs-h6 { font-size: 1em; } }
+
+.fs-body { font-size: 1em; }
+
+.fs-small { font-size: 0.875em; }
 
 .d-inlineblock, .d-iblock, .d-inline-block { display: inline-block; }
 
@@ -427,7 +533,7 @@ h-tile > * { grid-column: span 1; }
 
 .d-none { display: none; }
 
-.flex { display: -ms-flexbox; display: -webkit-flex; display: flex; }
+.flex, .demo-bg div { display: -ms-flexbox; display: -webkit-flex; display: flex; }
 
 .flex--column { flex-direction: column; }
 
@@ -441,7 +547,7 @@ h-tile > * { grid-column: span 1; }
 
 .ai-end, .ai-flex-end { align-items: flex-end; }
 
-.ai-center { align-items: center; }
+.ai-center, .demo-bg div { align-items: center; }
 
 .ai-baseline { align-items: baseline; }
 
@@ -451,7 +557,7 @@ h-tile > * { grid-column: span 1; }
 
 .jc-end, .jc-flex-end { justify-content: flex-end; }
 
-.jc-center { justify-content: center; }
+.jc-center, .demo-bg div { justify-content: center; }
 
 .jc-between, .jc-space-between { justify-content: space-between; }
 
@@ -1587,14 +1693,6 @@ article table p { margin-bottom: 0; }
 
 pre { padding: 1em; background-color: #f3f6f8; border: 1px solid #c8d7e1; border-radius: 4px; }
 
-.text-left { text-align: left; }
-
-.text-center { text-align: center; }
-
-.text-right { text-align: right; }
-
-#main-wrapper { overflow-x: hidden; }
-
 /*
 @include font-faces("Font Name", (
   ("font.woff", 400),
@@ -1602,6 +1700,10 @@ pre { padding: 1em; background-color: #f3f6f8; border: 1px solid #c8d7e1; border
   ("font-bold.woff", 700), // always append comma
 ));
 */
+.demo-bg div { width: 75px; height: 50px; margin-bottom: 4px; margin-right: 4px; }
+
+.demo-bg div[class*="bg-black"] { color: white; }
+
 .button, [type="button"], [type="submit"], [type="reset"], .button-passive, a.button-passive, .button-line { display: inline-block; outline: none; overflow: hidden; border-style: solid; border-width: 1px 1px 2px; padding: 0.375em 0.75em; font-weight: 600; text-decoration: none; line-height: normal; vertical-align: top; border-radius: 4px; transition: none; }
 
 .button:active, :active[type="button"], :active[type="submit"], :active[type="reset"], .button-passive:active, .button-line:active { border-width: 2px 1px 1px; }
