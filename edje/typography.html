@@ -1,8 +1,8 @@
 <h1>Font Sizes</h1>
 <article>
-  <p> Customizable in variable <code>$font-size-classes</code>. It accepts map and pixel. </p>
+  Customizable in variable `$font-size-classes`. It accepts map and pixel.
 
-  <p>Providing a map will create responsive font sizes. It must contain "base" key, followed by the screen sizes breakpoint. For example: <code>(base: 26px, medium: 22px, small: 18px, mini: 16px)</code> </p>
+  Providing a map will create responsive font sizes. It must contain "base" key, followed by the screen sizes breakpoint. For example: `(base: 26px, medium: 22px, small: 18px, mini: 16px)`
 </article>
 
 <table>
@@ -79,7 +79,7 @@
 <h1>Color</h1>
 
 <article>
-  <p> Customizable in variable <code>$color-classes</code> </p>
+  Customizable in variable `$color-classes`.
 </article>
 
 <table>
@@ -114,26 +114,13 @@
         'color: $color-blue',
         'color: $color-yellow',
       ] ],
-    ]
-  </script>
-</table>
-
-<h1>Color with Opacity Range</h1>
-
-<article>
-  <p> Customizable in variable <code>$color-classes-with-opacity</code>. Every item will be made into 6 classes with different opacity ranging from 0.5 to 0.9 </p>
-</article>
-
-<table>
-  <script>
-    [
-      [ '.c-black / .c-black-90 / .c-black-80 / .c-black-70 / .c-black-60 / .c-black-50',
+      [ '.c-black / .c-black90 / .c-black80 / .c-black70 / .c-black60 / .c-black50',
       `<p class="c-black">Lorem ipsum dolor sit amet</p>
-      <p class="c-black-90">Lorem ipsum dolor sit amet</p>
-      <p class="c-black-80">Lorem ipsum dolor sit amet</p>
-      <p class="c-black-70">Lorem ipsum dolor sit amet</p>
-      <p class="c-black-60">Lorem ipsum dolor sit amet</p>
-      <p class="c-black-50">Lorem ipsum dolor sit amet</p>
+      <p class="c-black90">Lorem ipsum dolor sit amet</p>
+      <p class="c-black80">Lorem ipsum dolor sit amet</p>
+      <p class="c-black70">Lorem ipsum dolor sit amet</p>
+      <p class="c-black60">Lorem ipsum dolor sit amet</p>
+      <p class="c-black50">Lorem ipsum dolor sit amet</p>
       `, [
         'color: black',
         'color: rgba(black, .9)',
@@ -142,14 +129,14 @@
         'color: rgba(black, .6)',
         'color: rgba(black, .5)',
       ] ],
-      [ '.c-white / .c-white-90 / .c-white-80 / .c-white-70 / .c-white-60 / .c-white-50',
-      `<section class="bg-black-75 p-1">
+      [ '.c-white / .c-white90 / .c-white80 / .c-white70 / .c-white60 / .c-white50',
+      `<section class="bg-black75 p-1">
       <p class="c-white">Lorem ipsum dolor sit amet</p>
-      <p class="c-white-90">Lorem ipsum dolor sit amet</p>
-      <p class="c-white-80">Lorem ipsum dolor sit amet</p>
-      <p class="c-white-70">Lorem ipsum dolor sit amet</p>
-      <p class="c-white-60">Lorem ipsum dolor sit amet</p>
-      <p class="c-white-50">Lorem ipsum dolor sit amet</p>
+      <p class="c-white90">Lorem ipsum dolor sit amet</p>
+      <p class="c-white80">Lorem ipsum dolor sit amet</p>
+      <p class="c-white70">Lorem ipsum dolor sit amet</p>
+      <p class="c-white60">Lorem ipsum dolor sit amet</p>
+      <p class="c-white50">Lorem ipsum dolor sit amet</p>
       </section>`, [
         'color: white',
         'color: rgba(white, .9)',
