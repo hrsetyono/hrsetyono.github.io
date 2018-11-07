@@ -1,0 +1,75 @@
+<h1>Width</h1>
+
+<article>
+  Customizable in variable `$width-classes`.
+</article>
+
+<table>
+  <script>
+    [
+      [ '.w-auto / .w-25 / .w-33 / .w-50 / .w-66 / .w-75 / .w-100',
+      `<section>
+        <div class="bg-black10 w-auto mb-025">.w-auto</div>
+        <div class="bg-black10 w-25 mb-025">.w-25</div>
+        <div class="bg-black10 w-33 mb-025">.w-33</div>
+        <div class="bg-black10 w-50 mb-025">.w-50</div>
+        <div class="bg-black10 w-66 mb-025">.w-66</div>
+        <div class="bg-black10 w-75 mb-025">.w-75</div>
+        <div class="bg-black10 w-100 mb-025">.w-100</div>
+      </section>`, [
+        'width: auto',
+        'width: 25%',
+        'width: calc(100% / 3)',
+        'width: 50%',
+        'width: calc(100% / 1.5)',
+        'width: 75%',
+        'width: 100%',
+      ] ],
+      [ '.s:w-auto / .s:w-25 / .s:w-33 / .s:w-50 / .s:w-66 / .s:w-75 / .s:w-100', '', [
+        '@include below(s) {',
+        '&nbsp; width: auto',
+        '&nbsp; ...',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>
+
+<h1>Height</h1>
+
+<article>
+
+  Customizable in variable `$height-classes`.
+
+</article>
+
+<table class="demo-height">
+  <script>
+    [
+      [ '.h-auto / .h-25 / .h-33 / .h-50 / .h-66 / .h-75 / .h-100',
+      `<section class="flex">
+        <div class="bg-black10 h-auto mr-025">.w-auto</div>
+        <div class="bg-black10 h-25 mr-025">.g-25</div>
+        <div class="bg-black10 h-33 mr-025">.g-33</div>
+        <div class="bg-black10 h-50 mr-025">.g-50</div>
+        <div class="bg-black10 h-66 mr-025">.g-66</div>
+        <div class="bg-black10 h-75 mr-025">.g-75</div>
+        <div class="bg-black10 h-100 mr-025">.g-100</div>
+      </section>`, [
+        'height: auto',
+        'height: 25%',
+        'height: calc(100% / 3)',
+        'height: 50%',
+        'height: calc(100% / 1.5)',
+        'height: 75%',
+        'height: 100%',
+      ] ],
+      [ '.s:h-auto / .s:h-25 / .s:h-33 / .s:h-50 / .s:h-66 / .s:h-75 / .s:h-100', '', [
+        '@include below(s) {',
+        '&nbsp; height: auto',
+        '&nbsp; ...',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>

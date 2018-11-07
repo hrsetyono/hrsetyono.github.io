@@ -1,0 +1,39 @@
+<h1>Edje Framework</h1>
+<h-grid> <article class="col-8">
+  
+Edje is a **Functional CSS framework**. Instead of writing semantic class name, we use many single-purpose classes like `.ta-center` to center text and `.p-1` to add 1em padding.
+
+NOTICE: We're working on the design for this documentation. Currently it's still rough, but it gets the jobs done :)
+
+For example, here's how most of us write CSS:
+
+
+    <div class="page-thumbnail"> </div>
+
+    .page-thumbnail {
+      background-color: red;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      padding: 1em;
+    }
+
+Using Edje framework, we wrote it like this:
+
+    <div class="bg-red b-2 b--black50 p-1"></div>
+
+
+    .bg-red { background-color: red; }
+    .b-2 { border: 2px solid; }
+    .b--black50 { border-color: rgba(0,0,0, .5); }
+    .p-1 { padding: 1em; }
+
+Those mini classes are already provided by the framework. As you can see, we wrote less CSS by writing more in the HTML. It sounds like a bad practice, but it has been proven to have more benefits such as:
+
+- Easier for your team to be in the same page. By just reading the class, they can roughly know how it is styled.
+
+- Safer to change an element's styling on the fly. You don't need to be afraid of breaking `.page-thumbnail` in other pages.
+
+- [Read more here](https://www.mikecr.it/ramblings/functional-css/)
+
+This is a whole new way on doing front-end development and it's hard to swallow without trying it firsthand. So go ahead and try it on [this Codepen](https://codepen.io/hrsetyono/pen/XyJary/).
+
+</article> </h-grid>

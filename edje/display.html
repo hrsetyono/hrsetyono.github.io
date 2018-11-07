@@ -1,27 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content=""> <!-- use Hex color -->
-
-  <!-- WEBSITE DETAIL -->
-  <title>Display & Flexbox | Edje Framework</title>
-  <meta name="description" content="Edje is a Functional CSS framework. Instead of writing semantic class name, we use many single-purpose classes like 'ta-center' to center text.">
-
-  <!-- STYLESHEET -->
-  <link rel="stylesheet" href="css/framework.css">
-  <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-<div class="wrapper">
-
-<aside class="sidebar"></aside>
-
-<main> <h-grid> <div class="col-12">
-
 <h1>Display</h1>
 
 <table class="demo-display">
@@ -43,7 +19,7 @@
 <h1>Visibility</h1>
 
 <article>
-  <p>Hide / Show an element depending on the screen size</p>
+  Hide / Show an element depending on the screen size
 </article>
 
 <table class="demo-visibility">
@@ -79,7 +55,7 @@
         'display: -ms-flexbox',
         'display: -webkit-flex',
         'display: flex',
-        'flex-wrap: wrap'
+        'width: 100%'
       ] ],
       [ '.flex--column', '<div class="flex flex--column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
           'flex-direction: column',
@@ -114,6 +90,10 @@
 
 
 <h2>Flex Items</h2>
+
+<article>
+  Flex is customizable in variable `$flex-classes`. Order is customizable in variable `$order-classes`.
+</article>
 
 <table class="demo-display demo-display--flex">
   <script>
@@ -170,14 +150,3 @@
     ]
   </script>
 </table>
-
-
-</div> </h-grid> </main>
-</div>
-
-<script src="js/jquery.min.js"></script>
-<script src="js/app.js"></script>
-
-</body>
-</html>
-    
