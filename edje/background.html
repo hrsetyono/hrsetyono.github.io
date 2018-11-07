@@ -22,55 +22,11 @@
 
 <main> <h-grid> <div class="col-12">
 
-<h1>Background with Opacity Range</h1>
-<article>
-  <p> Customizable in variable <code>$background-classes-with-opacity</code> </p>
-  <p>Every item will be made into 10 classes with different opacity ranging from 0.05 to 0.9 </p>
-</article>
-
 <table class="demo-bg">
   <script>
     [
-      [ '.bg-main / .bg-main-90 / … / .bg-main-10 / .bg-main-05', `
-      <section class="flex flex--wrap">
-        <div class="bg-main">.bg-main</div>
-        <div class="bg-main-90">90</div>
-        <div class="bg-main-80">80</div>
-        <div class="bg-main-70">70</div>
-        <div class="bg-main-60">60</div>
-        <div class="bg-main-50">50</div>
-        <div class="bg-main-40">40</div>
-        <div class="bg-main-30">30</div>
-        <div class="bg-main-20">20</div>
-        <div class="bg-main-10">10</div>
-        <div class="bg-main-05">05</div>
-      </section>`, [
-        'background-color: $color-main',
-        'background-color: rgba($color-main, .9)',
-        '…',
-        'background-color: rgba($color-main, .1)',
-        'background-color: rgba($color-main, .05)',
-      ] ],
-      [ '.bg-sub / .bg-sub-90 / … / .bg-sub-10 / .bg-sub-05', `
-      <section class="flex flex--wrap">
-        <div class="bg-sub">.bg-sub</div>
-        <div class="bg-sub-90">90</div>
-        <div class="bg-sub-80">80</div>
-        <div class="bg-sub-70">70</div>
-        <div class="bg-sub-60">60</div>
-        <div class="bg-sub-50">50</div>
-        <div class="bg-sub-40">40</div>
-        <div class="bg-sub-30">30</div>
-        <div class="bg-sub-20">20</div>
-        <div class="bg-sub-10">10</div>
-        <div class="bg-sub-05">05</div>
-      </section>`, [
-        'background-color: $color-sub',
-        'background-color: rgba($color-sub, .9)',
-        '…',
-        'background-color: rgba($color-sub, .1)',
-        'background-color: rgba($color-sub, .05)',
-      ] ],
+      
+    
       [ '.bg-black / .bg-black-90 / … / .bg-black-10 / .bg-black-05', `
       <section class="flex flex--wrap">
         <div class="bg-black">.bg-black</div>
@@ -118,35 +74,92 @@
 
 <h1>Background Color</h1>
 <article>
-  <p> Customizable in variable <code>$background-classes</code> </p>
+  <p> Customizable in variable <code>$background-classes</code>.</p>
+  <p> Can accept linear-gradient() and url().</p>
 </article>
 
 <table class="demo-bg">
   <script>
     [
+      [ '.bg-main / .bg-main75 / .bg-main50 / .bg-main25 / .bg-main10 / .bg-main05', `
+      <section class="flex flex--wrap">
+        <div class="bg-main">.bg-main</div>
+        <div class="bg-main75">75</div>
+        <div class="bg-main50">50</div>
+        <div class="bg-main25">25</div>
+        <div class="bg-main10">10</div>
+        <div class="bg-main05">05</div>
+      </section>`, [
+        'background-color: $color-main',
+        'background-color: rgba($color-main, .75)',
+        'background-color: rgba($color-main, .5)',
+        'background-color: rgba($color-main, .25)',
+        'background-color: rgba($color-main, .1)',
+        'background-color: rgba($color-main, .05)',
+      ] ],
+
       [ '.bg-main-light', '<div class="bg-main-light"></div>', [
         'background-color: $color-main-light'
       ] ],
       [ '.bg-main-dark', '<div class="bg-main-dark"></div>', [
         'background-color: $color-main-dark'
       ] ],
+      
+      [ '.bg-sub', '<div class="bg-sub"></div>', [
+        'background-color: $color-sub'
+      ] ],
+
       [ '.bg-red / .bg-blue / .bg-yellow / .bg-green',
       `<section class="flex flex--wrap">
         <div class="bg-red"></div>
+        <div class="bg-green"></div>
         <div class="bg-blue"></div>
         <div class="bg-yellow"></div>
-        <div class="bg-green"></div>
       </section>`, [
         'background-color: $color-red',
+        'background-color: $color-green',
         'background-color: $color-blue',
         'background-color: $color-yellow',
-        'background-color: $color-green',
       ]],
+
+      [ '.bg-black / .bg-black75 / .bg-black50 / .bg-black25 / .bg-black10 / .bg-black05', `
+      <section class="flex flex--wrap">
+        <div class="bg-black">.bg-black</div>
+        <div class="bg-black75">75</div>
+        <div class="bg-black50">50</div>
+        <div class="bg-black25">25</div>
+        <div class="bg-black10">10</div>
+        <div class="bg-black05">05</div>
+      </section>`, [
+        'background-color: black',
+        'background-color: rgba(black, .75)',
+        'background-color: rgba(black, .5)',
+        'background-color: rgba(black, .25)',
+        'background-color: rgba(black, .1)',
+        'background-color: rgba(black, .05)',
+      ] ],
+
+      [ '.bg-white / .bg-white75 / .bg-white50 / .bg-white25 / .bg-white10 / .bg-white05', `
+      <section class="flex flex--wrap bg-black75">
+        <div class="bg-white">.bg-white</div>
+        <div class="bg-white75">75</div>
+        <div class="bg-white50">50</div>
+        <div class="bg-white25">25</div>
+        <div class="bg-white10">10</div>
+        <div class="bg-white05">05</div>
+      </section>`, [
+        'background-color: white',
+        'background-color: rgba(white, .75)',
+        'background-color: rgba(white, .5)',
+        'background-color: rgba(white, .25)',
+        'background-color: rgba(white, .1)',
+        'background-color: rgba(white, .05)',
+      ] ],
     ]
   </script>
 </table>
 
-<h2>Background</h2>
+<h2>Background Misc</h2>
 
 <table>
   <script>

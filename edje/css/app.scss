@@ -1,6 +1,16 @@
 // Put styles that are unique for this project here
 @import "setting";
+$output-framework: true;
 @import "edje-v20";
+@import "blog";
+
+@mixin apply( $classes... ) {
+  @each $c in $classes {
+    @extend .#{ $c };
+  }
+}
+
+///
 
 @mixin highlight {
   display: block;
@@ -27,11 +37,14 @@ table {
 }
 
 th {
-  border-bottom: 2px solid rgba(black, .75);
-  padding: 0.25em 0;
-  text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  @include apply(
+    pv-025,
+    bb-2,
+    b--black75,
+    ta-left,
+    tt-uppercase,
+    ls-100
+  );
 }
 
 td {
@@ -134,7 +147,22 @@ td:nth-child(3) {
   }
 }
 
+// BACKGROUND
+.demo-bg {
+  div {
+    @include apply( flex, ai-center, jc-center );
+    width: 75px;
+    height: 50px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+  }
 
+  div[class*="bg-black"] {
+    color: white;
+  }
+}
+
+// BORDER
 .demo-border {
   div {
     width: 100px;

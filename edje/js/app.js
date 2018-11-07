@@ -20,7 +20,7 @@ $( document ).ready( function() {
 
     var navHtml = '';
     for( var key in nav ) {
-      navHtml += `<a class="d-iblock pv-04 ph-06" href="${ key }.html">${ nav[key] }</a>`;
+      navHtml += `<a class="d-iblock pv-05 ph-075" href="${ key }.html">${ nav[key] }</a>`;
     }
 
     $( '.sidebar' ).html( '<h-grid><div class="col-12">' + navHtml + '</div></h-grid>' );
@@ -33,10 +33,11 @@ $( document ).ready( function() {
       var content = eval( $(this).html() );
       var $table = $(this).closest('table');
 
-      var thead = "<thead> <tr> <th>Class</th> <th>Declaration</th> <th>Preview</th> </tr> </thead>";
+      var thead = "<thead> <tr> <th>Class</th> <th>Properties</th> <th></th> </tr> </thead>";
       
       // create tbody
       var tbody = "<tbody>";
+      
       for( var i = 0, len = content.length; i < len; i++ ) {
 
         // if empty means separator

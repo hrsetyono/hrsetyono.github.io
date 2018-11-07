@@ -49,11 +49,11 @@
 <table class="demo-visibility">
   <script>
     [
-      [ '.hide-for-l / .hide-for-s / .hide-for-xs', `<pre>                     L      S     XS
+      [ '.hide-for-l / .hide-for-s / .hide-for-xs', `<pre>                 L      S     XS
 
-.hide-for-large      -      ✓     ✓
-.hide-for-small      ✓      -     -
-.hide-for-mini       ✓      ✓     -</pre>`, [
+.hide-for-l      -      ✓     ✓
+.hide-for-s      ✓      -     -
+.hide-for-m      ✓      ✓     -</pre>`, [
         '✓ = displayed',
         '- = hidden',
         '',
@@ -61,11 +61,11 @@
         'S = Small screen <=768px',
         'XS = Extra small screen <=480px'
       ] ],
-      [ '.show-for-l / .show-for-s / .show-for-xs', `<pre>                     L      S     XS
+      [ '.show-for-l / .show-for-s / .show-for-xs', `<pre>                 L      S     XS
 
-.show-for-large      ✓      -     -
-.show-for-small      -      ✓     ✓
-.show-for-mini       -      -     ✓</pre>`],
+.show-for-l      ✓      -     -
+.show-for-s      -      ✓     ✓
+.show-for-m      -      -     ✓</pre>`],
     ]
   </script>
 </table>
@@ -126,7 +126,7 @@
         'flex: 5',
       ] ],
 
-      [ '.flex-1-s / .flex-2-s / .flex-3-s / .flex-4-s / .flex-5-s', '<div class="flex"> <span class="flex-2 flex-1-s">.flex-2 .flex-1-s</span> <span class="flex-3 flex-1-s">.flex-3 .flex-1-s</span> </div> On <768px, the width become 1:1 ratio', [
+      [ '.s:flex-1 / .s:flex-2 / .s:flex-3 / .s:flex-4 / .s:flex-5', '<div class="flex"> <span class="flex-2 s:flex-1">.flex-2 .s:flex-1</span> <span class="flex-3 s:flex-1">.flex-3 .s:flex-1</span> </div> On <768px, the width become 1:1 ratio', [
         '@include below(s) {',
         '&nbsp; flex: 1',
         '&nbsp; flex: 2',
@@ -135,7 +135,12 @@
         '&nbsp; flex: 5',
         '}'
       ] ],
-      [ '.as-start / .as-end / .as-center / .as-baseline / .as-stretch', '<section class="flex flex--wrap flex--boxed flex--boxed-2"> <div class="flex" data-title=".as-end"> <span>.</span><span class="as-end">.as-end</span><span>.</span></div> <div class="flex" data-title=".as-center"> <span>.</span><span class="as-center">.as-center</span><span>.</span></div> </section>', [
+      [ '.as-start / .as-end / .as-center / .as-baseline / .as-stretch',
+      `<section class="flex flex--wrap flex--boxed flex--boxed-2">
+        <div class="flex" data-title=".as-start"> <span>.</span><span class="as-start">.as-start</span><span>.</span></div>
+        <div class="flex" data-title=".as-end"> <span>.</span><span class="as-end">.as-end</span><span>.</span></div>
+        <div class="flex" data-title=".as-center"> <span>.</span><span class="as-center">.as-center</span><span>.</span></div>
+      </section>`, [
         'align-self: flex-start',
         'align-self: flex-end',
         'align-self: center',
@@ -152,7 +157,7 @@
         'flex: 5',
       ] ],
 
-      [ ' / .order-last-s / .order-1-s / .order-2-s / .order-3-s / .order-4-s / .order-5-s', '', [
+      [ ' / .s:order-last / .s:order-1 / .s:order-2 / .s:order-3 / .s:order-4 / .s:order-5', '', [
         '@include below(s) {',
         '&nbsp; flex: 9999',
         '&nbsp; flex: 1',

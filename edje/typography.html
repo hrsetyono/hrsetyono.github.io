@@ -101,6 +101,93 @@
   </script>
 </table>
 
+<h1>Color</h1>
+
+<article>
+  <p> Customizable in variable <code>$color-classes</code> </p>
+</article>
+
+<table>
+  <script>
+    [
+      [ '.c-body', `<p class="c-body"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`, [
+        'color: $font-color',
+      ] ],
+      [ '.c-passive', `<p class="c-passive"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
+        'color: $font-color-passive',
+      ] ],
+      [ '.c-main', `<p class="c-main"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>`, [
+        'color: $color-main',
+      ] ],
+      [ '.c-main-dark', `<p class="c-main-dark"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>`, [
+        'color: $color-main-dark',
+      ] ],
+      [ '.c-main-light', `<p class="c-main-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`, [
+        'color: $color-main-light',
+      ] ],
+      [ '.c-sub', `<p class="c-sub"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
+        'color: $color-sub',
+      ] ],
+      [],
+      [ '.c-red / .c-green / .c-blue / .c-yellow',
+        `<p class="c-red"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>
+        <p class="c-green"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>
+        <p class="c-blue"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>
+        <p class="c-yellow"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
+        'color: $color-red',
+        'color: $color-green',
+        'color: $color-blue',
+        'color: $color-yellow',
+      ] ],
+    ]
+  </script>
+</table>
+
+<h1>Color with Opacity Range</h1>
+
+<article>
+  <p> Customizable in variable <code>$color-classes-with-opacity</code>. Every item will be made into 6 classes with different opacity ranging from 0.5 to 0.9 </p>
+</article>
+
+<table>
+  <script>
+    [
+      [ '.c-black / .c-black-90 / .c-black-80 / .c-black-70 / .c-black-60 / .c-black-50',
+      `<p class="c-black">Lorem ipsum dolor sit amet</p>
+      <p class="c-black-90">Lorem ipsum dolor sit amet</p>
+      <p class="c-black-80">Lorem ipsum dolor sit amet</p>
+      <p class="c-black-70">Lorem ipsum dolor sit amet</p>
+      <p class="c-black-60">Lorem ipsum dolor sit amet</p>
+      <p class="c-black-50">Lorem ipsum dolor sit amet</p>
+      `, [
+        'color: black',
+        'color: rgba(black, .9)',
+        'color: rgba(black, .8)',
+        'color: rgba(black, .7)',
+        'color: rgba(black, .6)',
+        'color: rgba(black, .5)',
+      ] ],
+      [ '.c-white / .c-white-90 / .c-white-80 / .c-white-70 / .c-white-60 / .c-white-50',
+      `<section class="bg-black-75 p-1">
+      <p class="c-white">Lorem ipsum dolor sit amet</p>
+      <p class="c-white-90">Lorem ipsum dolor sit amet</p>
+      <p class="c-white-80">Lorem ipsum dolor sit amet</p>
+      <p class="c-white-70">Lorem ipsum dolor sit amet</p>
+      <p class="c-white-60">Lorem ipsum dolor sit amet</p>
+      <p class="c-white-50">Lorem ipsum dolor sit amet</p>
+      </section>`, [
+        'color: white',
+        'color: rgba(white, .9)',
+        'color: rgba(white, .8)',
+        'color: rgba(white, .7)',
+        'color: rgba(white, .6)',
+        'color: rgba(white, .5)',
+      ] ],
+    ]
+  </script>
+</table>
+
+
 <h1>Misc Typography</h1>
 
 <table>

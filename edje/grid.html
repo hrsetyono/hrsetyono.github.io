@@ -37,7 +37,11 @@
         'grid-template-columns: repeat( 12, 1fr )',
         'grid-column-gap: 20px',
         'max-width: 1140px',
-        'padding: 0 10px'
+        'padding: 0 10px',
+        '',
+        '> * {',
+        '&nbsp; grid-column: span 1',
+        '}'
       ] ],
       [ '.grid-collapse', '<h-grid class="grid-collapse"> <span class="col-4">.</span><span class="col-8">.</span> </h-grid>', [
         'grid-column-gap: 0',
@@ -58,7 +62,7 @@
         '…',
         'grid-column: span 12',
       ] ],
-      [ '/ .col-1-s / .col-2-s / .col-3-s / … / .col-12-s', '<h-grid> <span class="col-4 col-6-s">.col-4 .col-6-s</span><span class="col-8 col-6-s">.col-8 .col-6-s</span> </h-grid> Responsive column, will take effect when the screen is <768px. Without specifying small column, the column become 12 on <768px screen.', [
+      [ '/ .s:col-1 / .s:col-2 / .s:col-3 / … / .s:col-12', '<h-grid> <span class="col-4 s:col-6">.col-4 .s:col-6</span><span class="col-8 s:col-6">.col-8 .s:col-6</span> </h-grid> Responsive column, will take effect when the screen is <768px. Without specifying small column, the column become 12 on <768px screen.', [
         '@include below(s) {',
         '&nbsp; grid-column: span 1',
         '&nbsp; grid-column: span 2',
@@ -86,6 +90,10 @@
         'grid-template-columns: repeat( $per_row, 1fr )',
         'grid-column-gap: 20px',
         'grid-row-gap: 20px',
+        '',
+        '> * {',
+        '&nbsp; grid-column: span 1',
+        '}'
       ] ],
       [ '.tile-collapse', '<h-tile class="tile-2 tile-collapse"> <span>.</span><span>.</span><span>.</span><span>.</span>  </h-tile>', [
         'grid-column-gap: 0',
@@ -97,7 +105,7 @@
         '…',
         'grid-template-columns: repeat( 8, 1fr )',
       ] ],
-      [ '/ .tile-2-s / .tile-3-s / .tile-4-s / … / .tile-8-s', '<h-tile class="tile-3 tile-2-s"> <span>.tile-3 .tile-2-s</span><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span> </h-tile> Without specifying small tile, each item will become 100% width on <768px screen', [
+      [ '/ .s:tile-2 / .s:tile-3 / .s:tile-4 / … / .s:tile-8', '<h-tile class="tile-3 s:tile-2"> <span>.tile-3 .s:tile-2</span><span>.</span><span>.</span><span>.</span><span>.</span><span>.</span> </h-tile> Without specifying small tile, each item will become 100% width on <768px screen', [
         '@include below(s) {',
         '&nbsp; grid-template-columns: repeat( 2, 1fr )',
         '&nbsp; grid-template-columns: repeat( 3, 1fr )',
