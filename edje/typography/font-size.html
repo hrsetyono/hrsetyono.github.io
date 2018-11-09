@@ -1,0 +1,43 @@
+<h1>Font Sizes</h1>
+<article>
+  Customizable in variable `$font-size-classes`. It accepts map and pixel.
+
+  Providing a map will create responsive font sizes. It must contain "base" key, followed by the screen sizes breakpoint. For example: `(base: 26px, medium: 22px, small: 18px, mini: 16px)`
+</article>
+
+<table>
+  <script>
+    [
+      [ '.fs-h1', '<p class="fs-h1">Heading 1</p>', [
+        'font-size: 42px',
+        '@include below(s) { font-size: 30px }'
+      ] ],
+      [ '.fs-h2', '<p class="fs-h2">Heading 2</p>', [
+        'font-size: 36px',
+        '@include below(s) { font-size: 26px }'
+      ] ],
+      [ '.fs-h3', '<p class="fs-h3">Heading 3</p>', [
+        'font-size: 30px',
+        '@include below(s) { font-size: 22px }'
+      ] ],
+      [ '.fs-h4', '<p class="fs-h4">Heading 4</p>', [
+        'font-size: 25px',
+        '@include below(s) { font-size: 20px }'
+      ] ],
+      [ '.fs-h5', '<p class="fs-h5">Heading 5</p>', [
+        'font-size: 20px',
+        '@include below(s) { font-size: 18px }'
+      ] ],
+      [ '.fs-h6', '<p class="fs-h6">Heading 6</p>', [
+        'font-size: $font-size',
+        '@include below(s) { font-size: $font-size }'
+      ] ],
+      [ '.fs-body', '<h1 class="fs-body">This H1 size become default body font size</h1>', [
+        'font-size: $font-size'
+      ] ],
+      [ '.fs-small', '<p class="fs-small">Smaller font specified in $font-size-small</p>', [
+        'font-size: $font-size-small'
+      ] ],
+    ]  
+  </script>
+</table>

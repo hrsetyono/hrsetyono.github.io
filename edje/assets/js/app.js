@@ -1,17 +1,21 @@
-$( document ).ready( function() {
+( function($) { 'use strict';
 
+const ROUTER = new Navigo( null, true, '#' );
+
+$( document ).ready( function() {
   Route.init();
   
+  console.log('router');
 });
 
 /*
   Handle Routing
 */
-const ROUTER = new Navigo( null, true, '#' );
 var Route = {
   init() {
     ROUTER.on( this.homeController.bind( this ) ).resolve();
     ROUTER.on( '/:slug', this.pageController.bind( this ) ).resolve();
+    ROUTER.on( '/:parent/:slug', this.childPageController.bind( this ) ).resolve();
   },
 
   homeController() {
@@ -22,12 +26,21 @@ var Route = {
     this._render( params.slug );
   },
 
-  _render( page ) {
-    $.get( page + '.html', (data) => {
-      console.log( data );
+  childPageController( params ) {
+    this._render( params.slug, params.parent );
+  },
+
+  _render( page, parent ) {
+    var filePath = parent ? `${ parent }/${ page }.html` : `${ page }.html`;
+    console.log(filePath);
+
+    $.get( filePath, (data) => {
       $('#content').html( data );
       parseTable();
       parseArticle();
+
+      // scroll to top
+      window.scrollTo(0, 0);
     } );
   },
 };
@@ -74,3 +87,5 @@ function parseArticle() {
     $(this).html( result );
   });
 }
+
+})( jQuery );

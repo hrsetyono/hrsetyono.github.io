@@ -1,0 +1,52 @@
+<h1>Grid Wrapper</h1>
+
+<article>
+  Using CSS3 Grid to create page layout.
+</article>
+
+<table class="demo-display demo-display--grid">
+  <script>
+    [
+      [ '&lt;h-grid&gt;', '<h-grid> <span class="col-4">.</span><span class="col-8">.</span> </h-grid> To customize the sizing, look for <code>$grid-</code> variable in setting', [
+        'display: -ms-grid',
+        'display: grid',
+        'grid-template-columns: repeat( 12, 1fr )',
+        'grid-column-gap: 20px',
+        'max-width: 1140px',
+        'padding: 0 10px',
+        '',
+        '> * {',
+        '&nbsp; grid-column: span 1',
+        '}'
+      ] ],
+      [ '.grid-collapse', '<h-grid class="grid-collapse"> <span class="col-4">.</span><span class="col-8">.</span> </h-grid>', [
+        'grid-column-gap: 0',
+      ] ],
+    ]
+  </script>
+</table>
+
+<h2>Grid Items</h2>
+
+<table class="demo-display demo-display--grid">
+  <script>
+    [
+      [ '.col-1 / .col-2 / .col-3 / … / .col-12', '<h-grid> <span class="col-4">.col-4</span><span class="col-8">.col-8</span> </h-grid> Grid divided into 12 portions.', [
+        'grid-column: span 1',
+        'grid-column: span 2',
+        'grid-column: span 3',
+        '…',
+        'grid-column: span 12',
+      ] ],
+      [ '/ .s:col-1 / .s:col-2 / .s:col-3 / … / .s:col-12', '<h-grid> <span class="col-4 s:col-6">.col-4 .s:col-6</span><span class="col-8 s:col-6">.col-8 .s:col-6</span> </h-grid> Responsive column, will take effect when the screen is <768px. Without specifying small column, the column become 12 on <768px screen.', [
+        '@include below(s) {',
+        '&nbsp; grid-column: span 1',
+        '&nbsp; grid-column: span 2',
+        '&nbsp; grid-column: span 3 ',
+        '&nbsp; …',
+        '&nbsp; grid-column: span 12',
+        '}'
+      ] ],
+    ]
+  </script>
+</table>

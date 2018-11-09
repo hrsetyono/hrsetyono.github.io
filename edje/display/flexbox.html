@@ -1,52 +1,4 @@
-<h1>Display</h1>
-
-<table class="demo-display">
-  <script>
-    [
-      [ '.d-block', '<span class="d-block"> This span becomes a block </span>', [
-        'display: block'
-      ] ],
-      [ '.d-iblock', '<p class="d-iblock">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
-        'display: inline-block'
-      ] ],
-      [ '.d-none', '<div class="d-none">Hello there!</div>', [
-        'display: none'
-      ] ],
-    ]
-  </script>
-</table>
-
-<h1>Visibility</h1>
-
-<article>
-  Hide / Show an element depending on the screen size
-</article>
-
-<table class="demo-visibility">
-  <script>
-    [
-      [ '.hide-for-l / .hide-for-s / .hide-for-xs', `<pre>                 L      S     XS
-
-.hide-for-l      -      ✓     ✓
-.hide-for-s      ✓      -     -
-.hide-for-m      ✓      ✓     -</pre>`, [
-        '✓ = displayed',
-        '- = hidden',
-        '',
-        'L = Large screen >768px',
-        'S = Small screen <=768px',
-        'XS = Extra small screen <=480px'
-      ] ],
-      [ '.show-for-l / .show-for-s / .show-for-xs', `<pre>                 L      S     XS
-
-.show-for-l      ✓      -     -
-.show-for-s      -      ✓     ✓
-.show-for-m      -      -     ✓</pre>`],
-    ]
-  </script>
-</table>
-
-<h2>Flex Wrapper</h2>
+<h1>Flex Wrapper</h1>
 
 <table class="demo-display demo-display--flex">
   <script>
@@ -89,7 +41,7 @@
 </table>
 
 
-<h2>Flex Items</h2>
+<h1>Flex Items</h1>
 
 <article>
   Flex is customizable in variable `$flex-classes`. Order is customizable in variable `$order-classes`.
@@ -151,8 +103,3 @@
   </script>
 </table>
 
-<h1>Overflow</h1>
-
-<article>
-  Customizable in variable `$overflow-classes`. We already covered all possible value in Overflow. The reason we made it customizable is for you to add more responsive option (like `m` or `xs`) if needed. 
-</article>

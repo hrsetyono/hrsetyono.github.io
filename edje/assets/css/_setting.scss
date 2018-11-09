@@ -12,8 +12,6 @@ $color-sub  : #f7db68;
 // $color-main-dark : #008ab3;
 // $color-main-light : #78dcfa;
 
-$color-link : $color-main;
-// $color-link-hover : lighten($color-main, 10%);
 
 $color-passive : #c8d7e1;
 $color-passive-light: #f3f6f8;
@@ -21,7 +19,11 @@ $color-passive-light: #f3f6f8;
 // $color-red : #f45b4f;
 // $color-yellow : #ffeb3b;
 // $color-green : #4caf50;
-// $color-blue: #2196f3;
+$color-blue: #2196f3;
+
+
+// $color-link : $color-blue;
+// $color-link-hover : lighten($color-blue, 10%);
 
 // $body-background: #fff;
 // $text-highlight: null;
@@ -50,7 +52,7 @@ $g-radius     : 4px;
 // $grid-max-width : $size-l;
 // $grid-columns   : 12;
 // $grid-gap       : 20px; // distance between columns
-// $grid-rim       : 10px; // min distance from edge of screen
+$grid-rim       : 20px; // min distance from edge of screen
 
 // ----- TILE -----
 // $tile-max    : 8;
@@ -127,29 +129,6 @@ $h6 : $font-size;
 //   2: 2px,
 // );
 
-// -------------
-// BORDER COLOR (b--x)
-
-// $border-color-classes: (
-//   main: $color-main,
-//   sub: $color-sub,
-//   transparent: transparent,
-
-//   black-75: rgba(black, .75),
-//   black-50: rgba(black, .50),
-//   black-25: rgba(black, .25),
-//   black-10: rgba(black, .10),
-//   black-025: rgba(black, .025),
-//   black-01: rgba(black, .01),
-
-//   white-75: rgba(white, .75),
-//   white-50: rgba(white, .50),
-//   white-25: rgba(white, .25),
-//   white-10: rgba(white, .10),
-//   white-025: rgba(white, .025),
-//   white-01: rgba(white, .01),
-// );
-
 
 $spinner_path: '../../../../../wp-admin/images/spinner.gif';
 
@@ -157,3 +136,12 @@ $spinner_path: '../../../../../wp-admin/images/spinner.gif';
 ///// CUSTOM MIXIN
 
 @mixin your-custom-mixin() { }
+
+@mixin apply( $classes... ) {
+  /*
+    classes: $classes
+  */
+  @each $c in $classes {
+    @extend .#{ $c };
+  }
+}

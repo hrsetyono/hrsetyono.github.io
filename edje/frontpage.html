@@ -1,6 +1,7 @@
 <h1>Edje Framework</h1>
-<h-grid> <article class="col-8">
-  
+
+<article>
+
 Edje is a **Functional CSS framework**. Instead of writing semantic class name, we use many single-purpose classes like `.ta-center` to center text and `.p-1` to add 1em padding.
 
 NOTICE: We're working on the design for this documentation. Currently it's still rough, but it gets the jobs done :)
@@ -18,7 +19,7 @@ For example, here's how most of us write CSS:
 
 Using Edje framework, we wrote it like this:
 
-    <div class="bg-red b-2 b--black50 p-1"></div>
+    <div class="bg-red b-2 b--black50 p-1"> </div>
 
 
     .bg-red { background-color: red; }
@@ -36,4 +37,21 @@ Those mini classes are already provided by the framework. As you can see, we wro
 
 This is a whole new way on doing front-end development and it's hard to swallow without trying it firsthand. So go ahead and try it on [this Codepen](https://codepen.io/hrsetyono/pen/XyJary/).
 
-</article> </h-grid>
+## Installation
+
+1. Install [Node JS](https://nodejs.org/en/download/).
+
+1. There are 4 global packages required. Run these commands below one by one.
+
+    ```
+    npm install -g node-sass
+    npm install -g edje
+    ```
+
+1. If you are on Windows, add **NODE_PATH** to your System Variable and set it to **%AppData%/npm/node_modules**.
+
+1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
+
+## Starter Boilerplate
+
+</article>

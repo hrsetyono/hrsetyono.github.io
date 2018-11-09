@@ -1,14 +1,6 @@
 // Put styles that are unique for this project here
 @import "setting";
-$output-framework: true;
 @import "edje-v20";
-@import "blog";
-
-@mixin apply( $classes... ) {
-  @each $c in $classes {
-    @extend .#{ $c };
-  }
-}
 
 ///
 
@@ -18,8 +10,11 @@ $output-framework: true;
   background-color: rgba(black, .1);
 }
 
-main {
+#wrapper {
   padding: 2em 0;
+}
+
+main {
 }
 
 h1 {
@@ -36,17 +31,6 @@ table {
   margin: 2em 0;
 }
 
-th {
-  @include apply(
-    pv-025,
-    bb-2,
-    b--black75,
-    ta-left,
-    tt-uppercase,
-    ls-100
-  );
-}
-
 td {
   padding: 1em 0;
   border-bottom: 1px solid rgba(black, .05);
@@ -58,8 +42,16 @@ td.separator {
   background-color: rgba(black, .05);
 }
 
+th {
+  padding: 0.25em 0;
+  border-bottom: 2px solid rgba(black, .75);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 100;
+}
+
 th:first-child { width: 15%; }
-th:nth-child(2) { width: 35%; }
+th:nth-child(2) { width: 30%; }
 
 td:first-child,
 td:nth-child(2) {
@@ -71,27 +63,41 @@ td:first-child {
 }
 
 td:nth-child(2) {
-  letter-spacing: -0.0375em;
+  font-size: em(12px);
+  letter-spacing: -0.025em;
+  line-height: 26px;
 }
 
 td:nth-child(3) {
   padding-left: 0.5em;
 }
 
+
 ///// SIDEBAR
 
-aside a {
-  @include apply( d-block, pv-05, c-sub );
-}
+aside {
+  line-height: 1.7;
 
-///// PAGE
+  strong {
+    display: block;
+    margin: 1em 0;
+    text-transform: uppercase;
+  }
 
-.functional-demo article {
-  * + * {
-    margin-top: 1em;
+  ul {
+    padding-left: 1.5em;
+  }
+
+  a {
+    display: block;
+    position: relative;
+
+    &:hover { text-decoration: underline; }
   }
 }
 
+
+///// PAGE
 
 .demo-display {
   span, p {
@@ -155,10 +161,19 @@ aside a {
   }
 }
 
+
+.demo-overflow {
+  div {
+    height: 120px;
+  }
+}
+
 // BACKGROUND
 .demo-bg {
   div {
-    @include apply( flex, ai-center, jc-center );
+    @include display-flex
+    align-items: center;
+    justify-content: center;
     width: 75px;
     height: 50px;
     margin-bottom: 4px;

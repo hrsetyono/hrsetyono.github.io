@@ -1,0 +1,30 @@
+<h1>Visibility</h1>
+
+<article>
+  Hide / Show an element depending on the screen size
+</article>
+
+<table class="demo-visibility">
+  <script>
+    [
+      [ '.hide-for-l / .hide-for-s / .hide-for-xs', `<pre>                 L      S     XS
+
+.hide-for-l      -      ✓     ✓
+.hide-for-s      ✓      -     -
+.hide-for-m      ✓      ✓     -</pre>`, [
+        '✓ = displayed',
+        '- = hidden',
+        '',
+        'L = Large screen >768px',
+        'S = Small screen <=768px',
+        'XS = Extra small screen <=480px'
+      ] ],
+      [ '.show-for-l / .show-for-s / .show-for-xs', `<pre>                 L      S     XS
+
+.show-for-l      ✓      -     -
+.show-for-s      -      ✓     ✓
+.show-for-m      -      -     ✓</pre>`],
+    ]
+  </script>
+</table>
+

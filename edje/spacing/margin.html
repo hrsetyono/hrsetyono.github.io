@@ -1,0 +1,49 @@
+<h1>Margin</h1>
+
+<article>
+  Customizable in variable `$margin-classes`. Every item will be made into 7 classes covering all margin directions.
+</article>
+
+<table class="demo-spacing">
+  <script>
+    [
+      [ '.m-x / .mv-x / .mh-x / .mt-x / .mr-x / .mb-x / .ml-x', `Replace x with: <br>
+<div> <code>025</code> <span>0.25rem</span> </div>
+<div> <code>05</code> <span>0.5rem</span> </div>
+<div> <code>075</code> <span>0.75rem</span> </div>
+
+<div> <code>1&nbsp;</code> <span>1rem</span> </div>
+<div> <code>15</code> <span>1.5rem</span> </div>
+
+<div> <code>2&nbsp;</code> <span>2rem</span> </div>
+<div> <code>25</code> <span>2.5rem</span> </div>
+<div> <code>3&nbsp;</code> <span>3rem</span> </div>
+<div> <code>4&nbsp;</code> <span>4rem</span> </div>
+<div> <code>5&nbsp;</code> <span>5rem</span> </div>
+      `, [
+        'margin: x',
+        'margin-top: x; margin-bottom: x',
+        'margin-right: x; margin-left: x',
+        'margin-top: x',
+        'margin-right: x',
+        'margin-bottom: x',
+        'margin-left: x'
+      ] ],
+      [ '.m:m-x / .m:mv-x / …', 'Margin below Medium screen (< 960px)', [
+        '@include below(m) {',
+        '&nbsp …',
+        '}'
+      ] ],
+      [ '.s:m-x-s / .s:mv-x / …', 'Margin below Small screen (< 768px)', [
+        '@include below(s) {',
+        '&nbsp …',
+        '}'
+      ] ],
+      [ '.xs:m-x / .xs:mv-x / …', 'Margin below Extra small screen (< 480px)', [
+        '@include below(xs) {',
+        '&nbsp …',
+        '}'
+      ] ]
+    ]  
+  </script>
+</table>
