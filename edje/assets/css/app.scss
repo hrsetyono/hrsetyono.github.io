@@ -5,16 +5,14 @@
 ///
 
 @mixin highlight {
-  display: block;
   padding: 0.25em 0.5em;
   background-color: rgba(black, .1);
 }
 
-#wrapper {
-  padding: 2em 0;
-}
 
-main {
+pre code {
+  background-color: transparent;
+  padding: 0;
 }
 
 h1 {
@@ -50,7 +48,7 @@ th {
   letter-spacing: 100;
 }
 
-th:first-child { width: 15%; }
+th:first-child { width: 20%; }
 th:nth-child(2) { width: 30%; }
 
 td:first-child,
@@ -60,6 +58,7 @@ td:nth-child(2) {
 
 td:first-child {
   font-weight: 600;
+  font-size: 15px;
 }
 
 td:nth-child(2) {
@@ -75,7 +74,7 @@ td:nth-child(3) {
 
 ///// SIDEBAR
 
-aside {
+.sidebar {
   line-height: 1.7;
 
   strong {
@@ -84,15 +83,27 @@ aside {
     text-transform: uppercase;
   }
 
-  ul {
-    padding-left: 1.5em;
+  li {
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   a {
     display: block;
     position: relative;
+    padding: 0 .5em;
+    border: 1px solid rgba($color-sub, .5);
+    background-color: rgba($color-sub, .1);
+    border-radius: $g-radius;
 
-    &:hover { text-decoration: underline; }
+    &:hover {
+      background-color: rgba($color-sub, .3);
+    }
+    
+    &.active {
+      background-color: rgba($color-sub, .5);
+    }
   }
 }
 
@@ -100,6 +111,10 @@ aside {
 ///// PAGE
 
 .demo-display {
+  span {
+    display: block;
+  }
+
   span, p {
     @include highlight;
   }
@@ -222,5 +237,17 @@ aside {
 .demo-height {
   section {
     height: 300px;
+  }
+}
+
+.demo-hover {
+  div {
+    @include display-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 50px;
+    background-color: rgba(black, .1);
   }
 }

@@ -18,7 +18,8 @@
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
-<div id="wrapper">
+
+<div class="pv05 bg-main mb1"></div>
 
 <h-grid>
 <main class="col-9" id="content">
@@ -27,17 +28,17 @@
 
 </main>
 
-<aside class="col-3 b-1 b--black05 p-1">
+<aside class="sidebar / col-3 b1 b-black05 p1">
   <nav>
     <strong>Home</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/">Home</a> </li>
-      <li> <a href="#/installation">Installation</a> </li>
-      <li> <a href="#/customization">Customization</a> </li>
+      <li> <a href="#/home/install">Installation</a> </li>
+      <li> <a href="#/home/custom">Customization</a> </li>
     </ul>
 
     <strong>Layout</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/layout/grid">Grid</a> </li>
       <li> <a href="#/layout/tile">Tile</a> </li>
       <li> <a href="#/layout/position">Position</a> </li>
@@ -45,52 +46,65 @@
     </ul>
 
     <strong>Display</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/display/display">Display Type</a> </li>
       <li> <a href="#/display/flexbox">Flexbox</a> </li>
       <li> <a href="#/display/overflow">Overflow</a> </li>
-      <li> <a href="#/display/visibility">Media Query Visibility</a> </li>
+      <li> <a href="#/display/visibility">Visibility</a> </li>
+      <li> <a href="#/display/cursor">Cursor</a> </li>
     </ul>
 
     <strong>Spacing</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/spacing/padding">Padding</a> </li>
       <li> <a href="#/spacing/margin">Margin</a> </li>
       <li> <a href="#/spacing/border">Border</a> </li>
     </ul>
  
     <strong>Sizing</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/sizing/width">Width</a> </li>
       <li> <a href="#/sizing/height">Height</a> </li>
     </ul>
 
     <strong>Typography</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/typography/color">Color</a> </li>
       <li> <a href="#/typography/font-size">Font Size</a> </li>
-      <li> <a href="#/typography/font-weight">Font Weight & Style</a> </li>
+      <li> <a href="#/typography/font">Font Misc</a> </li>
       <li> <a href="#/typography/letter-spacing">Letter Spacing</a> </li>
+      <li> <a href="#/typography/list">List</a> </li>
       <li> <a href="#/typography/misc">Misc</a> </li>
     </ul>
 
     <strong>Theme</strong>
-    <ul>
+    <ul class="flex flex--wrap">
       <li> <a href="#/theme/background">Background</a> </li>
       <li> <a href="#/theme/opacity">Opacity</a> </li>
       <li> <a href="#/theme/shadow">Shadow</a> </li>
+      <li> <a href="#/theme/hover">Hover</a> </li>
     </ul>
     
   </nav>
 </aside>
 </h-grid>
 
+<footer class="main-footer / mt2 fs-small">
 
-</div> <!-- wrapper-->
+  <h-grid>
+    <div class="col-12 bt1 b-black05 pv1">
+      <p>© 2018 Pixel Studio Indonesia</p>
+    </div>
+  </h-grid>
+
+  <div class="pv05 bg-sub mt2"></div>
+</footer>
+
+
 
 <script src="assets/js-vendor/jquery.min.js"></script>
 <script src="assets/js-vendor/navigo.min.js"></script>
-<script src="assets/js-vendor/markdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>

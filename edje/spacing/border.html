@@ -3,29 +3,29 @@
 <article>
   Customizable in variable `$border-width-classes`.
   
-  Every item in the list will add many classes to cover all directions and responsive. `b-x`, `bt-x`, `bb-x`, `bl-x`, and `br-x`.
+  Every item in the list will add many classes to cover all directions and responsive. `bx`, `btx`, `bbx`, `blx`, and `brx`.
 </article>
 
 <table class="demo-border">
   <script>
     [
-      [ '.b-1 / .b-2', '<div class="b-1"></div>', [
+      [ '.b1 / .b2', '<div class="b1"></div>', [
         'border: 1px solid',
         'border: 2px solid'
       ] ],
-      [ '.bt-1 / .bt-2 ', '<div class="bt-1"></div>', [
+      [ '.bt1 / .bt2 ', '<div class="bt1"></div>', [
         'border-top: 1px solid',
         'border-top: 2px solid',
       ] ],
-      [ '.bb-1 / .bb-2', '<div class="bb-1"></div>', [
+      [ '.bb1 / .bb2', '<div class="bb1"></div>', [
         'border-bottom: 1px solid',
         'border-bottom: 2px solid',
       ] ],
-      [ '.br-1 / .br-2', '<div class="br-1"></div>', [
+      [ '.br1 / .br2', '<div class="br1"></div>', [
         'border-right: 1px solid',
         'border-right: 2px solid',
       ] ],
-      [ '.bl-1 / .bl-2', '<div class="bl-1"></div>', [
+      [ '.bl1 / .bl2', '<div class="bl1"></div>', [
         'border-left: 1px solid',
         'border-left: 2px solid',
       ] ],
@@ -42,10 +42,10 @@
 <table class="demo-border">
   <script>
     [
-      [ '.b--dashed', '<div class="b-2 b--dashed"></div>', [
+      [ '.b-dashed', '<div class="b2 b-dashed"></div>', [
         'border-style: dashed',
       ] ],
-      [ '.b--dotted', '<div class="b-2 b--dotted"></div>', [
+      [ '.b-dotted', '<div class="b2 b-dotted"></div>', [
         'border-style: dotted',
       ] ],
     ]
@@ -61,17 +61,17 @@
 <table class="demo-border">
   <script>
     [
-      [ '.b--main', '<div class="b-2 b--main"></div>', [
+      [ '.b-main', '<div class="b2 b-main"></div>', [
         'border-color: $color-main',
       ] ],
-      [ '.b--sub', '<div class="b-2 b--sub"></div>', [
+      [ '.b-sub', '<div class="b2 b-sub"></div>', [
         'border-color: $color-sub',
       ] ],
-      [ '.b--transparent', '<div class="b-2 b--transparent"></div>', [
+      [ '.b-transparent', '<div class="b2 b-transparent"></div>', [
         'border-color: transparent',
       ] ],
-      [ '.b--black75 / .b--black50 / .b--black25 / .b--black10 / .b--black025 / .b--black01',
-      '<div class="b-2 b--black50"></div>', [
+      [ '.b-black75 / .b-black50 / .b-black25 / .b-black10 / .b-black025 / .b-black01',
+      '<div class="b2 b-black50"></div>', [
         'border-color: rgba(black, .75)',
         'border-color: rgba(black, .50)',
         'border-color: rgba(black, .25)',
@@ -79,8 +79,8 @@
         'border-color: rgba(black, .025)',
         'border-color: rgba(black, .01)',
       ] ],
-      [ '.b--white75 / .b--white50 / .b--white25 / .b--white10 / .b--white025 / .b--white01',
-      '<div class="b-2 b--white50 shadow-2"></div> (Shadow is added to make the white border visible)', [
+      [ '.b-white75 / .b-white50 / .b-white25 / .b-white10 / .b-white025 / .b-white01',
+      '<div class="b2 b-white50 shadow-2"></div> (Shadow is added to make the white border visible)', [
         'border-color: rgba(white, .75)',
         'border-color: rgba(white, .50)',
         'border-color: rgba(white, .25)',
@@ -98,13 +98,13 @@
 <table class="demo-border-radius">
   <script>
     [
-      [ '.br', '<div class="b-2 br"></div>', [
+      [ '.br', '<div class="b2 br"></div>', [
         'border-radius: $g-radius',
       ] ],
-      [ '.br-circle', '<div class="b-2 br-circle"></div>', [
+      [ '.brcircle', '<div class="b2 brcircle"></div>', [
         'border-radius: 50%',
       ] ],
-      [ '.br-pill', '<div class="b-2 br-pill"></div>', [
+      [ '.brpill', '<div class="b2 brpill"></div>', [
         'border-radius: 9999px',
       ] ]
     ]

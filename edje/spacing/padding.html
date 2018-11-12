@@ -7,21 +7,18 @@
 <table class="demo-spacing">
   <script>
     [
-      [ '.p-x / .pv-x / .ph-x / .pt-x / .pr-x / .pb-x / .pl-x', `Replace x with: <br>
+      [ '.px / .pvx / .phx / .ptx / .prx / .pbx / .plx', `Replace x with: <br>
+<div> <code>0</code> <span>0</span> </div>
 <div> <code>025</code> <span>0.25rem</span> </div>
 <div> <code>05</code> <span>0.5rem</span> </div>
 <div> <code>075</code> <span>0.75rem</span> </div>
 
 <div> <code>1&nbsp;</code> <span>1rem</span> </div>
-<div> <code>125</code> <span>1.25rem</span> </div>
 <div> <code>15</code> <span>1.5rem</span> </div>
-<div> <code>175</code> <span>1.75rem</span> </div>
 
 <div> <code>2&nbsp;</code> <span>2rem</span> </div>
-<div> <code>25</code> <span>2.5rem</span> </div>
 <div> <code>3&nbsp;</code> <span>3rem</span> </div>
 <div> <code>4&nbsp;</code> <span>4rem</span> </div>
-<div> <code>5&nbsp;</code> <span>5rem</span> </div>
       `, [
         'padding: x',
         'padding-top: x; padding-bottom: x',
@@ -31,21 +28,11 @@
         'padding-bottom: x',
         'padding-left: x'
       ] ],
-      [ '.m:p-x / .m:pv-x / …', 'Padding below Medium screen (< 960px)', [
-        '@include below(m) {',
-        '&nbsp …',
-        '}'
-      ] ],
-      [ '.s:p-x / .s:pv-x / …', 'Padding below Small screen (< 768px)', [
+      [ '.s:px / .s:pvx / …', 'Padding below Small screen (< 768px)', [
         '@include below(s) {',
         '&nbsp …',
         '}'
       ] ],
-      [ '.xs:p-x / .xs:pv-x / …', 'Padding below Extra small screen (< 480px)', [
-        '@include below(xs) {',
-        '&nbsp …',
-        '}'
-      ] ]
     ]  
   </script>
 </table>

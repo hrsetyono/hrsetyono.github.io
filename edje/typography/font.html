@@ -1,4 +1,23 @@
-<h1>Font Weight & Styles</h1>
+<h1>Font Family</h1>
+
+<article>
+  Customizable in variable `$font-family-classes`.
+</article>
+
+<table>
+  <script>
+    [
+      [ '.ff-body', '<h4 class="ff-body">This is a H4 and we apply Body font here</h4>', [
+        'font-family: $font-family'
+      ] ],
+      [ '.ff-header', '<p class="ff-header">This is a paragraph and we apply Header font here</p>', [
+        'font-family: $font-family-header'
+      ] ],
+    ]  
+  </script>
+</table>
+
+<h1>Font Weight</h1>
 
 <table>
   <script>
@@ -18,7 +37,15 @@
       [ '.fw-900', '<div class="fw-900">BLACK Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo consectetur.</div>', [
         'font-weight: 900'
       ] ],
-      [ ],
+    ]
+  </script>
+</table>
+
+<h1>Font Style & Decoration</h1>
+
+<table>
+  <script>
+    [
       [ '.i', '<div class="i">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>', [
         'font-style: italic'
       ] ],
@@ -28,6 +55,6 @@
       [ '.td-strike / .td-line', '<div class="td-strike">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>', [
         'text-decoration: line-through'
       ] ],
-    ]
+    ]  
   </script>
 </table>

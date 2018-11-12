@@ -5,7 +5,10 @@ const ROUTER = new Navigo( null, true, '#' );
 $( document ).ready( function() {
   Route.init();
   
-  console.log('router');
+  var host = 'hrsetyono.github.io';
+  if( (host == window.location.host) && (window.location.protocol != 'https:') ) {
+    window.location.protocol = 'https';
+  }
 });
 
 /*
@@ -31,8 +34,8 @@ var Route = {
   },
 
   _render( page, parent ) {
+    var linkTarget = `#/${ parent }/${ page }`;
     var filePath = parent ? `${ parent }/${ page }.html` : `${ page }.html`;
-    console.log(filePath);
 
     $.get( filePath, (data) => {
       $('#content').html( data );
@@ -41,6 +44,10 @@ var Route = {
 
       // scroll to top
       window.scrollTo(0, 0);
+
+      // set active state to link
+      $('.sidebar a').removeClass('active');
+      $(`a[href="${ linkTarget }"]`).addClass('active');
     } );
   },
 };
@@ -83,7 +90,7 @@ function parseTable() {
 
 function parseArticle() {
   $('article').each( function() {
-    var result = markdown.toHTML( $(this).html() );
+    var result = marked( $(this).html() );
     $(this).html( result );
   });
 }

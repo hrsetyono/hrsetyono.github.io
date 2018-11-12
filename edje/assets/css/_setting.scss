@@ -21,9 +21,9 @@ $color-passive-light: #f3f6f8;
 // $color-green : #4caf50;
 $color-blue: #2196f3;
 
+$color-link : $color-main;
+$color-link-hover : lighten($color-link, 20%);
 
-// $color-link : $color-blue;
-// $color-link-hover : lighten($color-blue, 10%);
 
 // $body-background: #fff;
 // $text-highlight: null;

@@ -4,54 +4,60 @@
 
 Edje is a **Functional CSS framework**. Instead of writing semantic class name, we use many single-purpose classes like `.ta-center` to center text and `.p-1` to add 1em padding.
 
-NOTICE: We're working on the design for this documentation. Currently it's still rough, but it gets the jobs done :)
+To make it clearer, here's how most of us write CSS:
 
-For example, here's how most of us write CSS:
+```
+<div class="page-thumbnail"> </div>
+
+.page-thumbnail {
+    background-color: red;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+```
+
+Using **Edje framework**, we wrote it like this:
+
+```
+<div class="bg-red b-2 b--black50 p-1"> </div>
 
 
-    <div class="page-thumbnail"> </div>
-
-    .page-thumbnail {
-      background-color: red;
-      border: 2px solid rgba(0, 0, 0, 0.5);
-      padding: 1em;
-    }
-
-Using Edje framework, we wrote it like this:
-
-    <div class="bg-red b-2 b--black50 p-1"> </div>
-
-
-    .bg-red { background-color: red; }
-    .b-2 { border: 2px solid; }
-    .b--black50 { border-color: rgba(0,0,0, .5); }
-    .p-1 { padding: 1em; }
+.bg-red { background-color: red; }
+.b-2 { border: 2px solid; }
+.b--black50 { border-color: rgba(0,0,0, .5); }
+.p-1 { padding: 1em; }
+```
 
 Those mini classes are already provided by the framework. As you can see, we wrote less CSS by writing more in the HTML. It sounds like a bad practice, but it has been proven to have more benefits such as:
 
-- Easier for your team to be in the same page. By just reading the class, they can roughly know how it is styled.
+- **Better understanding in team**. By just reading the class, they can roughly know how it is styled.
 
-- Safer to change an element's styling on the fly. You don't need to be afraid of breaking `.page-thumbnail` in other pages.
+- **Safer to update**. When we modify an existing CSS, we often afraid to break things on other pages, not the case with Functional CSS.
 
-- [Read more here](https://www.mikecr.it/ramblings/functional-css/)
+- **Faster development** - You might say using full-fledged framework like Bootstrap is faster. But from my experience, I spent longer time trying to override or customize their default styling.
 
-This is a whole new way on doing front-end development and it's hard to swallow without trying it firsthand. So go ahead and try it on [this Codepen](https://codepen.io/hrsetyono/pen/XyJary/).
+- **Fun**. Yeah I know that this is subjective. For me and other Functional CSS users, combining a bunch of small things to create larger entity is enjoyable, .
 
-## Installation
+- [Read more here]()
 
-1. Install [Node JS](https://nodejs.org/en/download/).
 
-1. There are 4 global packages required. Run these commands below one by one.
+**But it's not DRY!**
 
-    ```
-    npm install -g node-sass
-    npm install -g edje
-    ```
+If you are writing plain HTML, then sure it is not DRY. But with many templating engine available, you can easily create reusable element.
 
-1. If you are on Windows, add **NODE_PATH** to your System Variable and set it to **%AppData%/npm/node_modules**.
+This is a whole new way on doing front-end development and it's hard to swallow without trying it firsthand. So go ahead and give it a quick try on [this Codepen](https://codepen.io/hrsetyono/pen/XyJary/).
 
-1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
+-----
 
-## Starter Boilerplate
+## Read More
+
+1. [Installation & Boilerplate](#/home/install)
+1. [Customization](#/home/custom)
+
+
+### Credit
+
+- [Mike CR](https://www.mikecr.it/ramblings/functional-css/) for convincing me to give this model a try.
+- Adam Moore - For making [Tachyon CSS](http://welcome.indihome.co.id/landing-page) the basis of my framework.
 
 </article>

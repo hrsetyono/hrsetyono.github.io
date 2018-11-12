@@ -1,0 +1,57 @@
+<h1>Hover</h1>
+
+<table class="demo-hover">
+<script>
+  [
+    [ '[class*="hover-"]', ``, [
+      'cursor: pointer',
+      'transition: $g-transition',
+      'backface-visibility: hidden'
+    ] ],
+    [ '.hover-dim', `<div class="hover-dim">Hover Me</div>`, [
+      ':hover { opacity: .6 }',
+      ':active { opacity: .8 }',
+    ] ],
+    [ '.hover-grow', `<div class="hover-grow">Hover Me</div>`, [
+      ':hover { transform( scale(1.05) ) }',
+      ':active { transform( scale(1) ) }'
+    ] ],
+    [ '.hover-u', `<a class="hover-u" href="https://pixelstudio.id">Click Me</a>`, [
+      ':hover { text-decoration: underline }'
+    ] ]
+    [ '.hover-shadow-0 / .hover-shadow-1 / ...',
+      `<p class="mb05 fs-small">All items from <code>$shadow-classes</code> are available. Except the responsive classes.</p>
+      <h-tile class="tile-4">
+        <div class="hover-shadow-0">Shadow-0</div>
+        <div class="hover-shadow-1">Shadow-1</div>
+        <div class="hover-shadow-2">Shadow-2</div>
+        <div class="hover-shadow-3">Shadow-3</div>
+      </h-tile-4>`, [
+      ':hover { box-shadow: $shadow-z0 }',
+      ':hover { box-shadow: $shadow-z1 }',
+      '...'
+    ] ],
+    [ '.hover-bg-main / .hover-bg-sub / ... ',
+    `<p class="mb05 fs-small">All items from <code>$background-classes</code> are available. Except the responsive classes.</p>
+    <h-tile class="tile-3">
+      <div class="hover-bg-main">Bg-main</div>
+      <div class="hover-bg-sub">Bg-sub</div>
+    </h-tile>`, [
+      ':hover { background-color: $color-main }',
+      ':hover { background-color: $color-sub }',
+      '...'
+    ] ],
+    [ '.hover-c-main / .hover-c-sub / ... ',
+    `<p class="mb05 fs-small">All items from <code>$color-classes</code> are available. Except the responsive classes.</p>
+    <h-tile class="tile-3">
+      <div class="hover-c-red">C-red</div>
+      <div class="hover-c-white50">C-white50</div>
+    </h-tile>`, [
+      ':hover { color: $color-red }',
+      ':hover { color: rgba(white, .5) }',
+      '...'
+    ] ]
+    
+  ]
+</script>
+</table>
