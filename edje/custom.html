@@ -1,0 +1,88 @@
+<h1>Customization</h1>
+
+<article>
+
+Across the documentation we mentioned whether it is customizable via variable or not. When it does, simply open `_settings.scss`, uncomment it, and add extra item to the list.
+
+**Note**: Since the list might refer to a variable, you need to uncomment that variable too.
+
+**EXAMPLE:**
+
+We want to add a new font family. As written in the documentation, we need to find and override `$h-font-family` in `_setting.scss`:
+
+``` sass
+$h-font-family: (
+  names: ( ff-: font-family ),
+  values: (
+    body: $font-family,
+    header: $font-family-header
+  )
+);
+```
+
+The variable are divided into two main parts: (1) `names` - The base shorthand and CSS properties (2) `values` - Postfix for the shorthand and the CSS value.  Edje will pair each name to each value. In this case, it will create two styles: `ff-body` and `ff-header`.
+
+Let's add in a new font:
+
+```sass
+$h-font-family: (
+  names: ( ff-: font-family ),
+  values: (
+    body: $font-family,
+    header: $font-family-header,
+    script: "Papyrus"
+  )
+);
+```
+
+Save it, compile the Sass, and now you can use `ff-script` to apply Papyrus font.
+
+```sass
+.page-title {
+  @include h( ff-script );
+}
+```
+
+## Direct Format
+
+Few of the variables doesn't use Name-Value pair, instead it directly specify the Class name and its CSS style like below:
+
+```sass
+$h-border-radius: (
+  br: ( border-radius: $g-radius ),
+  br-circle: ( border-radius: 50% ),
+  br-pill: ( border-radius: 999px ),
+);
+```
+
+Calling `br-circle` will give me `border-radius: 50%;` style.
+
+## Pseudoselector Format
+
+Specify the styling for any pseudoselector with this format:
+
+```sass
+name: (
+  ":hover": ( ... ),
+  ":active": ( ... ),
+  "::before": ( ... ),
+),
+```
+
+You can see it in action in `$h-hover` variable:
+
+```sass
+$h-hover: (
+  hover-dim: (
+    ':hover': ( opacity: .6 ),
+    ':active': ( opacity: .8 ),
+  ),
+  hover-grow: (
+    ':hover': ( '-webkit-transform': scale(1.05), transform: scale(1.05) ),
+    ':active': ( '-webkit-transform': scale(1), transform: scale(1) ),
+  ),
+  hover-u: ( ':hover': ( text-decoration: underline ) ),
+);
+```
+
+</article>

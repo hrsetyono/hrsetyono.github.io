@@ -1,60 +1,75 @@
 <h1>Color</h1>
 
 <article>
-  Customizable in variable `$color-classes`.
+  Customizable in variable `$h-color`.
 </article>
 
-<table>
-  <script>
-    [
-      [ '.c-body', `<p class="c-body"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`, [
-        'color: $font-color',
-      ] ],
-      [ '.c-passive', `<p class="c-passive"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
-        'color: $font-color-passive',
-      ] ],
-      [ '.c-main', `<p class="c-main"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>`, [
-        'color: $color-main',
-      ] ],
-      [ '.c-main-dark', `<p class="c-main-dark"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>`, [
-        'color: $color-main-dark',
-      ] ],
-      [ '.c-main-light', `<p class="c-main-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`, [
-        'color: $color-main-light',
-      ] ],
-      [ '.c-sub', `<p class="c-sub"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
-        'color: $color-sub',
-      ] ],
-      [],
-      [ '.c-red / .c-green / .c-blue / .c-yellow',
-        `<p class="c-red"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>
-        <p class="c-green"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>
-        <p class="c-blue"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>
-        <p class="c-yellow"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`, [
-        'color: $color-red',
-        'color: $color-green',
-        'color: $color-blue',
-        'color: $color-yellow',
-      ] ],
-      [ '.c-black / .c-black75 / .c-black50',
+<table class="demo-color"> <script>
+  [
+    [ 'c-body',
+      `<p class="c-body"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`,
+      `color: $font-color`,
+    ],
+    [ 'c-passive',
+      `<p class="c-passive"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`,
+      `color: $font-color-passive`
+    ],
+    [ 'c-inherit',
+      `<p class="c-inherit"> Color will be the same as its parent, useful to reset Anchor color </p>`,
+      'color: inherit'
+    ],
+
+    [],
+
+    [ 'c-main / c-main75 / c-main50',
+      `<p class="c-main"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>
+      <p class="c-main75"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>
+      <p class="c-main50"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>`,
+
+      `color: $color-main`,
+    ],
+    
+    [ 'c-main-dark',
+      `<p class="c-main-dark"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>`,
+      `color: $color-main-dark`,
+    ],
+    [ 'c-main-light',
+      `<p class="c-main-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>`,
+      `color: $color-main-light`,
+    ],
+    [ 'c-sub',
+      `<p class="c-sub"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`,
+      `color: $color-sub`
+    ],
+    [],
+    [ 'c-red / c-green / c-blue / c-yellow',
+      `<p class="c-red"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus perferendis eaque. </p>
+      <p class="c-green"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In distinctio eos temporibus?</p>
+      <p class="c-blue"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis quia distinctio. </p>
+      <p class="c-yellow"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe expedita perspiciatis ea. </p>`,
+
+      `color: $color-red
+      color: $color-green
+      color: $color-blue
+      color: $color-yellow`
+    ],
+    [ 'c-black / c-black75 / c-black50',
       `<p class="c-black">Lorem ipsum dolor sit amet</p>
       <p class="c-black75">Lorem ipsum dolor sit amet</p>
-      <p class="c-black50">Lorem ipsum dolor sit amet</p>
-      `, [
-        'color: black',
-        'color: rgba(black, .75)',
-        'color: rgba(black, .5)',
-      ] ],
-      [ '.c-white / .c-white75 / .c-white50',
-      `<section class="bg-black75 p1">
-      <p class="c-white">Lorem ipsum dolor sit amet</p>
-      <p class="c-white75">Lorem ipsum dolor sit amet</p>
-      <p class="c-white50">Lorem ipsum dolor sit amet</p>
-      </section>`, [
-        'color: white',
-        'color: rgba(white, .75)',
-        'color: rgba(white, .5)',
-      ] ],
-    ]
-  </script>
-</table>
+      <p class="c-black50">Lorem ipsum dolor sit amet</p>`,
+      `color: black
+      color: rgba(black, .75)
+      color: rgba(black, .5)`
+    ],
+    [ 'c-white / c-white75 / c-white50',
+      `<section>
+        <p class="c-white">Lorem ipsum dolor sit amet</p>
+        <p class="c-white75">Lorem ipsum dolor sit amet</p>
+        <p class="c-white50">Lorem ipsum dolor sit amet</p>
+      </section>`,
+      `color: white
+      color: rgba(white, .75)
+      color: rgba(white, .5)`
+    ],
+  ]
+</script> </table>

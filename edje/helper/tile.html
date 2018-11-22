@@ -1,0 +1,113 @@
+<h1>Tile</h1>
+
+<article>
+
+Create horizontally-stacked list that are evenly sized. Will wrap to next line when overflowing.
+
+It starts with our custom element `<h-tile>` and **any children** directly under it will become list items.
+
+```html
+<h-tile class="tile-3 small-tile-2">
+  <div> 1 </div>
+  <div> 2 </div>
+  <div> 3 </div>
+  <div> 4 </div>
+  <div> 5 </div>
+</h-tile>
+```
+
+![Edje Grid - Tile](https://cdn.setyono.net/edge/grid-tile.jpg)
+
+-----
+
+</article>
+
+<h3>Classes</h3>
+
+<table class="demo-tile"> <script>
+  [
+    [ '&lt;h-tile&gt;',
+      `<h-tile class="tile-2">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </h-tile>`,
+      `display: -ms-grid
+      display: grid
+      grid-template-columns: repeat( $per_row, 1fr )
+      grid-column-gap: 20px
+      grid-row-gap: 20px
+
+      > * {
+      &nbsp; grid-column: span 1
+      }`
+    ],
+    [ '.collapse',
+      `<h-tile class="tile-2 collapse">
+        <span>.</span><span>.</span><span>.</span><span>.</span>  
+      </h-tile>`,
+      `grid-column-gap: 0`
+    ],
+    [ '.tile-2 / .tile-3 / .tile-4 / … / .tile-8',
+      `<h-tile class="tile-4">
+        <span>.tile-4</span><span>.</span><span>.</span><span>.</span>
+      </h-tile>`,
+      `grid-template-columns: repeat( 2, 1fr )
+      grid-template-columns: repeat( 3, 1fr )
+      grid-template-columns: repeat( 4, 1fr )
+      ...
+      grid-template-columns: repeat( 8, 1fr )`
+    ],
+
+    [ '/ .small-tile-2 / .small-tile-3 / .small-tile-4 / ... / .small-tile-8',
+      `<h-tile class="tile-3 small-tile-2">
+        <span>.tile-3 .small-tile-2</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </h-tile>
+      Without specifying small tile, each item will become 100% width on <768px screen`,  
+      `@include below(s) {
+      &nbsp; grid-template-columns: repeat( 2, 1fr )
+      &nbsp; grid-template-columns: repeat( 3, 1fr )
+      &nbsp; grid-template-columns: repeat( 4, 1fr )
+      &nbsp; ...
+      &nbsp; grid-template-columns: repeat( 8, 1fr )
+      }`
+    ],
+  ]
+</script> </table>
+
+
+<h2>Sass Mixins</h2>
+
+<article>
+```
+tile()
+  $per_row      (int) Amount of items on each row
+  $per_row_s    (int) For small screen <=768px
+  $per_row_xs   (int) For mini screen <=480px
+  $gap          (px) Distance between block
+  $collapse     (bool) Close the gap, default: false
+```
+
+This mixin should only be applied on `<h-tile>` element.
+
+**EXAMPLE**
+
+```html
+<h-tile class="product-tile">
+  <div> ... </div>
+  <div> ... </div>
+</h-tile>
+```
+
+```sass
+.product-tile {
+  @include tile(6, 4, 2);
+}
+```
+</article>

@@ -2,30 +2,28 @@
 <h1>Opacity</h1>
 
 <article>
-  Customizable in variable `$opacity-classes`.
+  Customizable in variable `$h-opacity`.
 </article>
 
-<table class="demo-bg">
-  <script>
-    [
-      [ '.o100 / .o90 / .o80 / .o70 / .o60 / .o50 / .o0',
-      `<section class="flex">
-        <div class="bg-main o100 c-sub">.o100</div>
-        <div class="bg-main o90 c-sub">.o90</div>
-        <div class="bg-main o80 c-sub">.o80</div>
-        <div class="bg-main o70 c-sub">.o70</div>
-        <div class="bg-main o60 c-sub">.o60</div>
-        <div class="bg-main o50 c-sub">.o50</div>
-        <div class="bg-main o0 c-sub">.o0</div>
-      </section>`, [
-        'opacity: 1',
-        'opacity: .9',
-        'opacity: .8',
-        'opacity: .7',
-        'opacity: .6',
-        'opacity: .5',
-        'opacity: 0',
-      ] ],
-    ]
-  </script>
-</table>
+<table class="demo-opacity"> <script>
+  [
+    [ ' o100 /  o90 /  o80 /  o70 /  o60 /  o50 /  o0',
+    `<section>
+      <div class="  o100 "> o100</div>
+      <div class="  o90 "> o90</div>
+      <div class="  o80 "> o80</div>
+      <div class="  o70 "> o70</div>
+      <div class="  o60 "> o60</div>
+      <div class="  o50 "> o50</div>
+      <div class="  o0 "> o0</div>
+    </section>`,
+      `opacity: 1
+      opacity: .9
+      opacity: .8
+      opacity: .7
+      opacity: .6
+      opacity: .5
+      opacity: 0`
+    ],
+  ]
+</script> </table>

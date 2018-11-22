@@ -1,38 +1,33 @@
 <h1>Padding</h1>
 
 <article>
-  Customizable in variable `$padding-classes`. Every item will be made into 7 classes covering all padding directions.
+  Customizable in variable `$h-padding`.
+  
+  Every item will be made into 7 classes that covers all directions including vertical (top + bottom) and horizontal (right + left).
 </article>
 
-<table class="demo-spacing">
-  <script>
-    [
-      [ '.px / .pvx / .phx / .ptx / .prx / .pbx / .plx', `Replace x with: <br>
-<div> <code>0</code> <span>0</span> </div>
-<div> <code>025</code> <span>0.25rem</span> </div>
-<div> <code>05</code> <span>0.5rem</span> </div>
-<div> <code>075</code> <span>0.75rem</span> </div>
+<table class="demo-padding"> <script>
+  [
+    [ 'px / pvx / phx / ptx / prx / pbx / plx',
+    `Replace x with: <br>
+    <div> <code>0</code> <span>0</span> </div>
+    <div> <code>025</code> <span>0.25rem</span> </div>
+    <div> <code>05</code> <span>0.5rem</span> </div>
+    <div> <code>075</code> <span>0.75rem</span> </div>
 
-<div> <code>1&nbsp;</code> <span>1rem</span> </div>
-<div> <code>15</code> <span>1.5rem</span> </div>
+    <div> <code>1&nbsp;</code> <span>1rem</span> </div>
+    <div> <code>15</code> <span>1.5rem</span> </div>
 
-<div> <code>2&nbsp;</code> <span>2rem</span> </div>
-<div> <code>3&nbsp;</code> <span>3rem</span> </div>
-<div> <code>4&nbsp;</code> <span>4rem</span> </div>
-      `, [
-        'padding: x',
-        'padding-top: x; padding-bottom: x',
-        'padding-right: x; padding-left: x',
-        'padding-top: x',
-        'padding-right: x',
-        'padding-bottom: x',
-        'padding-left: x'
-      ] ],
-      [ '.s:px / .s:pvx / …', 'Padding below Small screen (< 768px)', [
-        '@include below(s) {',
-        '&nbsp …',
-        '}'
-      ] ],
-    ]  
-  </script>
-</table>
+    <div> <code>2&nbsp;</code> <span>2rem</span> </div>
+    <div> <code>3&nbsp;</code> <span>3rem</span> </div>
+    <div> <code>4&nbsp;</code> <span>4rem</span> </div>`,
+      `padding: x
+      padding-top: x; padding-bottom: x
+      padding-right: x; padding-left: x
+      padding-top: x
+      padding-right: x
+      padding-bottom: x
+      padding-left: x`
+    ],
+  ]  
+</script> </table>

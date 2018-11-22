@@ -1,0 +1,54 @@
+<h1>Media Query</h1>
+
+<article>
+
+```
+below( $size ) { }
+above( $size ) { }
+between( $smaller-size, $larger-size ) { }
+```
+
+Possible values for **$size** are:
+
+- `l` - Large screen (1120px).
+- `m` - Medium screen (960px).
+- `s` - Small screen (767px).
+- `xs` - Extra Small screen (480px).
+- Any number in pixel.
+
+**EXAMPLE:**
+
+```sass
+p {
+  @include above(1000px) {
+    color: blue;
+  }
+
+  @include between(s, m) {
+    color: red;
+  }
+
+  @include below(xs) {
+    color: yellow;
+  }
+}
+```
+
+**RESULT:**
+
+```sass
+@media only screen and (min-width: 1001px) {
+  p { color: blue; }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 961px) {
+  p { color: red; }
+}
+
+@media only screen and (min-width: 480px) {
+  p { color: yellow; }
+}
+```
+
+As you may have noticed, when using `above()`, we added 1px to the number. So `above( 1000px )` is translated into `(min-width: 1001px)`.
+</article>

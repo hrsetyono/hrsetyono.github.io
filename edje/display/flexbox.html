@@ -1,35 +1,74 @@
-<h1>Flex Wrapper</h1>
+<h1>Flex</h1>
 
-<table class="demo-display demo-display--flex">
+<table class="demo-display  demo-flex">
   <script>
     [
-      [ '.flex', '<div class="flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
-        'display: -ms-flexbox',
-        'display: -webkit-flex',
+      [ 'flex', '<div class="flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
         'display: flex',
         'width: 100%'
       ] ],
-      [ '.flex--column', '<div class="flex flex--column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
-          'flex-direction: column',
-        ]
-      ],
-      [ '.flex--row-r', '<div class="flex flex--row-r"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+      [ 'flex--column', '<div class="flex--column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+        'flex-direction: column',
+      ] ],
+      [ 'flex--row-reverse', '<div class="flex--row-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
         'flex-direction: row-reverse',
       ] ],
-      [ '.flex--column-r', '<div class="flex flex--column-r"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+      [ 'flex--column-reverse', '<div class="flex--column-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
         'flex-direction: column-reverse',
       ] ],
-      [ '.flex--wrap', '<div class="demo-flex-wrap flex flex--wrap"> <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span>  </div> Check out <a target="_blank" href="https://github.com/hrsetyono/edje/wiki/Tile-System">TILE LAYOUT</a> to achieve this format properly', [
+      [ 'flex--wrap',
+      `<div class="flex--wrap">
+        <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span>
+      </div>
+      Check out <a href="#/classes/tile">Tile System</a> to achieve this format properly`, [
         'flex-wrap: wrap',
       ] ],
-      [ '.ai-start / .ai-end / .ai-center / .ai-baseline / .ai-stretch', '<section class="flex flex--wrap flex--boxed"><div class="flex ai-start" data-title=".ai-start"> <span>.</span><span>.</span><span>.</span></div> <div class="flex ai-end" data-title=".ai-end"><span>.</span><span>.</span><span>.</span></div> <div class="flex ai-center" data-title=".ai-center"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex ai-baseline" data-title=".ai-baseline"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex ai-stretch" data-title=".ai-stretch (default)"> <span>.</span><span>.</span><span>.</span> </div> </section>', [
+      [ 'ai-start / ai-end / ai-center / ai-baseline / ai-stretch',
+        `<h-tile class="tile-3 flex--boxed">
+          <div class="flex ai-start" data-title="ai-start"> 
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          
+          <div class="flex ai-end" data-title="ai-end">  
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          
+          <div class="flex ai-center" data-title="ai-center">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          
+          <div class="flex ai-baseline" data-title="ai-baseline">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          
+          <div class="flex ai-stretch" data-title="ai-stretch (default)">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+        </h-tile>`, [
         'align-items: flex-start',
         'align-items: flex-end',
         'align-items: center',
         'align-items: baseline',
         'align-items: stretch',
       ] ],
-      [ '.jc-start / .jc-end / .jc-center / .jc-baseline / .jc-stretch', '<section class="flex flex--wrap flex--boxed flex--boxed-2"><div class="flex jc-start" data-title=".jc-start (default)"> <span>.</span><span>.</span><span>.</span></div> <div class="flex jc-end" data-title=".jc-end"><span>.</span><span>.</span><span>.</span></div> <div class="flex jc-center" data-title=".jc-center"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex jc-between" data-title=".jc-between"> <span>.</span><span>.</span><span>.</span> </div> <div class="flex jc-around" data-title=".jc-around"> <span>.</span><span>.</span><span>.</span> </div> </section>', [
+      [ 'jc-start / jc-end / jc-center / jc-around / jc-between', 
+        `<h-tile class="tile-3 flex--boxed flex--boxed-2">
+          <div class="flex jc-start" data-title="jc-start (default)">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          <div class="flex jc-end" data-title="jc-end"> 
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          <div class="flex jc-center" data-title="jc-center">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          <div class="flex jc-around" data-title="jc-around">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+          <div class="flex jc-between" data-title="jc-between">
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+        </h-tile>`, [
         'justify-content: flex-start',
         'justify-content: flex-end',
         'justify-content: center',
@@ -47,31 +86,40 @@
   Flex is customizable in variable `$flex-classes`. Order is customizable in variable `$order-classes`.
 </article>
 
-<table class="demo-display demo-display--flex">
+<table class="demo-display demo-flex">
   <script>
     [
-      [ '.flex-1 / .flex-2 / .flex-3 / .flex-4 / .flex-5', '<div class="flex"> <span class="flex-2">.flex-2</span> <span class="flex-3">.flex-3</span> </div> <div class="flex"> <span class="flex-1">.flex-1</span> <span class="flex-4">.flex-4</span> </div>', [
+      [ 'flex1 / flex2 / flex3 / flex4 / flex5',
+      `<div class="flex">
+        <span class="flex2">flex2</span> <span class="flex3">flex3</span>
+      </div>
+      <div class="flex">
+        <span class="flex1">flex1</span> <span class="flex4">flex4</span>
+      </div>
+      Don't use this as page layout, use <a href="#/classes/grid">Grid System</a> instead`, [
         'flex: 1',
         'flex: 2',
         'flex: 3',
         'flex: 4',
         'flex: 5',
       ] ],
-
-      [ '.s:flex-1 / .s:flex-2 / .s:flex-3 / .s:flex-4 / .s:flex-5', '<div class="flex"> <span class="flex-2 s:flex-1">.flex-2 .s:flex-1</span> <span class="flex-3 s:flex-1">.flex-3 .s:flex-1</span> </div> On <768px, the width become 1:1 ratio', [
-        '@include below(s) {',
-        '&nbsp; flex: 1',
-        '&nbsp; flex: 2',
-        '&nbsp; flex: 3',
-        '&nbsp; flex: 4',
-        '&nbsp; flex: 5',
-        '}'
-      ] ],
-      [ '.as-start / .as-end / .as-center / .as-baseline / .as-stretch',
-      `<section class="flex flex--wrap flex--boxed flex--boxed-2">
-        <div class="flex" data-title=".as-start"> <span>.</span><span class="as-start">.as-start</span><span>.</span></div>
-        <div class="flex" data-title=".as-end"> <span>.</span><span class="as-end">.as-end</span><span>.</span></div>
-        <div class="flex" data-title=".as-center"> <span>.</span><span class="as-center">.as-center</span><span>.</span></div>
+      [ 'as-start / as-end / as-center / as-baseline / as-stretch',
+      `<section class="flex--boxed flex--boxed-2 / flex flex-wrap">
+        <div class="flex" data-title="as-start">
+          <span>.</span>
+          <span class="as-start">as-start</span>
+          <span>.</span>
+        </div>
+        <div class="flex" data-title="as-end">
+          <span>.</span>
+          <span class="as-end">as-end</span>
+          <span>.</span>
+        </div>
+        <div class="flex" data-title="as-center">
+          <span>.</span>
+          <span class="as-center">as-center</span>
+          <span>.</span>
+        </div>
       </section>`, [
         'align-self: flex-start',
         'align-self: flex-end',
@@ -80,24 +128,22 @@
         'align-self: stretch',
       ] ],
 
-      [ '.order-last / .order-1 / .order-2 / .order-3 / .order-4 / .order-5', '<section class="flex flex--boxed flex--boxed-2"><div class="flex"> <span class="order-last">.order-last</span> <span>.</span> </div> <div class="flex"> <span class="order-2">.order-2</span> <span class="order-1">.order-1</span> </div>', [
+      [ 'order-last / order1 / order2 / order3 / order4 / order5',
+        `<section class="flex--boxed flex--boxed-2 / flex">
+          <div class="flex">
+            <span class="order-last">.order-last</span>
+            <span>.</span> </div>
+          <div class="flex">
+            <span class="order2">.order2</span>
+            <span class="order1">.order1</span>
+          </div>
+         </section>`, [
         'flex: 9999',
         'flex: 1',
         'flex: 2',
         'flex: 3',
         'flex: 4',
         'flex: 5',
-      ] ],
-
-      [ ' / .s:order-last / .s:order-1 / .s:order-2 / .s:order-3 / .s:order-4 / .s:order-5', '', [
-        '@include below(s) {',
-        '&nbsp; flex: 9999',
-        '&nbsp; flex: 1',
-        '&nbsp; flex: 2',
-        '&nbsp; flex: 3',
-        '&nbsp; flex: 4',
-        '&nbsp; flex: 5',
-        '}'
       ] ],
     ]
   </script>

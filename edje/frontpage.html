@@ -2,62 +2,58 @@
 
 <article>
 
-Edje is a **Functional CSS framework**. Instead of writing semantic class name, we use many single-purpose classes like `.ta-center` to center text and `.p-1` to add 1em padding.
+Edje is a **Functional Sass framework**. Basically we provide many shorthand styles, so instead of writing `padding: 1em`, we just write `p1`.
 
-To make it clearer, here's how most of us write CSS:
+To make it clearer, here's an example of a class definition:
 
-```
-<div class="page-thumbnail"> </div>
-
+```sass
 .page-thumbnail {
-    background-color: red;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    padding: 1em;
+  background-color: red;
+  border: 2px solid rgba(black, 0.5);
+  padding: 1em;
 }
 ```
 
 Using **Edje framework**, we wrote it like this:
 
-```
-<div class="bg-red b-2 b--black50 p-1"> </div>
-
-
-.bg-red { background-color: red; }
-.b-2 { border: 2px solid; }
-.b--black50 { border-color: rgba(0,0,0, .5); }
-.p-1 { padding: 1em; }
+```sass
+.page-thumbnail {
+  @include h( bg-red  b2  b-black50  p1 );
+}
 ```
 
-Those mini classes are already provided by the framework. As you can see, we wrote less CSS by writing more in the HTML. It sounds like a bad practice, but it has been proven to have more benefits such as:
+Those mini styles are defined by Edje and easily customizable by overriding a Sass variable.
 
-- **Better understanding in team**. By just reading the class, they can roughly know how it is styled.
+Some of you might think it's a bad practice to add an abstraction layer to CSS. But we've seen benefits such as:
 
-- **Safer to update**. When we modify an existing CSS, we often afraid to break things on other pages, not the case with Functional CSS.
+- **Compact Codebase** - Easier to skim through the code.
 
 - **Faster development** - You might say using full-fledged framework like Bootstrap is faster. But from my experience, I spent longer time trying to override or customize their default styling.
 
-- **Fun**. Yeah I know that this is subjective. For me and other Functional CSS users, combining a bunch of small things to create larger entity is enjoyable, .
-
-- [Read more here]()
-
-
-**But it's not DRY!**
-
-If you are writing plain HTML, then sure it is not DRY. But with many templating engine available, you can easily create reusable element.
-
-This is a whole new way on doing front-end development and it's hard to swallow without trying it firsthand. So go ahead and give it a quick try on [this Codepen](https://codepen.io/hrsetyono/pen/XyJary/).
+- **Fun**. Yeah I know that this is subjective. But for me, combining a bunch of small things to create larger entity is enjoyable.
 
 -----
 
+## Installation
+
+1. Install [Node JS](https://nodejs.org/en/download/).
+
+1. Run the command `npm install -g node-sass` and `npm install -g edje`.
+
+1. If you are on Windows, add **NODE_PATH** to your System Variable and set it to **%AppData%/npm/node_modules**.
+
+1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
+
+
 ## Read More
 
-1. [Installation & Boilerplate](#/home/install)
-1. [Customization](#/home/custom)
+1. [Customization](#/custom)
+1. [The Grid System](#/layout/grid)
 
 
 ### Credit
 
 - [Mike CR](https://www.mikecr.it/ramblings/functional-css/) for convincing me to give this model a try.
-- Adam Moore - For making [Tachyon CSS](http://welcome.indihome.co.id/landing-page) the basis of my framework.
+- Adam Moore - For making [Tachyon CSS](https://tachyons.io/) the basis of my framework.
 
 </article>

@@ -1,0 +1,141 @@
+<h1>Grid</h1>
+
+<article>
+Using CSS3 Grid to create page layout. Customizable in variable `$grid-max-width`, `$grid-columns`, and `$grid-gap`.
+
+It starts with our custom element `<h-grid>` and followed by 12 columns that you can divide using `large-x` class.
+
+```
+<h-grid>
+  <main class="large-8"> ... </main>
+  <aside class="large-4"> ... </aside>
+</h-grid>
+```
+
+![Edje Grid - Large only](http://cdn.setyono.net/edge/grid-large.jpg)
+
+### Responsive Grid
+
+Use `small-x` class like below:
+
+```html
+<h-grid>
+  <div class="large-8 small-6"> </div>
+  <div class="large-4 small-6"> </div>
+</h-grid>
+```
+
+![Edje Grid - Large and Small](http://cdn.setyono.net/edge/grid-large-small.jpg)
+
+------
+
+</article>
+
+<h3>Classes</h3>
+
+<table class="demo-grid">
+  <script>
+    [
+      [ '&lt;h-grid&gt;',
+        `<h-grid>
+          <span class="large-4">.</span>
+          <span class="large-8">.</span>
+        </h-grid>`,
+        `display: -ms-grid
+        display: grid
+        grid-template-columns: repeat( 12, 1fr )
+        grid-column-gap: 20px
+        max-width: 1140px
+        padding: 0 10px
+        
+        > * {
+        &nbsp; grid-column: span 1
+        }`
+      ],
+      [ '.collapse',
+        `<h-grid class="collapse">
+          <span class="large-4">.</span>
+          <span class="large-8">.</span>
+        </h-grid>`,
+        `grid-column-gap: 0`
+      ],
+    ]
+  </script>
+</table>
+
+<h3>Column Classes</h3>
+
+<table class="demo-grid">
+  <script>
+    [
+      [ '.large-1 / .large-2 / .large-3 / … / .large-12',
+        `<h-grid>
+          <span class="large-4">.large-4</span>
+          <span class="large-8">.large-8</span>
+        </h-grid>`,
+        `grid-column: span 1
+        grid-column: span 2
+        grid-column: span 3
+        ...
+        grid-column: span 12`
+      ],
+      [ '/ .small-1 / .small-2 / .small-3 / … / .small-12',
+        `<h-grid>
+          <span class="large-4 small-6">.large-4 .small-6</span>
+          <span class="large-8 small-6">.large-8 .small-6</span>
+        </h-grid>
+        Try resizing your browser to <768px`,
+        `@include below(s) {
+        &nbsp; grid-column: span 1
+        &nbsp; grid-column: span 2
+        &nbsp; grid-column: span 3
+        &nbsp; ...
+        &nbsp; grid-column: span 12
+        }`
+      ],
+    ]
+  </script>
+</table>
+
+<h2>Sass Mixins</h2>
+
+<article>
+
+```
+grid()
+  $columns  (int) Total number of columns per row
+  $gap      (px)  Distance between columns
+  $rim      (px)  Distance from edge of screen
+  $width    (px)  Grid's max width
+  $collapse (bool)
+  
+column()
+  $size     (int) Column size for large screen >768px
+  $size_s   (int) For small screen <=768px
+  $size_xs  (int) For mini screen <=480px
+```
+
+Grid mixin should only be applied on `<h-grid>` element.
+
+```html
+<h-grid class="my-grid">
+  <div class="sidebar"></div>
+  <div class="content"></div>
+</h-grid>
+```
+
+```sass
+.my-grid {
+  @include grid( $columns:10, $gap:40px );
+}
+
+.sidebar {
+  @include column(3, 4, 10); // 3 on Large, 4 on Small, 10 on XSmall screen
+}
+
+.main {
+  @include column(7, 6, 10);
+}
+```
+
+</article>

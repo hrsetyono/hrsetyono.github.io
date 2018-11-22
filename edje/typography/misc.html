@@ -1,38 +1,94 @@
+<h1>Misc Typography</h1>
 
+<table class="demo-font-misc"> <script>
+  [
+    [ 'nowrap',
+      `<div class="nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus</div>`,
+      'white-space: nowrap' ]
+  ]
+</script> </table>
 
 <h1>Text Transform</h1>
 
-<table>
-  <script>
-    [
-      [ '.tt-uppercase', '<p class="tt-uppercase">Hello World</p>', [
-        'text-transform: uppercase'
-      ] ],
-      [ '.tt-lowercase', '<p class="tt-lowercase">Hello World</p>', [
-        'text-transform: lowercase'
-      ] ],
-      [ '.tt-capitalize', '<p class="tt-capitalize">hello world</p>', [
-        'text-transform: capitalize'
-      ] ],
-    ]  
-  </script>
-</table>
+<table class="demo-font-misc"> <script>
+  [
+    [ 'tt-uppercase', '<p class="tt-uppercase">Hello World</p>',
+      'text-transform: uppercase'
+    ],
+    [ 'tt-lowercase', '<p class="tt-lowercase">Hello World</p>',
+      'text-transform: lowercase'
+    ],
+    [ 'tt-capitalize', '<p class="tt-capitalize">hello world</p>',
+      'text-transform: capitalize'
+    ],
+  ]  
+</script> </table>
 
 <h1>Text Align</h1>
 
-<table>
-  <script>
-    [
-      [ '.ta-center', '<p class="ta-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
-        'text-align: center'
-      ] ],
-      [ '.ta-left', '<p class="ta-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
-        'text-align: left'
-      ] ],
-      [ '.ta-right', '<p class="ta-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>', [
-        'text-align: right'
-      ] ],
-    ]
-  </script>
-</table>
+<table class="demo-font-misc"> <script>
+  [
+    [ 'ta-center', '<p class="ta-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>',
+      'text-align: center'
+    ],
+    [ 'ta-left', '<p class="ta-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>',
+      'text-align: left'
+    ],
+    [ 'ta-right', '<p class="ta-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>',
+      'text-align: right'
+    ],
+    [ 'ta-justify', '<p class="ta-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>',
+      'text-align: justify'
+    ],
+  ]
+</script> </table>
 
+<h1>Vertical Align</h1>
+
+<table class="demo-valign"> <script>
+  [
+    [ 'va-baseline',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-baseline"></span></p>`,
+      'vertical-align: baseline' ],
+    [ 'va-top',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-top"></span></p>`,
+      'vertical-align: top' ],
+    [ 'va-middle',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-middle"></span></p>`, 'vertical-align: middle' ],
+    [ 'va-bottom',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-bottom"></span></p>`, 'vertical-align: bottom' ],
+    [ 'va-sub',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-sub"></span></p>`,
+      'vertical-align: sub' ],
+    [ 'va-super',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-sub"></span></p>`,
+      'vertical-align: super' ],
+    [ 'va-text-top',
+      `<p>Lorem Ipsum dolor sit amet <span class="va-text-top"></span></p>`,
+      'vertical-align: text-top' ],
+  ]
+</script> </table>
+
+<h1>Line Height</h1>
+
+<article>
+  Customizable in variable `$h-line-height`.
+</article>
+
+<table class="demo-font-misc"> <script>
+  [
+    [ 'lh-base',
+    `<p class="lh-base">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis autem architecto error culpa ea repellendus reiciendis accusamus nihil corrupti accusantium incidunt dolor, libero, temporibus maiores omnis consectetur sint harum!</p>`,
+      [ 'line-height: 1' ]
+    ],
+    [ 'lh-body',
+    `<p class="lh-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis autem architecto error culpa ea repellendus reiciendis accusamus nihil corrupti accusantium incidunt dolor, libero, temporibus maiores omnis consectetur sint harum!</p>`,
+      [ 'line-height: $font-line', ]
+    ],
+    [ 'lh-header', `<h3 class="lh-header">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>`,
+      [ 'line-height: $header-line', ]
+    ]
+  ]
+</script> </table>

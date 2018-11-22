@@ -1,20 +1,24 @@
 <h1>Float</h1>
 
-<table>
+<table class="demo-float">
   <script>
     [
-      [ '.f-left', '<img class="f-left" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>', [
-        'float: left'
-      ] ],
-      [ '.f-right', '<img class="f-right" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>', [
-        'float: right'
-      ] ],
-      [ '.clearfix', 'Apply to the wrapper that has floated element inside', [
-        '::before, ::after {',
-        '&nbsp&nbspcontent: " "; display: table;',
-        '}',
-        '::after { clear: both; }'
-      ] ]
+      [ 'f-left',
+        `<img class="f-left" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
+        `float: left`
+      ],
+      [ 'f-right',
+        `<img class="f-right" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
+        `float: right`
+      ],
+      [ 'clearfix',
+        `Apply to the wrapper that has floated element inside`,
+        `::before, ::after {
+        &nbsp content: " "
+        &nbsp display: table
+        }
+        ::after { clear: both }`
+      ]
     ]  
   </script>
 </table>

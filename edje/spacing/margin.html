@@ -1,39 +1,35 @@
 <h1>Margin</h1>
 
 <article>
-  Customizable in variable `$margin-classes`. Every item will be made into 7 classes covering all margin directions.
+  Customizable in variable `$h-margin`.
+  
+  Every item will be made into 7 classes that covers all directions including vertical (top + bottom) and horizontal (right + left).
 </article>
 
-<table class="demo-spacing">
-  <script>
-    [
-      [ '.mx / .mvx / .mhx / .mtx / .mrx / .mbx / .mlx',
-      `Replace x with: <br>
-        <div> <code>0&nbsp </code> <span>0</span> </div>
-        <div> <code>025</code> <span>0.25rem</span> </div>
-        <div> <code>05&nbsp</code> <span>0.5rem</span> </div>
-        <div> <code>075</code> <span>0.75rem</span> </div>
+<table class="demo-margin"> <script>
+  [
+    [ 'mx / mvx / mhx / mtx / mrx / mbx / mlx',
+    `Replace x with: <br>
+    <div> <code>-auto</code> <span>auto</span> </div>
+    <div> <code>0&nbsp </code> <span>0</span> </div>
+    <div> <code>025</code> <span>0.25rem</span> </div>
+    <div> <code>05&nbsp</code> <span>0.5rem</span> </div>
+    <div> <code>075</code> <span>0.75rem</span> </div>
 
-        <div> <code>1&nbsp;</code> <span>1rem</span> </div>
-        <div> <code>15</code> <span>1.5rem</span> </div>
+    <div> <code>1&nbsp;</code> <span>1rem</span> </div>
+    <div> <code>15</code> <span>1.5rem</span> </div>
 
-        <div> <code>2&nbsp;</code> <span>2rem</span> </div>
-        <div> <code>3&nbsp;</code> <span>3rem</span> </div>
-        <div> <code>4&nbsp;</code> <span>4rem</span> </div>
-      `, [
-        'margin: x',
-        'margin-top: x; margin-bottom: x',
-        'margin-right: x; margin-left: x',
-        'margin-top: x',
-        'margin-right: x',
-        'margin-bottom: x',
-        'margin-left: x'
-      ] ],
-      [ '.s:mx / .s:mvx / …', 'Margin below Small screen (< 768px)', [
-        '@include below(s) {',
-        '&nbsp …',
-        '}'
-      ] ],
-    ]  
-  </script>
-</table>
+    <div> <code>2&nbsp;</code> <span>2rem</span> </div>
+    <div> <code>3&nbsp;</code> <span>3rem</span> </div>
+    <div> <code>4&nbsp;</code> <span>4rem</span> </div>
+    `,
+      `margin: x
+      margin-top: x; margin-bottom: x
+      margin-right: x; margin-left: x
+      margin-top: x
+      margin-right: x
+      margin-bottom: x
+      margin-left: x`
+    ],
+  ]  
+</script> </table>

@@ -1,60 +1,54 @@
 <h1>Font Family</h1>
 
 <article>
-  Customizable in variable `$font-family-classes`.
+  Customizable in variable `$h-font-family`.
 </article>
 
-<table>
-  <script>
-    [
-      [ '.ff-body', '<h4 class="ff-body">This is a H4 and we apply Body font here</h4>', [
-        'font-family: $font-family'
-      ] ],
-      [ '.ff-header', '<p class="ff-header">This is a paragraph and we apply Header font here</p>', [
-        'font-family: $font-family-header'
-      ] ],
-    ]  
-  </script>
-</table>
+<table class="demo-font"> <script>
+  [
+    [ 'ff-body', '<h4 class="ff-body">This is a H4 and we apply Body font here</h4>',
+      `font-family: $font-family`
+    ],
+    [ 'ff-header', '<p class="ff-header">This is a paragraph and we apply Header font here</p>',
+      `font-family: $font-family-header`
+    ],
+  ]
+</script> </table>
 
 <h1>Font Weight</h1>
 
-<table>
-  <script>
-    [
-      [ '.fw-300', '<div class="fw-300">THIN Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>', [
-        'font-weight: 300'
-      ] ],
-      [ '.fw-400', '<div class="fw-400">NORMAL Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque illum obcaecati?</div>', [
-        'font-weight: 400'
-      ] ],
-      [ '.fw-600', '<div class="fw-600">SEMIBOLD Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>', [
-        'font-weight: 600'
-      ] ],
-      [ '.fw-700 / .b', '<div class="fw-700">BOLD Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque illum obcaecati?</div>', [
-        'font-weight: 700'
-      ] ],
-      [ '.fw-900', '<div class="fw-900">BLACK Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo consectetur.</div>', [
-        'font-weight: 900'
-      ] ],
-    ]
-  </script>
-</table>
+<table class="demo-font"> <script>
+  [
+    [ 'fw300', '<div class="fw300">THIN Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>',
+      `font-weight: 300`
+    ],
+    [ 'fw400', '<div class="fw400">NORMAL Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque illum obcaecati?</div>',
+      `font-weight: 400`
+    ],
+    [ 'fw600', '<div class="fw600">SEMIBOLD Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>',
+      `font-weight: 600`
+    ],
+    [ 'fw700 / b', '<div class="fw700">BOLD Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque illum obcaecati?</div>',
+      `font-weight: 700`
+    ],
+    [ 'fw900', '<div class="fw900">BLACK Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo consectetur.</div>',
+      `font-weight: 900`
+    ],
+  ]
+</script> </table>
 
 <h1>Font Style & Decoration</h1>
 
-<table>
-  <script>
-    [
-      [ '.i', '<div class="i">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>', [
-        'font-style: italic'
-      ] ],
-      [ '.u / .td-underline', '<div class="u">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla porro voluptatem suscipit.</div>', [
-        'text-decoration: underline'
-      ] ],
-      [ '.td-strike / .td-line', '<div class="td-strike">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>', [
-        'text-decoration: line-through'
-      ] ],
-    ]  
-  </script>
-</table>
+<table class="demo-font"> <script>
+  [
+    [ 'i', '<div class="i">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>',
+      `font-style: italic`
+    ],
+    [ 'u', '<div class="u">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla porro voluptatem suscipit.</div>',
+      `text-decoration: underline`
+    ],
+    [ 'strike', '<div class="strike">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>',
+      `text-decoration: line-through`
+    ],
+  ]  
+</script> </table>
