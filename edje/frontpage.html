@@ -49,6 +49,7 @@ Some of you might think it's a bad practice to add an abstraction layer to CSS. 
 
 1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
 
+-----
 
 ## Boilerplate
 
@@ -71,6 +72,21 @@ Alternatively, you can get the template files directly from these repository:
 
 - [HTML](https://github.com/hrsetyono/edje-html-boilerplate)
 - [WordPress](https://github.com/hrsetyono/edje-wp-boilerplate)
+
+
+-----
+
+## Compiling Sass
+
+Open command line in the theme directory and type `npm run sass`. Now whenever you save the Sass files, it will automatically compile into CSS.
+
+Something to take note of:
+
+- If you create new `.scss` file, you need to restart the command to make it detected.
+- If the variable in `_settings.scss` calls another variable, you need to uncomment the called variable or else it will return "Variable not found" error.
+- If you use unknown Class name, it will put a warning in the command log.
+
+-----
 
 ## Read More
 
