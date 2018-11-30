@@ -38,17 +38,44 @@ Some of you might think it's a bad practice to add an abstraction layer to CSS. 
 
 1. Install [Node JS](https://nodejs.org/en/download/).
 
-1. Run the command `npm install -g node-sass` and `npm install -g edje`.
+1. Run these 2 commands as administrator:
+
+    ```
+    npm install -g node-sass
+    npm install -g edje
+    ```
 
 1. If you are on Windows, add **NODE_PATH** to your System Variable and set it to **%AppData%/npm/node_modules**.
 
 1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
 
 
+## Boilerplate
+
+We have HTML, Wordpress, and WooCommerce template / boilerplate. To use it, install it with these commands:
+
+```
+npm install -g yeoman
+npm install -g generator-edje
+```
+
+To generate the template, open command line **in your project directory** and type:
+
+```
+yo edje
+```
+
+Select the template with arrow key and press Enter.
+
+Alternatively, you can get the template files directly from these repository:
+
+- [HTML](https://github.com/hrsetyono/edje-html-boilerplate)
+- [WordPress](https://github.com/hrsetyono/edje-wp-boilerplate)
+
 ## Read More
 
 1. [Customization](#/custom)
-1. [The Grid System](#/layout/grid)
+1. [The Grid System](#/helper/grid)
 
 
 ### Credit

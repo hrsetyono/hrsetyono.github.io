@@ -5,29 +5,30 @@
 
 <table class="demo-bg"> <script>
   [
-    [ 'bg-main / bg-main75 / bg-main50 / bg-main25 / bg-main10 / bg-main05',
+    [ 'bg-main / bg-main-light / bg-main-dark',
+    `<div class="bg-main c-white">bg-main</div>
+    <div class="bg-main-light">bg-main-light</div>
+    <div class="bg-main-dark c-white">bg-main-dark</div>`,
+      `background-color: $color-main
+      background-color: $color-main-light
+      background-color: $color-main-dark`
+    ],
+    [ 'bg-main75 / bg-main50 / bg-main25 / bg-main10 / bg-main05',
     `<section>
-      <div class="bg-main c-white">bg-main</div>
       <div class="bg-main75 c-white">bg-main75</div>
       <div class="bg-main50">bg-main50</div>
       <div class="bg-main25">bg-main25</div>
       <div class="bg-main10">bg-main10</div>
       <div class="bg-main05">bg-main05</div>
     </section>`,
-      `background-color: $color-main
-      background-color: rgba($color-main, .75)
+      `background-color: rgba($color-main, .75)
       background-color: rgba($color-main, .5)
       background-color: rgba($color-main, .25)
       background-color: rgba($color-main, .1)
       background-color: rgba($color-main, .05)`
     ],
 
-    [ 'bg-main-light',
-    `<div class="bg-main-light">bg-main-light</div>
-    <div class="bg-main-dark c-white">bg-main-dark</div>`,
-      `background-color: $color-main-light
-      background-color: $color-main-dark`
-    ],
+    
     
     [ 'bg-sub',
     '<div class="bg-sub">bg-sub</div>',

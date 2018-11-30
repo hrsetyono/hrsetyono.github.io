@@ -56,25 +56,38 @@
 
 <table class="demo-border"> <script>
   [
-    [ 'b-main', '<div class="b2 b-main"></div>', 
-      'border-color: $color-main',
+    [ 'bc-main / bc-main-dark / bc-main-light',
+    `<div class="b2 bc-main"></div>
+    <div class="b2 bc-main-dark"></div>
+    <div class="b2 bc-main-light"></div>`, 
+      `border-color: $color-main
+      border-color: $color-main-dark
+      border-color: $color-main-light`,
     ],
-    [ 'b-sub', '<div class="b2 b-sub"></div>', 
+    [ 'bc-sub', '<div class="b2 bc-sub"></div>', 
       'border-color: $color-sub',
     ],
-    [ 'b-transparent', '<div class="b2 b-transparent"></div>', 
+    [ 'bc-transparent', '<div class="b2 bc-transparent"></div>', 
       'border-color: transparent',
     ],
-    [ 'b-black75 / b-black50 / b-black25 / b-black10 / b-black05',
-    `<div class="b2 b-black50"></div>`,
+    [ 'bc-passive / bc-passive-dark / bc-passive-light',
+    `<div class="b2 bc-passive"></div>
+    <div class="b2 bc-passive-dark"></div>
+    <div class="b2 bc-passive-light"></div>`, 
+      `border-color: $color-passive
+      border-color: $color-passive-dark
+      border-color: $color-passive-light`,
+    ],
+    [ 'bc-black75 / bc-black50 / bc-black25 / bc-black10 / bc-black05',
+    `<div class="b2 bc-black50"></div>`,
       `border-color: rgba(black, .75)
       border-color: rgba(black, .50)
       border-color: rgba(black, .25)
       border-color: rgba(black, .10)
       border-color: rgba(black, .05)`
     ],
-    [ 'b-white / b-white75 / b-white50 / b-white25 / b-white10 / b-white05',
-    `<div class="b2 b-white50 shadow2"></div> (Shadow is added to make the white border visible)`,
+    [ 'bc-white / bc-white75 / bc-white50 / bc-white25 / bc-white10 / bc-white05',
+    `<div class="b2 bc-white50 shadow2"></div> (Shadow is added to make the white border visible)`,
       `border-color: white
       border-color: rgba(white, .75)
       border-color: rgba(white, .50)
