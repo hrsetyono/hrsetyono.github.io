@@ -103,19 +103,27 @@ Use `small-x` class like below:
 
 ```
 grid()
-  $columns  (int) Total number of columns per row
-  $gap      (px)  Distance between columns
-  $rim      (px)  Distance from edge of screen
-  $width    (px)  Grid's max width
-  $collapse (bool)
-  
-column()
-  $size     (int) Column size for large screen >768px
-  $size_s   (int) For small screen <=768px
-  $size_xs  (int) For mini screen <=480px
 ```
 
-Grid mixin should only be applied on `<h-grid>` element.
+Grid mixin should only be applied on `<h-grid>` element. The parameters in order are:
+
+- `$column` (int) - Total number of columns per row.
+- `$gap` (px) - Distance between columns.
+- `$rim` (px) - Distance from edge of screen.
+- `$width` (px) - Grid's max width.
+- `$collapse` (bool) - Clear the gap or not. Default: false.
+
+
+```
+column()
+```
+
+Column parameters in order are:
+
+- `$span` (int) - Column size for large screen >768px
+- `$span-s` (int) - Column size for small screen <=768px
+- `$span-xs` (int) - Column size for extra small screen <=480px
+
 
 ```html
 <h-grid class="my-grid">

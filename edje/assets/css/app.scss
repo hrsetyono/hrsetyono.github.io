@@ -99,15 +99,15 @@ td:nth-child(3) {
       c-main
     );
 
-    border-color: rgba( $color-sub, .5 );
-    background-color: rgba( $color-sub, .1 );
+    border-color: rgba( $sub, .5 );
+    background-color: rgba( $sub, .1 );
 
     &:hover {
-      background-color: rgba( $color-sub, .3 );
+      background-color: rgba( $sub, .3 );
     }
     
     &.active {
-      background-color: rgba( $color-sub, .5 );
+      background-color: rgba( $sub, .5 );
     }
   }
 

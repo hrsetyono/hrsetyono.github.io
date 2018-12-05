@@ -7,21 +7,21 @@ $font-family-header : "Apple Garamond", "Baskerville", "Times New Roman", "Droid
 $font-family-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 // ----- COLORS -----
-$color-main : #4f4053;
-$color-sub  : #f7db68;
+$main : #4f4053;
+$sub  : #f7db68;
 
-$color-main-dark : #008ab3;
-$color-main-light : #78dcfa;
+$main-dark : #008ab3;
+$main-light : #78dcfa;
 
-$color-passive : #c8d7e1;
-$color-passive-light: #f3f6f8;
+$gray : #c8d7e1;
+$gray-light: #f3f6f8;
 
-$color-red : #f45b4f;
-$color-yellow : #ffeb3b;
-$color-green : #4caf50;
-$color-blue: #2196f3;
+$red : #f45b4f;
+$yellow : #ffeb3b;
+$green : #4caf50;
+$blue: #2196f3;
 
-$color-link : $color-blue;
+$color-link : $blue;
 $color-link-hover : lighten($color-link, 20%);
 
 $body-background: #fff;
@@ -60,7 +60,7 @@ $grid-rim       : 20px; // min distance from edge of screen
 
 // ----- TYPOGRAPHY -----
 $font-color  : #2e4453;
-// $font-color-passive : #888;
+// $font-gray : #888;
 
 // $font-weight : 400;
 // $font-line : 1.65;
