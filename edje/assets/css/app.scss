@@ -35,7 +35,7 @@ table {
 }
 
 td {
-  @include h( pv1 bb1 b-black05 va-top);
+  @include h( pv1 bb1 bc-black05 va-top);
 }
 
 td.separator {
@@ -44,7 +44,7 @@ td.separator {
 
 th {
   @include h(
-    pv025 bb2 b-black75
+    pv025 bb2 bc-black75
     ta-left tt-uppercase ls100
   );
 }
@@ -82,7 +82,7 @@ td:nth-child(3) {
 ///// SIDEBAR
 
 .sidebar {
-  @include h( b1 b-black05 p1 );
+  @include h( b1 bc-black05 p1 );
   line-height: 1.7;
   
   strong {
@@ -146,7 +146,7 @@ td:nth-child(3) {
 
   .flex--boxed div {
     @include h( relative
-      b1 b-black50 mt15 mr05 mb05
+      b1 bc-black50 mt15 mr05 mb05
     );
     height: 90px;
 
@@ -260,7 +260,7 @@ td:nth-child(3) {
 
 .demo-visibility {
   span {
-    @include h( d-iblock ml1 b2 b-black50 va-middle );
+    @include h( d-iblock ml1 b2 bc-black50 va-middle );
     width: 25px;
     height: 25px;
   }
@@ -337,7 +337,7 @@ td:nth-child(3) {
   }
 
   .c-body { @include h( c-body ); }
-  .c-passive { @include h( c-passive ); }
+  .c-gray { @include h( c-gray ); }
   .c-inherit { @include h( c-inherit ); }
 
   .c-main { @include h( c-main ); }
@@ -480,23 +480,23 @@ td:nth-child(3) {
   .b-dashed { @include h( b-dashed ); }
   .b-dotted { @include h( b-dotted ); }
 
-  .b-main { @include h( b-main ); }
-  .b-sub { @include h( b-sub ); }
-  .b-transparent { @include h( b-transparent ); }
+  .bc-main { @include h( bc-main ); }
+  .bc-sub { @include h( bc-sub ); }
+  .bc-transparent { @include h( bc-transparent ); }
   
-  .b-black05 { @include h( b-black05 ); }
-  .b-black10 { @include h( b-black10 ); }
-  .b-black25 { @include h( b-black25 ); }
-  .b-black50 { @include h( b-black50 ); }
-  .b-black75 { @include h( b-black75 ); }
-  .b-black { @include h( b-black ); }
+  .bc-black05 { @include h( bc-black05 ); }
+  .bc-black10 { @include h( bc-black10 ); }
+  .bc-black25 { @include h( bc-black25 ); }
+  .bc-black50 { @include h( bc-black50 ); }
+  .bc-black75 { @include h( bc-black75 ); }
+  .bc-black { @include h( bc-black ); }
 
-  .b-white05 { @include h( b-white05 ); }
-  .b-white10 { @include h( b-white10 ); }
-  .b-white25 { @include h( b-white25 ); }
-  .b-white50 { @include h( b-white50 ); }
-  .b-white75 { @include h( b-white75 ); }
-  .b-white { @include h( b-white ); }
+  .bc-white05 { @include h( bc-white05 ); }
+  .bc-white10 { @include h( bc-white10 ); }
+  .bc-white25 { @include h( bc-white25 ); }
+  .bc-white50 { @include h( bc-white50 ); }
+  .bc-white75 { @include h( bc-white75 ); }
+  .bc-white { @include h( bc-white ); }
 
   .shadow2 { @include h( shadow2 ); }
 
@@ -556,7 +556,7 @@ td:nth-child(3) {
  
   .bg-sub { @include h( bg-sub ); }
   .bg-body { @include h( bg-body ); }
-  .bg-passive { @include h( bg-passive ); }
+  .bg-gray { @include h( bg-gray ); }
   
   .bg-red { @include h( bg-red ); }
   .bg-blue { @include h( bg-blue ); }
@@ -580,6 +580,20 @@ td:nth-child(3) {
   .bg-center { @include h( bg-center ); }
   .bg-cover { @include h( bg-cover ); }
   .bg-contain { @include h( bg-contain ); }
+
+  .bg-repeat { @include h( bg-repeat ); }
+  .bg-repeat-no { @include h( bg-repeat-no ); }
+  .bg-repeat-x { @include h( bg-repeat-x ); }
+  .bg-repeat-y { @include h( bg-repeat-y ); }
+
+  [class*="bg-repeat"] {
+    @include h( b1 b-dashed )
+    background-image: url(https://picsum.photos/50/50);
+    width: 150px;
+    height: 150px;
+  }
+
+  
 }
 
 
@@ -616,7 +630,7 @@ td:nth-child(3) {
 
 .demo-hover {
   div {
-    @include h( b1 b-black50 bg-main25 );
+    @include h( b1 bc-black50 bg-main25 );
     
     width: 100px;
     height: 75px;
@@ -639,7 +653,7 @@ td:nth-child(3) {
   @include h( mt2 fs-small );
 
   p {
-    @include h( bt1 b-black05 pv1 );
+    @include h( bt1 bc-black05 pv1 );
   }
 }
 
