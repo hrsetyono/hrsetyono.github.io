@@ -1,54 +1,101 @@
 <h1>Media Query</h1>
 
 <article>
+We provide variables that can be used in conjunction with `@media`.
 
 ```
-below( $size ) { }
-above( $size ) { }
-between( $smaller-size, $larger-size ) { }
+@media ($below-s) {
+  // styling below small screen
+}
+
+@media ($below-xs) and ($landscape) {
+  // ...
+}
+```
+</article>
+
+<table> <script>
+  [
+    [ '$below-xs / $above-xs', `Extra Small screen is <480px`,
+      `@media (max-width: 480px) { ... }
+      @media (min-width: 481px) { ... }`
+    ],
+    [ '$below-s / $above-s', `Small screen is <767px`,
+      `@media (max-width: 767px) { ... }
+      @media (min-width: 768px) { ... }`
+    ],
+    [ '$below-m / $above-m', `Medium screen is <960px`,
+      `@media (max-width: 960px) { ... }
+      @media (min-width: 961px) { ... }`
+    ],
+    [ '$below-l / $above-l', `Large screen is >1120px`,
+      `@media (max-width: 1120px) { ... }
+      @media (min-width: 1121px) { ... }`
+    ],
+    [ '$portrait / $landscape', ``,
+      `@media (orientation: portrait) { ... }
+      @media (orientation: landscape) { ... }`
+    ]
+  ]
+</script> </table>
+
+<h1>Customization</h1>
+
+<article>
+To change the size of a keyword, such as `s`, edit the variable `$size-s` in settings.
+
+If you want to add your own media-query size, simply create new variable in `_settings.scss`.
+
+```
+$below-watch : "max-width: 220px";
+$above-watch : "min-width: 221px";
 ```
 
-Possible values for **$size** are:
-
-- `l` - Large screen (1120px).
-- `m` - Medium screen (960px).
-- `s` - Small screen (767px).
-- `xs` - Extra Small screen (480px).
-- Any number in pixel.
-
-**EXAMPLE:**
-
-```sass
-p {
-  @include above(1000px) {
-    color: blue;
-  }
-
-  @include between(s, m) {
-    color: red;
-  }
-
-  @include below(xs) {
-    color: yellow;
-  }
+```
+@media ($below-watch) {
+  ...
 }
 ```
 
-**RESULT:**
+-----
+</article>
 
-```sass
-@media only screen and (min-width: 1001px) {
-  p { color: blue; }
+<h1>One-Time Use</h1>
+
+<article>
+When you only need the media-query size once, we provide a function so you don't need to create new variable for it.
+</article>
+
+<table> <script>
+  [
+    [ 'below()', ``,
+      `@media (below(572px)) {
+        ...
+      }` ],
+    [ 'above()', ``,
+      `@media (above(834px)) {
+        ...
+      }` ],
+    [ 'between()', ``,
+      `@media (between(300px, 600px)) {
+        ...
+      }` ],
+  ]
+</script> </table>
+
+<hr>
+<h1>Print and Screen</h1>
+
+<article>
+There is no need for fancy variables when specifying Print / Screen media query.
+
+```
+@media only print {
+  ...
 }
 
-@media only screen and (min-width: 767px) and (max-width: 961px) {
-  p { color: red; }
-}
-
-@media only screen and (min-width: 480px) {
-  p { color: yellow; }
+@media only screen and ($below-s) {
+  ...
 }
 ```
-
-As you may have noticed, when using `above()`, we added 1px to the number. So `above( 1000px )` is translated into `(min-width: 1001px)`.
 </article>

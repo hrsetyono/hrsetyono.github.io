@@ -2,6 +2,15 @@
 @import "setting";
 @import "edje-v20";
 
+
+@each $name, $values in $_h-all {
+  .#{ $name } {
+    @each $prop, $value in $values {
+      #{ $prop } : #{ $value };
+    }
+  }
+}
+
 ///
 
 @mixin highlight {
@@ -172,41 +181,6 @@ td:nth-child(3) {
       font-size: 1.5em;
     }
   }
-
-  //
-
-  .flex { @include h( flex ); }
-  .flex-column { @include h( flex--column ); }
-  .flex-row-reverse { @include h( flex--row-reverse ); }
-  .flex-column-reverse { @include h( flex--column-reverse ); }
-  .flex-wrap { @include h( flex flex--wrap mb05 ); }
-
-  .ai-start { @include h( ai-start ); }
-  .ai-end { @include h( ai-end ); }
-  .ai-center { @include h( ai-center ); }
-  .ai-baseline { @include h( ai-baseline ); }
-  .ai-stretch { @include h( ai-stretch ); }
-
-  .jc-start { @include h( jc-start ); }
-  .jc-end { @include h( jc-end ); }
-  .jc-center { @include h( jc-center ); }
-  .jc-around { @include h( jc-around ); }
-  .jc-between { @include h( jc-between ); }
-
-  .flex1 { @include h( flex1 ); }
-  .flex2 { @include h( flex2 ); }
-  .flex3 { @include h( flex3 ); }
-  .flex4 { @include h( flex4 ); }
-
-  .as-start { @include h( as-start ); }
-  .as-end { @include h( as-end ); }
-  .as-center { @include h( as-center ); }
-  .as-baseline { @include h( as-baseline ); }
-  .as-stretch { @include h( as-stretch ); }
-
-  .order-last { @include h( order-last ); }
-  .order1 { @include h( order1 ); }
-  .order2 { @include h( order2 ); }
 }
 
 
@@ -214,14 +188,6 @@ td:nth-child(3) {
   div {
     @include h( d-iblock pv1 ph15 bg-main10 );
   }
-
-  .cursor-pointer { @include h( cursor-pointer ); }
-  .cursor-text { @include h( cursor-text ); }
-  .cursor-grab { @include h( cursor-grab ); }
-  .cursor-progress { @include h( cursor-progress ); }
-  .cursor-not-allowed { @include h( cursor-not-allowed ); }
-  .cursor-zoom-in { @include h( cursor-zoom-in ); }
-  .cursor-zoom-out { @include h( cursor-zoom-out ); }
 }
 
 
@@ -230,11 +196,6 @@ td:nth-child(3) {
     @include h( bg-black10 p05 );
     height: 120px;
   }
-
-  .ov-auto { @include h( ov-auto ); }
-  .ov-scroll { @include h( ov-scroll ); }
-  .ov-hidden { @include h( ov-hidden ); }
-  .ov-visible { @include h( ov-visible ); }
 }
 
 
@@ -270,38 +231,17 @@ td:nth-child(3) {
 ///// LAYOUT
 
 .demo-float {
-  .f-left { @include h( f-left ); }
-  .f-right { @include h( f-right ); }
-  .clearfix { @include h( clearfix ); }
+
 }
 
 .demo-z-index {
-  .z-1 { @include h( z-1 ); }
-  .z2 { @include h( z2 ); }
-  .z5 { @include h( z5 ); }
-  .z10 { @include h( z10 ); }
-  .z100 { @include h( z100 ); }
+
 }
 
 .demo-width {
   div {
     @include h( bg-black10 mb025 );
   }
-
-  .w10 { @include h( w10 ); }
-  .w20 { @include h( w20 ); }
-  .w25 { @include h( w25 ); }
-  .w30 { @include h( w30 ); }
-  .w33 { @include h( w33 ); }
-  .w40 { @include h( w40 ); }
-  .w50 { @include h( w50 ); }
-  .w60 { @include h( w60 ); }
-  .w66 { @include h( w66 ); }
-  .w70 { @include h( w70 ); }
-  .w75 { @include h( w75 ); }
-  .w80 { @include h( w80 ); }
-  .w90 { @include h( w90 ); }
-  .w100 { @include h( w100 ); }
 }
 
 .demo-height {
@@ -314,14 +254,6 @@ td:nth-child(3) {
     @include h( flex );
     height: 300px;
   }
-
-  .h25 { @include h( h25 ); }
-  .h33 { @include h( h33 ); }
-  .h50 { @include h( h50 ); }
-  .h66 { @include h( h66 ); }
-  .h75 { @include h( h75 ); }
-  .h100 { @include h( h100 ); }
-  .h100vh { @include h( h100vh ); }
 }
 
 .demo-position {
@@ -335,101 +267,10 @@ td:nth-child(3) {
   section {
     @include h( bg-black75 p1 );
   }
-
-  .c-body { @include h( c-body ); }
-  .c-gray { @include h( c-gray ); }
-  .c-inherit { @include h( c-inherit ); }
-
-  .c-main { @include h( c-main ); }
-  .c-main75 { @include h( c-main75 ); }
-  .c-main50 { @include h( c-main50 ); }
-  .c-main-dark { @include h( c-main-dark ); }
-  .c-main-light { @include h( c-main-light ); }
-  .c-sub { @include h( c-sub ); }
-
-  .c-red { @include h( c-red ); }
-  .c-green { @include h( c-green ); }
-  .c-blue { @include h( c-blue ); }
-  .c-yellow { @include h( c-yellow ); }
-
-  .c-black { @include h( c-black ); }
-  .c-black75 { @include h( c-black75 ); }
-  .c-black50 { @include h( c-black50 ); }
-
-  .c-white { @include h( c-white ); }
-  .c-white75 { @include h( c-white75 ); }
-  .c-white50 { @include h( c-white50 ); }
 }
-
-
-.demo-font-size {
-  .fs-h1 { @include h( fs-h1 ); }
-  .fs-h2 { @include h( fs-h2 ); }
-  .fs-h3 { @include h( fs-h3 ); }
-  .fs-h4 { @include h( fs-h4 ); }
-  .fs-h5 { @include h( fs-h5 ); }
-  .fs-h6 { @include h( fs-h6 ); }
-
-  .fs-body { @include h( fs-body ); }
-  .fs-small { @include h( fs-small ); }
-}
-
 
 .demo-font {
-  .ff-body { @include h( ff-body ); }
-  .ff-header { @include h( ff-header ); }
 
-  .fw300 { @include h( fw300 ); }
-  .fw400 { @include h( fw400 ); }
-  .fw600 { @include h( fw600 ); }
-  .fw700, .b { @include h( fw700 ); }
-  .fw900 { @include h( fw900 ); }
-
-  .i { @include h( i ); }
-  .u { @include h( u ); }
-  .strike { @include h( strike ); }
-}
-
-
-.demo-letter-spacing {
-  .ls-100 { @include h( ls-100 ); }
-  .ls-50 { @include h( ls-50 ); }
-  .ls-25 { @include h( ls-25 ); }
-  .ls0 { @include h( ls0 ); }
-  .ls25 { @include h( ls25 ); }
-  .ls50 { @include h( ls50 ); }
-  .ls100 { @include h( ls100 ); }
-  .ls150 { @include h( ls150 ); }
-}
-
-.demo-list {
-  .list-none { @include h( list-none ); }
-  .list-disc { @include h( list-disc ); }
-  .list-circlce { @include h( list-circle ); }
-  .list-square { @include h( list-square ); }
-
-  .list-decimal { @include h( list-decimal ); }
-  .list-decimal0 { @include h( list-decimal0 ); }
-  .list-alpha { @include h( list-alpha ); }
-  .list-roman { @include h( list-roman ); }
-  .list-upper-alpha { @include h( list-upper-alpha ); }
-  .list-upper-roman { @include h( list-upper-roman ); }
-}
-
-.demo-font-misc {
-
-  .tt-uppercase { @include h( tt-uppercase ); }
-  .tt-lowercase { @include h( tt-lowercase ); }
-  .tt-capitalize { @include h( tt-capitalize ); }
-
-  .ta-center { @include h( ta-center ); }
-  .ta-left { @include h( ta-left ); }
-  .ta-right { @include h( ta-right ); }
-  .ta-justify { @include h( ta-justify ); }
-
-  .lh-base { @include h( lh-base ); }
-  .lh-body { @include h( lh-body ); }
-  .lh-header { @include h( lh-header ); }
 }
 
 .demo-valign {
@@ -444,14 +285,6 @@ td:nth-child(3) {
     width: 16px;
     text-shadow: 0 0 1px black;
   }
-
-  .va-baseline { @include h( va-baseline ); }
-  .va-top { @include h( va-top ); }
-  .va-middle { @include h( va-middle ); }
-  .va-bottom { @include h( va-bottom ); }
-  .va-sub { @include h( va-sub ); }
-  .va-super { @include h( va-super ); }
-  .va-text-top { @include h( va-text-top ); }
 }
 
 
@@ -464,42 +297,6 @@ td:nth-child(3) {
     width: 100px;
     height: 25px;
   }
-
-  .b1 { @include h( b1 ); }
-  .bt1 { @include h( bt1 ); }
-  .bb1 { @include h( bb1 ); }
-  .br1 { @include h( br1 ); }
-  .bl1 { @include h( bl1 ); }
-
-  .b2 { @include h( b2 ); }
-  .bt2 { @include h( bt2 ); }
-  .bb2 { @include h( bb2 ); }
-  .br2 { @include h( br2 ); }
-  .bl2 { @include h( bl2 ); }
-
-  .b-dashed { @include h( b-dashed ); }
-  .b-dotted { @include h( b-dotted ); }
-
-  .bc-main { @include h( bc-main ); }
-  .bc-sub { @include h( bc-sub ); }
-  .bc-transparent { @include h( bc-transparent ); }
-  
-  .bc-black05 { @include h( bc-black05 ); }
-  .bc-black10 { @include h( bc-black10 ); }
-  .bc-black25 { @include h( bc-black25 ); }
-  .bc-black50 { @include h( bc-black50 ); }
-  .bc-black75 { @include h( bc-black75 ); }
-  .bc-black { @include h( bc-black ); }
-
-  .bc-white05 { @include h( bc-white05 ); }
-  .bc-white10 { @include h( bc-white10 ); }
-  .bc-white25 { @include h( bc-white25 ); }
-  .bc-white50 { @include h( bc-white50 ); }
-  .bc-white75 { @include h( bc-white75 ); }
-  .bc-white { @include h( bc-white ); }
-
-  .shadow2 { @include h( shadow2 ); }
-
 }
 
 .demo-border-radius {
@@ -511,10 +308,6 @@ td:nth-child(3) {
   .br-pill {
     width: 100px;
   }
-  
-  .br { @include h( br ); }
-  .br-circle { @include h( br-circle ); }
-  .br-pill { @include h( br-pill ); }
 }
 
 
@@ -542,58 +335,12 @@ td:nth-child(3) {
   section { @include h( flex flex--wrap ); }
   section.dark { @include h( p05 bg-black75 ); }
 
-  .c-white { @include h( c-white); }
-
-  .bg-main { @include h( bg-main ); }
-  .bg-main75 { @include h( bg-main75 ); }
-  .bg-main50 { @include h( bg-main50 ); }
-  .bg-main25 { @include h( bg-main25 ); }
-  .bg-main10 { @include h( bg-main10 ); }
-  .bg-main05 { @include h( bg-main05 ); }
-
-  .bg-main-light { @include h( bg-main-light ); }
-  .bg-main-dark { @include h( bg-main-dark ); }
- 
-  .bg-sub { @include h( bg-sub ); }
-  .bg-body { @include h( bg-body ); }
-  .bg-gray { @include h( bg-gray ); }
-  
-  .bg-red { @include h( bg-red ); }
-  .bg-blue { @include h( bg-blue ); }
-  .bg-yellow { @include h( bg-yellow ); }
-  .bg-green { @include h( bg-green ); }
-
-  .bg-black { @include h( bg-black ); }
-  .bg-black75 { @include h( bg-black75 ); }
-  .bg-black50 { @include h( bg-black50 ); }
-  .bg-black25 { @include h( bg-black25 ); }
-  .bg-black10 { @include h( bg-black10 ); }
-  .bg-black05 { @include h( bg-black05 ); }
-  
-  .bg-white { @include h( bg-white ); }
-  .bg-white75 { @include h( bg-white75 ); }
-  .bg-white50 { @include h( bg-white50 ); }
-  .bg-white25 { @include h( bg-white25 ); }
-  .bg-white10 { @include h( bg-white10 ); }
-  .bg-white05 { @include h( bg-white05 ); }
-
-  .bg-center { @include h( bg-center ); }
-  .bg-cover { @include h( bg-cover ); }
-  .bg-contain { @include h( bg-contain ); }
-
-  .bg-repeat { @include h( bg-repeat ); }
-  .bg-repeat-no { @include h( bg-repeat-no ); }
-  .bg-repeat-x { @include h( bg-repeat-x ); }
-  .bg-repeat-y { @include h( bg-repeat-y ); }
-
   [class*="bg-repeat"] {
     @include h( b1 b-dashed )
     background-image: url(https://picsum.photos/50/50);
     width: 150px;
     height: 150px;
   }
-
-  
 }
 
 
@@ -605,14 +352,6 @@ td:nth-child(3) {
   }
 
   section { @include h( flex flex--wrap ); }
-
-  .o100 { @include h( o100 ); }
-  .o90 { @include h( o90 ); }
-  .o80 { @include h( o80 ); }
-  .o70 { @include h( o70 ); }
-  .o60 { @include h( o60 ); }
-  .o50 { @include h( o50 ); }
-  .o0 { @include h( o0 ); }
 }
 
 
@@ -621,11 +360,6 @@ td:nth-child(3) {
     width: 100px;
     height: 75px;
   }
-
-  .shadow0 { @include h( shadow0 ); }
-  .shadow1 { @include h( shadow1 ); }
-  .shadow2 { @include h( shadow2 ); }
-  .shadow3 { @include h( shadow3 ); }
 }
 
 .demo-hover {
@@ -635,10 +369,6 @@ td:nth-child(3) {
     width: 100px;
     height: 75px;
   }
-
-  .hover-dim { @include h( hover-dim ); }
-  .hover-grow { @include h( hover-grow ); }
-  .hover-u { @include h( hover-u ); }
 }
 
 .demo-transition {

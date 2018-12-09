@@ -1,6 +1,6 @@
 <h1>Misc Typography</h1>
 
-<table class="demo-font-misc"> <script>
+<table> <script>
   [
     [ 'nowrap',
       `<div class="nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus</div>`,
@@ -10,7 +10,7 @@
 
 <h1>Text Transform</h1>
 
-<table class="demo-font-misc"> <script>
+<table></table> <script>
   [
     [ 'tt-uppercase', '<p class="tt-uppercase">Hello World</p>',
       'text-transform: uppercase'
@@ -26,7 +26,7 @@
 
 <h1>Text Align</h1>
 
-<table class="demo-font-misc"> <script>
+<table> <script>
   [
     [ 'ta-center', '<p class="ta-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam aperiam nesciunt temporibus a deserunt ipsum!</p>',
       'text-align: center'
@@ -75,12 +75,17 @@
   Customizable in variable `$h-line-height`.
 </article>
 
-<table class="demo-font-misc"> <script>
+<table> <script>
   [
     [ 'lh-base',
     `<p class="lh-base">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis autem architecto error culpa ea repellendus reiciendis accusamus nihil corrupti accusantium incidunt dolor, libero, temporibus maiores omnis consectetur sint harum!</p>`,
       [ 'line-height: 1' ]
+    ],
+    [ 'lh-normal',
+    `<p class="lh-normal">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis autem architecto error culpa ea repellendus reiciendis accusamus nihil corrupti accusantium incidunt dolor, libero, temporibus maiores omnis consectetur sint harum!</p>`,
+      [ 'line-height: normal' ]
     ],
     [ 'lh-body',
     `<p class="lh-body">
