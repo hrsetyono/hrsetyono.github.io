@@ -3,22 +3,35 @@
 <table class="demo-float">
   <script>
     [
-      [ 'f-left',
-        `<img class="f-left" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
+      [ 'float-left',
+        `<img class="float-left" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
         `float: left`
       ],
-      [ 'f-right',
-        `<img class="f-right" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
+      [ 'float-right',
+        `<img class="float-right" src="https://picsum.photos/75/75"> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eaque praesentium exercitationem.</p>`,
         `float: right`
       ],
-      [ 'clearfix',
-        `Apply to the wrapper that has floated element inside`,
-        `::before, ::after {
-        &nbsp content: " "
-        &nbsp display: table
-        }
-        ::after { clear: both }`
-      ]
     ]  
   </script>
 </table>
+
+<h1>Clearfix</h1>
+
+<article>
+  Apply it to the container of float elements so it will wrap properly.
+</article>
+
+<table> <script>
+  [
+    [
+      'clearfix', ``,
+      `::before, ::after {
+      &nbsp content: " "
+      &nbsp display: table
+      }
+
+      ::after { clear: both }
+      `
+    ]
+  ]
+</script> </table>

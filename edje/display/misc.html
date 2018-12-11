@@ -1,0 +1,36 @@
+<h1>Display Misc</h1>
+
+<table> <script>
+  [
+    [ 'no-select', `<p class="no-select">You can't select my text!</p>`,
+      `-webkit-touch-callout: none
+      -webkit-user-select: none
+      -moz-user-select: none
+      user-select: none`
+    ],
+    [ 'appearance-none',
+    `<select class="appearance-none">
+      <option>This is a &lt;select&gt;</option>
+      <option>But appearance is "none"</option>
+      <option>So there's no down arrow</option>
+      <option>And all styling are from Edje</option>
+    </select>`,
+      `-moz-appearance: none
+      -webkit-appearance: none
+      appearance: none`
+    ],
+    [ 'backface-hidden', `When you add hover effect and the image gets blurry / stutter, apply this class`,
+      `-webkit-backface-visibility: hidden
+      backface-visibility: hidden`
+    ]
+  ]
+</script> </table>
+
+<h1>Visibility</h1>
+
+<table> <script>
+  [
+    [ 'v-visible', '', `visibility: visible` ],
+    [ 'v-hidden', '', `visibility: hidden` ],
+  ]
+</script> </table>

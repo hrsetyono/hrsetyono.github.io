@@ -5,16 +5,14 @@
 
 @each $name, $values in $_h-all {
   .#{ $name } {
-    @each $prop, $value in $values {
-      #{ $prop } : #{ $value };
-    }
+    @include h( $name );
   }
 }
 
 ///
 
 @mixin highlight {
-  @include h( pv025 ph05 bg-black10 );
+  @include h( clearfix pv025 ph05 bg-black10 );
 }
 
 
@@ -121,7 +119,7 @@ td:nth-child(3) {
   }
 
   ul {
-    @include h( flex flex--wrap );
+    @include h( f fw-wrap );
   }
 }
 
@@ -161,7 +159,7 @@ td:nth-child(3) {
 
     &::before {
       content: attr(data-title);
-      @include h( absolute left0 fs-small );
+      @include h( absolute left0 fs-s );
       top: -1.5em;
     }
   }
@@ -251,7 +249,7 @@ td:nth-child(3) {
   }
 
   section {
-    @include h( flex );
+    @include h( f );
     height: 300px;
   }
 }
@@ -267,10 +265,6 @@ td:nth-child(3) {
   section {
     @include h( bg-black75 p1 );
   }
-}
-
-.demo-font {
-
 }
 
 .demo-valign {
@@ -327,12 +321,12 @@ td:nth-child(3) {
 
 .demo-bg {
   div {
-    @include h( flex ai-center jc-center mb025 mr025 fs-small );
+    @include h( ai-center jc-center mb025 mr025 fs-s );
     width: 75px;
     height: 50px;
   }
 
-  section { @include h( flex flex--wrap ); }
+  section { @include h( f fw-wrap ); }
   section.dark { @include h( p05 bg-black75 ); }
 
   [class*="bg-repeat"] {
@@ -346,12 +340,12 @@ td:nth-child(3) {
 
 .demo-opacity {
   div {
-    @include h( flex ai-center jc-center mb025 mr025 bg-main c-sub fs-small );
+    @include h( f ai-center jc-center mb025 mr025 bg-main c-sub fs-s );
     width: 75px;
     height: 50px;
   }
 
-  section { @include h( flex flex--wrap ); }
+  section { @include h( f fw-wrap ); }
 }
 
 
@@ -380,7 +374,7 @@ td:nth-child(3) {
 /////
 
 .main-footer {
-  @include h( mt2 fs-small );
+  @include h( mt2 fs-s );
 
   p {
     @include h( bt1 bc-black05 pv1 );

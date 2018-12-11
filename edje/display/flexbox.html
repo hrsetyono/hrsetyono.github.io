@@ -3,23 +3,28 @@
 <table class="demo-display  demo-flex">
   <script>
     [
-      [ 'flex', '<div class="flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+      [ 'f / d-flex', '<div class="f"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
         'display: flex',
       ] ],
-      [ 'flex--column', '<div class="flex--column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+      [ 'fd-column', '<div class="fd-column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
         'flex-direction: column',
       ] ],
-      [ 'flex--row-reverse', '<div class="flex--row-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+      [ 'fd-row-rev', '<div class="fd-row-rev"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
         'flex-direction: row-reverse',
       ] ],
-      [ 'flex--column-reverse', '<div class="flex--column-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+      [ 'fd-column-rev', '<div class="fd-column-rev"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
         'flex-direction: column-reverse',
       ] ],
-      [ 'flex--wrap',
-      `<div class="flex--wrap">
-        <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span>
+      [ 'fw-wrap',
+      `<div class="f fw-wrap">
+        <span class="w30">1</span>
+        <span class="w30">2</span>
+        <span class="w30">3</span>
+        <span class="w30">4</span>
+        <span class="w30">5</span>
+        <span class="w30">6</span>
       </div>
-      Check out <a href="#/classes/tile">Tile System</a> to achieve this format properly`, [
+      Check out <a href="#/helper/tile">Tile System</a> to achieve this format properly`, [
         'flex-wrap: wrap',
       ] ],
       [ 'ai-start / ai-end / ai-center / ai-baseline / ai-stretch',

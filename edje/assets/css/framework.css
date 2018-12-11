@@ -125,6 +125,30 @@ td, th { padding: 0; }
 
 .flex-iframe iframe, .flex-iframe object, .flex-iframe embed, .flex-iframe video { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
 
+h1 { font-size: 2.625em; }
+
+@media (max-width: 767px) { h1 { font-size: 1.875em; } }
+
+h2 { font-size: 2.25em; }
+
+@media (max-width: 767px) { h2 { font-size: 1.625em; } }
+
+h3 { font-size: 1.875em; }
+
+@media (max-width: 767px) { h3 { font-size: 1.375em; } }
+
+h4 { font-size: 1.5em; }
+
+@media (max-width: 767px) { h4 { font-size: 1.25em; } }
+
+h5 { font-size: 1.25em; }
+
+@media (max-width: 767px) { h5 { font-size: 1.125em; } }
+
+h6 { font-size: 1em; }
+
+@media (max-width: 767px) { h6 { font-size: 1em; } }
+
 /* ----------
   Typography
 ----------- */
