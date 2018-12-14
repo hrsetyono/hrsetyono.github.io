@@ -320,6 +320,14 @@ td:nth-child(3) {
 ///// THEME
 
 .demo-bg {
+  // bg position
+  article {
+    width: 200px;
+    height: 150px;
+    background-image: url(https://picsum.photos/100/100);
+  }
+
+  // bg color
   div {
     @include h( ai-center jc-center mb025 mr025 fs-s );
     width: 75px;
@@ -329,7 +337,8 @@ td:nth-child(3) {
   section { @include h( f fw-wrap ); }
   section.dark { @include h( p05 bg-black75 ); }
 
-  [class*="bg-repeat"] {
+  // bg-repeat
+  aside {
     @include h( b1 b-dashed )
     background-image: url(https://picsum.photos/50/50);
     width: 150px;
