@@ -5,7 +5,7 @@ Using CSS3 Grid to create page layout. Customizable in variable `$grid-max-width
 
 It starts with our custom element `<h-grid>` and followed by 12 columns that you can divide using `large-x` class.
 
-```
+```html
 <h-grid>
   <main class="large-8"> ... </main>
   <aside class="large-4"> ... </aside>
@@ -87,13 +87,7 @@ Use `small-x` class like below:
           <span class="large-8 small-6">.large-8 .small-6</span>
         </h-grid>
         Try resizing your browser to <768px`,
-        `@include below(s) {
-        &nbsp; grid-column: span 1
-        &nbsp; grid-column: span 2
-        &nbsp; grid-column: span 3
-        &nbsp; ...
-        &nbsp; grid-column: span 12
-        }`
+        ``
       ],
     ]
   </script>
@@ -126,6 +120,7 @@ Column parameters in order are:
 - `$span-s` (int) - Column size for small screen <=768px
 - `$span-xs` (int) - Column size for extra small screen <=480px
 
+**EXAMPLE**
 
 ```html
 <h-grid class="my-grid">
@@ -134,7 +129,7 @@ Column parameters in order are:
 </h-grid>
 ```
 
-```sass
+```scss
 .my-grid {
   @include grid( $columns:10, $gap:40px );
 }

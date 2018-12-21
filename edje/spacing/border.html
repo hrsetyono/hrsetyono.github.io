@@ -1,101 +1,127 @@
 <h1>Border Width</h1>
 
 <article>
-  Customizable in variable `$h-border-width`.
-  
-  Every item in the list will add many classes to cover all directions `bx`, `btx`, `bbx`, `blx`, and `brx`.
+  Customizable in variable `$h-border`.
 </article>
 
 <table class="demo-border"> <script>
   [
-    [ 'b1 / b2', '<div class="b1"></div>', 
-      `border-width: 1px
-      border-width: 2px`
+    [ 'b1-solid / b1-dashed / b2-solid / b2-dashed',
+    `<div class="b1-solid mb05"></div>
+    <div class="b1-dashed mb05"></div>
+    <div class="b2-solid mb05"></div>
+    <div class="b2-dashed"></div>`, 
+      `border: 1px solid
+      border: 1px dashed
+      border: 2px solid
+      border: 2px dashed`
     ],
-    [ 'bt1 / bt2 ', '<div class="bt1"></div>', 
-      `border-top-width: 1px
-      border-top-width: 2px`
+    [ 'bt1-solid / bt1-dashed / bt2-solid / bt2-dashed',
+    `<div class="bt1-solid mb05"></div>
+    <div class="bt1-dashed mb05"></div>
+    <div class="bt2-solid mb05"></div>
+    <div class="bt2-dashed"></div>`, 
+      `border-top: 1px solid
+      border-top: 1px dashed
+      border-top: 2px solid
+      border-top: 2px dashed`
     ],
-    [ 'bb1 / bb2', '<div class="bb1"></div>', 
-      `border-bottom-width: 1px
-      border-bottom-width: 2px`
+    [ 'br1-solid / br1-dashed / bt2-solid / bt2-dashed',
+    `<div class="br1-solid mb05"></div>
+    <div class="br1-dashed mb05"></div>
+    <div class="br2-solid mb05"></div>
+    <div class="br2-dashed"></div>`, 
+      `border-right: 1px solid
+      border-right: 1px dashed
+      border-right: 2px solid
+      border-right: 2px dashed`
     ],
-    [ 'br1 / br2', '<div class="br1"></div>', 
-      `border-right-width: 1px
-      border-right-width: 2px`
+    [ 'bb1-solid / bb1-dashed / bt2-solid / bt2-dashed',
+    `<div class="bb1-solid mb05"></div>
+    <div class="bb1-dashed mb05"></div>
+    <div class="bb2-solid mb05"></div>
+    <div class="bb2-dashed"></div>`, 
+      `border-bottom: 1px solid
+      border-bottom: 1px dashed
+      border-bottom: 2px solid
+      border-bottom: 2px dashed`
     ],
-    [ 'bl1 / bl2', '<div class="bl1"></div>', 
-      `border-left-width: 1px
-      border-left-width: 2px`
+    [ 'bl1-solid / bl1-dashed / bt2-solid / bt2-dashed',
+    `<div class="bl1-solid mb05"></div>
+    <div class="bl1-dashed mb05"></div>
+    <div class="bl2-solid mb05"></div>
+    <div class="bl2-dashed"></div>`, 
+      `border-left: 1px solid
+      border-left: 1px dashed
+      border-left: 2px solid
+      border-left: 2px dashed`
     ],
     [],
-    [ 'b0 / bt0 / bb0 / br0 / bl0', ``,
-    `border-width: 0
-    border-top-width: 0
-    border-right-width: 0
-    border-bottom-width: 0
-    border-left-width: 0`
+    [ 'b-none / bt-none / br-none / bb-none / bl-none', ``,
+    `border: none
+    border-top: none
+    border-right: none
+    border-bottom: none
+    border-left: none`
     ]
-  ]
-</script> </table>
-
-<h1>Border Style</h1>
-
-<article>
-  Must be used in conjuction with Border Width class.
-</article>
-
-<table class="demo-border"> <script>
-  [
-    [ 'b-dashed', '<div class="b2 b-dashed"></div>', 
-      `border-style: dashed`,
-    ],
-    [ 'b-dotted', '<div class="b2 b-dotted"></div>', 
-      `border-style: dotted`,
-    ],
   ]
 </script> </table>
 
 <h2>Border Color</h2>
 
 <article>
-  Customizable in variable `$h-border-color`. Must be used in conjuction with Border Width class.
+  Must be used in conjuction with Border class above.
+
+  Customizable in variable `$h-border-color`.
 </article>
 
 <table class="demo-border"> <script>
   [
     [ 'bc-main / bc-main-dark / bc-main-light',
-    `<div class="b2 bc-main"></div>
-    <div class="b2 bc-main-dark"></div>
-    <div class="b2 bc-main-light"></div>`, 
+    `<div class="b2-solid bc-main mb05"></div>
+    <div class="b2-solid bc-main-dark mb05"></div>
+    <div class="b2-solid bc-main-light"></div>`, 
       `border-color: $main
       border-color: $main-dark
       border-color: $main-light`,
     ],
-    [ 'bc-sub', '<div class="b2 bc-sub"></div>', 
+    [ 'bc-sub', '<div class="b2-solid bc-sub"></div>', 
       'border-color: $sub',
     ],
-    [ 'bc-transparent', '<div class="b2 bc-transparent"></div>', 
+    [ 'bc-transparent', '<div class="b2-solid bc-transparent"></div>', 
       'border-color: transparent',
     ],
-    [ 'bc-passive / bc-passive-dark / bc-passive-light',
-    `<div class="b2 bc-passive"></div>
-    <div class="b2 bc-passive-dark"></div>
-    <div class="b2 bc-passive-light"></div>`, 
+    [ 'bc-gray / bc-gray-dark / bc-gray-light',
+    `<div class="b2-solid bc-gray mb05"></div>
+    <div class="b2-solid bc-gray-dark mb05"></div>
+    <div class="b2-solid bc-gray-light"></div>`, 
       `border-color: $gray
       border-color: $gray-dark
       border-color: $gray-light`,
     ],
-    [ 'bc-black75 / bc-black50 / bc-black25 / bc-black10 / bc-black05',
-    `<div class="b2 bc-black50"></div>`,
-      `border-color: rgba(black, .75)
+    [ 'bc-black / bc-black75 / bc-black50 / bc-black25 / bc-black10 / bc-black05',
+    `<div class="b2-solid bc-black mb05"></div>
+    <div class="b2-solid bc-black75 mb05"></div>
+    <div class="b2-solid bc-black50 mb05"></div>
+    <div class="b2-solid bc-black25 mb05"></div>
+    <div class="b2-solid bc-black10 mb05"></div>
+    <div class="b2-solid bc-black05"></div>`,
+      `border-color: black
+      border-color: rgba(black, .75)
       border-color: rgba(black, .50)
       border-color: rgba(black, .25)
       border-color: rgba(black, .10)
       border-color: rgba(black, .05)`
     ],
     [ 'bc-white / bc-white75 / bc-white50 / bc-white25 / bc-white10 / bc-white05',
-    `<div class="b2 bc-white50 shadow2"></div> (Shadow is added to make the white border visible)`,
+    `<section class="bg-black75 p05">
+      <div class="b2-solid bc-white mb05"></div>
+      <div class="b2-solid bc-white75 mb05"></div>
+      <div class="b2-solid bc-white50 mb05"></div>
+      <div class="b2-solid bc-white25 mb05"></div>
+      <div class="b2-solid bc-white10 mb05"></div>
+      <div class="b2-solid bc-white05"></div>
+    </section>`,
       `border-color: white
       border-color: rgba(white, .75)
       border-color: rgba(white, .50)

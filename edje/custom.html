@@ -8,23 +8,21 @@ Across the documentation we mentioned whether it is customizable via variable or
 
 **EXAMPLE:**
 
-We want to add a new font family. As written in the documentation, we need to find and override `$h-font-family` in `_setting.scss`:
+We want to add a new font family. As written in the documentation, we need to find and override `$h-font-family`. Find this variable in settings:
 
-``` sass
-$h-font-family: (
-  names: ( ff-: font-family ),
-  values: (
-    body: $font-family,
-    header: $font-family-header
-  )
-);
+``` scss
+// $h-font-family: (
+//  names: ( ff-: font-family ),
+//  values: (
+//    body: $font-family,
+//    header: $font-family-header
+//  )
+//);
 ```
 
-The variable are divided into two main parts: (1) `names` - The base shorthand and CSS properties (2) `values` - Postfix for the shorthand and the CSS value.  Edje will pair each name to each value. In this case, it will create two styles: `ff-body` and `ff-header`.
+**Uncomment it**, and add extra item to `values` argument:
 
-Let's add in a new font:
-
-```sass
+```scss
 $h-font-family: (
   names: ( ff-: font-family ),
   values: (
@@ -35,19 +33,25 @@ $h-font-family: (
 );
 ```
 
-Save it, compile the Sass, and now you can use `ff-script` to apply Papyrus font.
+Now you can use `ff-script` to apply Papyrus font:
 
-```sass
+```scss
 .page-title {
   @include h( ff-script );
 }
 ```
 
-## Direct Format
+Don't like the shorthand `ff-` for font-family? You can simply change it in `names` argument!
 
-Few of the variables doesn't use Name-Value pair, instead it directly specify the Class name and its CSS style like below:
+-----
+</article>
 
-```sass
+<h2>Direct Format</h2>
+
+<article>
+Some of the variables don't use Name-Value pair, instead it directly specify the Class name and its CSS style like in `$h-border-radius`:
+
+```scss
 $h-border-radius: (
   br: ( border-radius: $g-radius ),
   br-circle: ( border-radius: 50% ),
@@ -55,23 +59,15 @@ $h-border-radius: (
 );
 ```
 
-Calling `br-circle` will give me `border-radius: 50%;` style.
+-----
+</article>
 
-## Pseudoselector Format
+<h2>Pseudoselector Format</h2>
 
-Specify the styling for any pseudoselector with this format:
+<article>
+You can see the example of pseudoselector format in `$h-hover` variable:
 
-```sass
-name: (
-  ":hover": ( ... ),
-  ":active": ( ... ),
-  "::before": ( ... ),
-),
-```
-
-You can see it in action in `$h-hover` variable:
-
-```sass
+```scss
 $h-hover: (
   hover-dim: (
     ':hover': ( opacity: .6 ),
@@ -81,8 +77,48 @@ $h-hover: (
     ':hover': ( '-webkit-transform': scale(1.05), transform: scale(1.05) ),
     ':active': ( '-webkit-transform': scale(1), transform: scale(1) ),
   ),
-  hover-u: ( ':hover': ( text-decoration: underline ) ),
+  hover-u: (
+    ':hover': ( text-decoration: underline )
+  ),
+);
+```
+</article>
+
+<h2>Extend Format</h2>
+
+<article>
+You can see the example of extending format in `$h-font-size` variable:
+
+```scss
+$h-font-size: (
+  names: ( 'fs-': font-size ),
+  values: (
+    h1: '%h1',
+    h2: '%h2',
+    ...
+  )
 );
 ```
 
+When a value is prefixed with percent sign (%), it will trigger `@extend` command.
+
+In the case of Heading 1 to 6, we already define the style within the framework. If you want to create a new one, add its definition at the **bottom of settings**:
+
+**NOTE**: In settings, you can't use any helper functions
+
+```scss
+...
+
+%subtitle {
+  font-size: 1.25em;
+
+  @media ($below-s) {
+    font-size: 1.125em;
+  }
+
+  @media ($below-xs) {
+    font-size: 1em;
+  }
+}
+```
 </article>

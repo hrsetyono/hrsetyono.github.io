@@ -6,9 +6,11 @@
 <table class="demo-bg"> <script>
   [
     [ 'bg-main / bg-main-light / bg-main-dark',
-    `<div class="bg-main c-white">bg-main</div>
-    <div class="bg-main-light">bg-main-light</div>
-    <div class="bg-main-dark c-white">bg-main-dark</div>`,
+    `<section>
+      <div class="bg-main c-white">bg-main</div>
+      <div class="bg-main-light">bg-main-light</div>
+      <div class="bg-main-dark c-white">bg-main-dark</div>
+    </section>`,
       `background-color: $main
       background-color: $main-light
       background-color: $main-dark`
@@ -28,20 +30,36 @@
       background-color: rgba($main, .05)`
     ],
 
+    [],
     
+    [ 'bg-sub / bg-sub-light / bg-sub-dark',
+    `<section>
+      <div class="bg-sub">bg-sub</div>
+      <div class="bg-sub-light">bg-sub-light</div>
+      <div class="bg-sub-dark">bg-sub-dark</div>
+    </section>`,
+      `background-color: $sub
+      background-color: $sub-light
+      background-color: $sub-dark`
+    ],
+
     
-    [ 'bg-sub',
-    '<div class="bg-sub">bg-sub</div>',
-      `background-color: $sub`
+    [ 'bg-gray / bg-gray-light / bg-gray-dark',
+    `<section>
+      <div class="bg-gray">bg-gray</div>
+      <div class="bg-gray-light">bg-gray-light</div>
+      <div class="bg-gray-dark">bg-gray-dark</div>
+    </section>`,
+      `background-color: $gray
+      background-color: $gray-light
+      background-color: $gray-dark`
     ],
 
     [ 'bg-body', `<div class="bg-body b1">bg-body</div>`,
       `background-color: $body-background`
     ],
-
-    [ 'bg-passive', `<div class="bg-passive">bg-passive</div>`,
-      `background-color: $gray`
-    ],
+    
+    [],
 
     [ 'bg-red / bg-blue / bg-yellow / bg-green',
     `<section>
@@ -95,10 +113,29 @@
 <h1>Background Image</h1>
 
 <article>
-  Customizable in variable `$h-background-image`.
+Customizable in variable `$h-background-image`.
 
-  It can also accept Gradient value. By default this variable is **empty**.
+By default this variable is **empty**. You can put either `url()` or any gradient value like `linear-gradient()`.
+
+**EXAMPLE:**
+
+```scss
+$h-background-image: (
+  names: ( bg-: background-image ),
+  values: (
+
+    pattern1: url('../images/pattern1.png'),
+    gradient1: linear-gradient( to top, #333, #333 50%, #eee 75%, #333 75%)
+  
+  )
+) !default;
+```
+
+Following the snippet above, the class name to use will be `bg-pattern1` and `bg-gradient1`.
+
 </article>
+
+<hr>
 
 <h1>Background Misc</h1>
 

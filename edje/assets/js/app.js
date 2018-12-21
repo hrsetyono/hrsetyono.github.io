@@ -36,6 +36,7 @@ var Route = {
       $('#content').html( data );
       parseTable();
       parseArticle();
+      Prism.highlightAll();
 
       // scroll to top
       window.scrollTo(0, 0);

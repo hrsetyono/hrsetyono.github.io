@@ -46,8 +46,6 @@
 
 .c-body { color: #2e4453; }
 
-.c-gray { color: #888; }
-
 .c-inherit { color: inherit; }
 
 .c-main { color: #4f4053; }
@@ -61,6 +59,12 @@
 .c-main-light { color: #78dcfa; }
 
 .c-sub { color: #f7db68; }
+
+.c-sub-dark { color: #f4cf38; }
+
+.c-sub-light { color: #fae798; }
+
+.c-gray { color: #888; }
 
 .c-red { color: #f45b4f; }
 
@@ -348,11 +352,15 @@
 
 .top0 { top: 0; }
 
+.top50 { top: 50%; }
+
 .top100 { top: 100%; }
 
 .top-auto { top: auto; }
 
 .right0 { right: 0; }
+
+.right50 { right: 50%; }
 
 .right100 { right: 100%; }
 
@@ -360,11 +368,15 @@
 
 .bottom0 { bottom: 0; }
 
+.bottom50 { bottom: 50%; }
+
 .bottom100 { bottom: 100%; }
 
 .bottom-auto { bottom: auto; }
 
 .left0 { left: 0; }
+
+.left50 { left: 50%; }
 
 .left100 { left: 100%; }
 
@@ -710,35 +722,55 @@
 
 .ml4 { margin-left: 4rem; }
 
-.b0 { border-width: 0; }
+.b-none { border: none; }
 
-.b1 { border-width: 1px; }
+.b1-solid { border: 1px solid; }
 
-.b2 { border-width: 2px; }
+.b1-dashed { border: 1px dashed; }
 
-.bt0 { border-top-width: 0; }
+.b2-solid { border: 2px solid; }
 
-.bt1 { border-top-width: 1px; }
+.b2-dashed { border: 2px dashed; }
 
-.bt2 { border-top-width: 2px; }
+.bt-none { border-top: none; }
 
-.bl0 { border-left-width: 0; }
+.bt1-solid { border-top: 1px solid; }
 
-.bl1 { border-left-width: 1px; }
+.bt1-dashed { border-top: 1px dashed; }
 
-.bl2 { border-left-width: 2px; }
+.bt2-solid { border-top: 2px solid; }
 
-.br0 { border-right-width: 0; }
+.bt2-dashed { border-top: 2px dashed; }
 
-.br1 { border-right-width: 1px; }
+.bl-none { border-left: none; }
 
-.br2 { border-right-width: 2px; }
+.bl1-solid { border-left: 1px solid; }
 
-.bb0 { border-bottom-width: 0; }
+.bl1-dashed { border-left: 1px dashed; }
 
-.bb1 { border-bottom-width: 1px; }
+.bl2-solid { border-left: 2px solid; }
 
-.bb2 { border-bottom-width: 2px; }
+.bl2-dashed { border-left: 2px dashed; }
+
+.br-none { border-right: none; }
+
+.br1-solid { border-right: 1px solid; }
+
+.br1-dashed { border-right: 1px dashed; }
+
+.br2-solid { border-right: 2px solid; }
+
+.br2-dashed { border-right: 2px dashed; }
+
+.bb-none { border-bottom: none; }
+
+.bb1-solid { border-bottom: 1px solid; }
+
+.bb1-dashed { border-bottom: 1px dashed; }
+
+.bb2-solid { border-bottom: 2px solid; }
+
+.bb2-dashed { border-bottom: 2px dashed; }
 
 .bc-main { border-color: #4f4053; }
 
@@ -747,6 +779,10 @@
 .bc-main-light { border-color: #78dcfa; }
 
 .bc-sub { border-color: #f7db68; }
+
+.bc-sub-dark { border-color: #f4cf38; }
+
+.bc-sub-light { border-color: #fae798; }
 
 .bc-transparent { border-color: transparent; }
 
@@ -780,12 +816,6 @@
 
 .bc-white05 { border-color: rgba(255, 255, 255, 0.05); }
 
-.b-solid { border-style: solid; }
-
-.b-dashed { border-style: dashed; }
-
-.b-dotted { border-style: dotted; }
-
 .br { border-radius: 4px; }
 
 .br-circle { border-radius: 50%; }
@@ -809,6 +839,10 @@
 .bg-main-light { background-color: #78dcfa; }
 
 .bg-sub { background-color: #f7db68; }
+
+.bg-sub-dark { background-color: #f4cf38; }
+
+.bg-sub-light { background-color: #fae798; }
 
 .bg-gray { background-color: #c8d7e1; }
 
@@ -874,6 +908,8 @@
 
 .shadow3 { box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
 
+.shadow-none { box-shadow: none; }
+
 .o100 { opacity: 1; }
 
 .o90 { opacity: 0.9; }
@@ -914,11 +950,11 @@ table { width: 100%; margin-top: 2rem; margin-bottom: 2rem; }
 
 table a { text-decoration: underline; }
 
-td { padding-top: 1rem; padding-bottom: 1rem; border-bottom-width: 1px; border-color: rgba(0, 0, 0, 0.05); vertical-align: top; }
+td { padding-top: 1rem; padding-bottom: 1rem; border-bottom: 1px solid; border-color: rgba(0, 0, 0, 0.05); vertical-align: top; }
 
 td.separator { padding-top: 0.5rem; padding-bottom: 0.5rem; background-color: rgba(0, 0, 0, 0.05); }
 
-th { padding-top: 0.25rem; padding-bottom: 0.25rem; border-bottom-width: 2px; border-color: rgba(0, 0, 0, 0.75); text-align: left; text-transform: uppercase; letter-spacing: 0.1em; }
+th { padding-top: 0.25rem; padding-bottom: 0.25rem; border-bottom: 2px solid; border-color: rgba(0, 0, 0, 0.75); text-align: left; text-transform: uppercase; letter-spacing: 0.1em; }
 
 th:first-child { width: 20%; }
 
@@ -928,19 +964,19 @@ td:first-child, td:nth-child(2) { font-family: "SFMono-Regular", Consolas, "Libe
 
 td:first-child { font-weight: 600; font-size: 15px; }
 
-td:nth-child(2) { letter-spacing: -0.025em; font-size: 0.75em; line-height: 26px; }
+td:nth-child(2) { letter-spacing: -0.025em; font-size: 0.875em; line-height: 26px; }
 
 td:nth-child(3) { padding-left: 0.5rem; }
 
 .top-ribbon { padding-top: 0.5rem; padding-bottom: 0.5rem; background-color: #4f4053; margin-bottom: 1rem; }
 
-.sidebar { border-width: 1px; border-color: rgba(0, 0, 0, 0.05); padding: 1rem; line-height: 1.7; }
+.sidebar { border: 1px solid; border-color: rgba(0, 0, 0, 0.05); padding: 1rem; line-height: 1.7; }
 
 .sidebar strong { display: block; margin-top: 1rem; margin-bottom: 1rem; text-transform: uppercase; }
 
 .sidebar li { display: inline-block; margin-right: 0.5rem; margin-bottom: 0.5rem; }
 
-.sidebar a { display: block; position: relative; padding-right: 0.5rem; padding-left: 0.5rem; border-width: 1px; border-radius: 4px; color: #4f4053; border-color: rgba(247, 219, 104, 0.5); background-color: rgba(247, 219, 104, 0.1); }
+.sidebar a { display: block; position: relative; padding-right: 0.5rem; padding-left: 0.5rem; border: 1px solid; border-radius: 4px; color: #4f4053; border-color: rgba(247, 219, 104, 0.5); background-color: rgba(247, 219, 104, 0.1); }
 
 .sidebar a:hover { background-color: rgba(247, 219, 104, 0.3); }
 
@@ -966,7 +1002,7 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .demo-flex .demo-flex-wrap span { width: calc(33.333% - 0.5em); }
 
-.demo-flex .flex--boxed div { position: relative; border-width: 1px; border-color: rgba(0, 0, 0, 0.5); margin-top: 1.5rem; margin-right: 0.5rem; margin-bottom: 0.5rem; height: 90px; }
+.demo-flex .flex--boxed div { position: relative; border: 1px solid; border-color: rgba(0, 0, 0, 0.5); margin-top: 1.5rem; margin-right: 0.5rem; margin-bottom: 0.5rem; height: 90px; }
 
 .demo-flex .flex--boxed div::before { content: attr(data-title); position: absolute; left: 0; font-size: 0.875em; top: -1.5em; }
 
@@ -994,7 +1030,7 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .demo-tile h-tile { margin-bottom: 1rem; }
 
-.demo-visibility span { display: inline-block; margin-left: 1rem; border-width: 2px; border-color: rgba(0, 0, 0, 0.5); vertical-align: middle; width: 25px; height: 25px; }
+.demo-visibility span { display: inline-block; margin-left: 1rem; border: 2px solid; border-color: rgba(0, 0, 0, 0.5); vertical-align: middle; width: 25px; height: 25px; }
 
 .demo-width div { background-color: rgba(0, 0, 0, 0.1); margin-bottom: 0.25rem; }
 
@@ -1018,7 +1054,7 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .demo-padding span { display: inline-block; margin-left: 1rem; }
 
-.demo-bg article { width: 200px; height: 150px; background-image: url(https://picsum.photos/100/100); }
+.demo-bg article { width: 200px; height: 150px; background-image: url(https://picsum.photos/100/100?image=0); }
 
 .demo-bg div { align-items: center; justify-content: center; margin-bottom: 0.25rem; margin-right: 0.25rem; font-size: 0.875em; width: 75px; height: 50px; }
 
@@ -1026,7 +1062,7 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .demo-bg section.dark { padding: 0.5rem; background-color: rgba(0, 0, 0, 0.75); }
 
-.demo-bg aside { border-width: 1px; border-style: dashed; background-image: url(https://picsum.photos/50/50); width: 150px; height: 150px; }
+.demo-bg aside { border: 1px dashed; background-image: url(https://picsum.photos/50/50/?image=20); width: 150px; height: 150px; }
 
 .demo-opacity div { display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem; margin-right: 0.25rem; background-color: #4f4053; color: #f7db68; font-size: 0.875em; width: 75px; height: 50px; }
 
@@ -1034,7 +1070,7 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .demo-shadow div { width: 100px; height: 75px; }
 
-.demo-hover div { border-width: 1px; border-color: rgba(0, 0, 0, 0.5); background-color: rgba(79, 64, 83, 0.25); width: 100px; height: 75px; }
+.demo-hover div { border: 1px solid; border-color: rgba(0, 0, 0, 0.5); background-color: rgba(79, 64, 83, 0.25); width: 100px; height: 75px; }
 
 .demo-transition div { margin-bottom: 0.5rem; }
 
@@ -1042,6 +1078,6 @@ td:nth-child(3) { padding-left: 0.5rem; }
 
 .main-footer { margin-top: 2rem; font-size: 0.875em; }
 
-.main-footer p { border-top-width: 1px; border-color: rgba(0, 0, 0, 0.05); padding-top: 1rem; padding-bottom: 1rem; }
+.main-footer p { border-top: 1px solid; border-color: rgba(0, 0, 0, 0.05); padding-top: 1rem; padding-bottom: 1rem; }
 
 .bottom-ribbon { padding-top: 0.5rem; padding-bottom: 0.5rem; background-color: #f7db68; margin-top: 2rem; }

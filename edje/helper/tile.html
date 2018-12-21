@@ -22,7 +22,7 @@ It starts with our custom element `<h-tile>` and **any children** directly under
 
 </article>
 
-<h3>Classes</h3>
+<h2>Classes</h2>
 
 <table class="demo-tile"> <script>
   [
@@ -70,13 +70,7 @@ It starts with our custom element `<h-tile>` and **any children** directly under
         <span>.</span>
       </h-tile>
       Without specifying small tile, each item will become 100% width on <768px screen`,  
-      `@include below(s) {
-      &nbsp; grid-template-columns: repeat( 2, 1fr )
-      &nbsp; grid-template-columns: repeat( 3, 1fr )
-      &nbsp; grid-template-columns: repeat( 4, 1fr )
-      &nbsp; ...
-      &nbsp; grid-template-columns: repeat( 8, 1fr )
-      }`
+      ``
     ],
   ]
 </script> </table>
@@ -87,14 +81,15 @@ It starts with our custom element `<h-tile>` and **any children** directly under
 <article>
 ```
 tile()
-  $per_row      (int) Amount of items on each row
-  $per_row_s    (int) For small screen <=768px
-  $per_row_xs   (int) For mini screen <=480px
-  $gap          (px) Distance between block
-  $collapse     (bool) Close the gap, default: false
 ```
 
-This mixin should only be applied on `<h-tile>` element.
+This mixin should only be applied on `<h-tile>` element. The parameters in order are:
+
+- `$per_row` (int) - Amount of items on each row
+- `$per_row_s` (int) - For small screen <=768px
+- `$per_row_xs` (int) - For mini screen <=480px
+- `$gap` (px) - Distance between block
+- `$collapse` (bool) - Close the gap, default: false
 
 **EXAMPLE**
 
