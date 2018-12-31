@@ -110,7 +110,7 @@
   ]
 </script> </table>
 
-<h1>Background Image</h1>
+<h2>Background Image</h2>
 
 <article>
 Customizable in variable `$h-background-image`.
@@ -123,10 +123,8 @@ By default this variable is **empty**. You can put either `url()` or any gradien
 $h-background-image: (
   names: ( bg-: background-image ),
   values: (
-
     pattern1: url('../images/pattern1.png'),
     gradient1: linear-gradient( to top, #333, #333 50%, #eee 75%, #333 75%)
-  
   )
 ) !default;
 ```
@@ -137,35 +135,78 @@ Following the snippet above, the class name to use will be `bg-pattern1` and `bg
 
 <hr>
 
-<h1>Background Misc</h1>
+<h2>Background Position</h2>
+
+<table class="demo-bg demo-bgp"> <script>
+  [
+    [ 'bgp-cc',
+    `<article class="bgp-cc"></article>`,
+      `background-position: center center`,
+    ],
+    [ 'bgp-cr',
+    `<article class="bgp-cr"></article>`,
+      `background-position: center right`,
+    ],
+    [ 'bgp-cl',
+    `<article class="bgp-cl"></article>`,
+      `background-position: center left`,
+    ],
+    [],
+    [ 'bgp-tc',
+    `<article class="bgp-tc"></article>`,
+      `background-position: top center`,
+    ],
+    [ 'bgp-tr',
+    `<article class="bgp-tr"></article>`,
+      `background-position: top right`,
+    ],
+    [ 'bgp-tl',
+    `<article class="bgp-tl"></article>`,
+      `background-position: top left`,
+    ],
+    [],
+    [ 'bgp-bc',
+    `<article class="bgp-bc"></article>`,
+      `background-position: bottom center`,
+    ],
+    [ 'bgp-br',
+    `<article class="bgp-br"></article>`,
+      `background-position: bottom right`,
+    ],
+    [ 'bgp-bl',
+    `<article class="bgp-bl"></article>`,
+      `background-position: bottom left`,
+    ],
+    [],
+  ]
+
+</script> </table>
+
+<h2>Background Misc</h2>
 
 <table class="demo-bg"> <script>
   [
-    [ 'bg-center',
-    `<article class="bg-center b1"></article>`,
-      `background-position: center center`,
-    ],
-    [ 'bg-cover',
-    `<article class="bg-cover b1"></article>`,
+    [ 'bgs-cover',
+    `<article class="bgs-cover b1-solid bgr-no"></article>`,
       `background-size: cover`
     ],
-    [ 'bg-contain',
-    `<article class="bg-contain b1 bg-no-repeat"></article>`,
+    [ 'bgs-contain',
+    `<article class="bgs-contain b1-solid bgr-no"></article>`,
       `background-size: contain`
     ],
 
     [],
 
-    [ 'bg-repeat', `This is default behavior <aside class="bg-repeat"></aside>`,
+    [ 'bgr', `This is default behavior <aside class="bgr"></aside>`,
       `background-repeat: repeat`
     ],
-    [ 'bg-no-repeat', `<aside class="bg-no-repeat"></aside>`,
+    [ 'bgr-no', `<aside class="bgr-no"></aside>`,
       `background-repeat: no-repeat`
     ],
-    [ 'bg-repeat-x', `<aside class="bg-repeat-x"></aside>`,
+    [ 'bgr-x', `<aside class="bgr-x"></aside>`,
       `background-repeat: repeat-x`
     ],
-    [ 'bg-repeat-y', `<aside class="bg-repeat-y"></aside>`,
+    [ 'bgr-y', `<aside class="bgr-y"></aside>`,
       `background-repeat: repeat-y`
     ],
   ]

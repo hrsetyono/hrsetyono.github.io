@@ -1,17 +1,55 @@
 <h1>Display Type</h1>
 
-<table class="demo-display">
-  <script>
-    [
-      [ 'd-block', '<span class="d-block"> This span becomes a block </span>', [
-        'display: block'
-      ] ],
-      [ 'd-iblock', '<p class="d-iblock">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
-        'display: inline-block'
-      ] ],
-      [ 'd-none', '<div class="d-none">Hello there!</div>', [
-        'display: none'
-      ] ],
+<table class="demo-display"> <script>
+  [
+    [ 'd-block', '<span class="d-block"> This span becomes a block </span>', [
+      'display: block'
+    ] ],
+    [ 'd-iblock', '<p class="d-iblock">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
+      'display: inline-block'
+    ] ],
+    [ 'd-none', '<div class="d-none">Hello there!</div>', [
+      'display: none'
+    ] ],
+  ]
+</script> </table>
+
+<h2>Visibility</h2>
+
+<table> <script>
+  [
+    [ 'v-visible', '', `visibility: visible` ],
+    [ 'v-hidden', '', `visibility: hidden` ],
+  ]
+</script> </table>
+
+<h2>Display Misc</h2>
+
+<table> <script>
+  [
+    [ 'no-select', `<p class="no-select">You can't select my text!</p>`,
+      `-webkit-touch-callout: none
+      -webkit-user-select: none
+      -moz-user-select: none
+      user-select: none`
+    ],
+    [ 'no-events', `<a href="https://google.com" class="no-events">This is link to Google</a> But pointer event is none, so nothing happened when you click it`,
+      `pointer-events: none`
+    ],
+    [ 'no-appearance',
+    `<select class="no-appearance">
+      <option>This is a &lt;select&gt; but...</option>
+      <option>But appearance is set to "none"</option>
+      <option>So there's no down arrow</option>
+      <option>And all styling are from your CSS</option>
+    </select>`,
+      `-moz-appearance: none
+      -webkit-appearance: none
+      appearance: none`
+    ],
+    [ 'backface-hidden', `When you add hover effect and the image gets blurry / stutter, apply this class`,
+      `-webkit-backface-visibility: hidden
+      backface-visibility: hidden`
     ]
-  </script>
-</table>
+  ]
+</script> </table>

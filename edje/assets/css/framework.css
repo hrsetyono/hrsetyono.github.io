@@ -345,9 +345,9 @@ pre { padding: 1em; background-color: #f3f6f8; border: 1px solid #c8d7e1; border
 
 .button:active, :active[type="button"], :active[type="submit"], :active[type="reset"], .button-passive:active, .button-line:active { border-width: 2px 1px 1px; }
 
-.button, [type="button"], [type="submit"], [type="reset"] { border-color: #008ab3; background-color: #4f4053; color: white; }
+.button, [type="button"], [type="submit"], [type="reset"] { border-color: #342a36; background-color: #4f4053; color: white; }
 
-.button:hover, [type="button"]:hover, [type="submit"]:hover, [type="reset"]:hover { border-color: #006380; color: white; }
+.button:hover, [type="button"]:hover, [type="submit"]:hover, [type="reset"]:hover { border-color: #181419; color: white; }
 
 .button[disabled], .button.disabled, [type="button"][disabled], [type="button"].disabled, [type="submit"][disabled], [type="submit"].disabled, [type="reset"][disabled], [type="reset"].disabled { cursor: not-allowed; opacity: .3; }
 

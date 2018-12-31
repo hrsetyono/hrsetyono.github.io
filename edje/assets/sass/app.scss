@@ -15,6 +15,12 @@
   @include h( clearfix pv025 ph05 bg-black10 );
 }
 
+#content {
+  @media ($above-s) {
+    padding-right: 1.5em;
+  }
+}
+
 
 pre, code {
   font-size: 15px;
@@ -343,6 +349,13 @@ td:nth-child(3) {
     background-image: url(https://picsum.photos/50/50/?image=20);
     width: 150px;
     height: 150px;
+  }
+}
+
+.demo-bgp {
+  article {
+    @include h( bgr-no b1-solid )
+    background-image: url(https://picsum.photos/100/100?image=50);
   }
 }
 

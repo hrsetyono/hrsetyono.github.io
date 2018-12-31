@@ -10,8 +10,8 @@ $font-family-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier
 $main : #4f4053;
 $sub  : #f7db68;
 
-$main-dark : #008ab3;
-$main-light : #78dcfa;
+// $main-dark : #008ab3;
+// $main-light : #78dcfa;
 
 $gray : #c8d7e1;
 $gray-light: #f3f6f8;
@@ -50,7 +50,7 @@ $g-radius     : 4px;
 // ----- GRID -----
 // $grid-max-width : $size-l;
 // $grid-columns   : 12;
-// $grid-gap       : 20px; // distance between columns
+$grid-gap       : 20px; // distance between columns
 $grid-rim       : 20px; // min distance from edge of screen
 
 // ----- TILE -----

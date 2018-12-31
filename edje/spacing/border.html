@@ -57,12 +57,12 @@
       border-left: 2px dashed`
     ],
     [],
-    [ 'b-none / bt-none / br-none / bb-none / bl-none', ``,
-    `border: none
-    border-top: none
-    border-right: none
-    border-bottom: none
-    border-left: none`
+    [ 'b0 / b0 / br0 / bb0 / bl0', ``,
+    `border: 0
+    border-top: 0
+    border-right: 0
+    border-bottom: 0
+    border-left: 0`
     ]
   ]
 </script> </table>
@@ -98,6 +98,16 @@
       `border-color: $gray
       border-color: $gray-dark
       border-color: $gray-light`,
+    ],
+    [ 'bc-red / bc-green / bc-blue / bg-yellow',
+    `<div class="b2-solid bc-red mb05"></div>
+    <div class="b2-solid bc-green mb05"></div>
+    <div class="b2-solid bc-blue mb05"></div>
+    <div class="b2-solid bc-yellow"></div>`, 
+      `border-color: $red
+      border-color: $green
+      border-color: $blue
+      border-color: $yellow`,
     ],
     [ 'bc-black / bc-black75 / bc-black50 / bc-black25 / bc-black10 / bc-black05',
     `<div class="b2-solid bc-black mb05"></div>
@@ -141,14 +151,15 @@
 
 <table class="demo-border  demo-border-radius"> <script>
   [
-    [ 'br', '<div class="b2 br"></div>', 
+    [ 'brad', '<div class="b2 brad"></div>', 
       'border-radius: $g-radius',
     ],
-    [ 'br-circle', '<div class="b2 br-circle"></div>', 
+    [ 'brad-circle', '<div class="b2 brad-circle"></div>', 
       'border-radius: 50%',
     ],
-    [ 'br-pill', '<div class="b2 br-pill"></div>', 
+    [ 'brad-pill', '<div class="b2 brad-pill"></div>', 
       'border-radius: 9999px',
-    ]
+    ],
+    [ 'brad0', ``, `border-radius: 0`],
   ]
 </script> </table>
