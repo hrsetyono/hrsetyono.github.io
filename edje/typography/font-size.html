@@ -26,12 +26,27 @@ Customizable in variable `$h-font-size`.
     [ 'fs-body', '<h1 class="fs-body">This H1 size become default body font size</h1>',
       `font-size: $font-size`
     ],
-    [ 'fs-small', '<p class="fs-small">Smaller font specified in $font-size-small</p>',
-      `font-size: $font-size-small`
+    [ 'fs-s', '<p class="fs-s">Slightly smaller font</p>',
+      `font-size: 0.875em`
+    ],
+    [ 'fs-m', '<p class="fs-m">Slightly larger font.</p>',
+      `font-size: 1.125em`
     ],
   ]  
 </script> </table>
 
 <article>
-  
+The Header's font size extends a style declared in the framework. Its sizing can be customized in variable `$h1` to `$h6`. Those variables follows a special format to allow responsive sizing.
+
+```scss
+$h1: (base: 42px, s: 30px);
+```
+
+The value above means H1 is 42px at normal and become 30px when below small (s) screen.
+
+You can also use the keyword `m`, `xs`, and `l` here:
+
+```scss
+$h1: (base: 42px, m: 36px, s: 30px, xs: 26px);
+```
 </article>

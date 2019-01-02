@@ -22,9 +22,11 @@
 
 @media (max-width: 767px) { .fs-h6 { font-size: 1em; } }
 
-.fs-body { font-size: 1em; }
+.fs-body { font-size: 16px; }
 
 .fs-s { font-size: 0.875em; }
+
+.fs-m { font-size: 1.125em; }
 
 .ls-100 { letter-spacing: -0.1em; }
 
@@ -330,6 +332,18 @@
 
 .w100vw { width: 100vw; }
 
+.minw-auto { min-width: auto; }
+
+.minw50 { min-width: 50%; }
+
+.minw100 { min-width: 100%; }
+
+.maxw-none { max-width: none; }
+
+.maxw50 { max-width: 50%; }
+
+.maxw100 { max-width: 100%; }
+
 .h-auto { height: auto; }
 
 .h0 { height: 0; }
@@ -347,6 +361,18 @@
 .h100 { height: 100%; }
 
 .h100vh { height: 100vh; }
+
+.minh-auto { min-height: auto; }
+
+.minh50 { min-height: 50%; }
+
+.minh100 { min-height: 100%; }
+
+.maxh-none { max-height: none; }
+
+.maxh50 { max-height: 50%; }
+
+.maxh100 { max-height: 100%; }
 
 .static { position: static; }
 
@@ -407,6 +433,8 @@
 .float-left { float: left; }
 
 .float-right { float: right; }
+
+.float-none { float: none; }
 
 .clearfix::before { content: " "; display: table; }
 
