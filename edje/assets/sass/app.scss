@@ -70,17 +70,20 @@ td:nth-child(2) {
   font-family: $font-family-code;
 }
 
+// name
 td:first-child {
   @include h( fw600 );
   font-size: 15px;
 }
 
+// output
 td:nth-child(2) {
   @include h( ls-25 );
-  font-size: em(14px);
+  font-size: em(13px);
   line-height: 26px;
 }
 
+// example
 td:nth-child(3) {
   @include h( pl05 );
 }
@@ -125,7 +128,7 @@ td:nth-child(3) {
   }
 
   ul {
-    @include h( f fw-wrap );
+    @include h( d-flex fw-wrap );
   }
 }
 
@@ -145,6 +148,9 @@ td:nth-child(3) {
   .d-block { @include h( d-block ); }
   .d-iblock { @include h( d-iblock ); }
   .d-none { @include h( d-none ); }
+
+  .d-grid { grid-template-columns: repeat( 3, 1fr ); }
+  .d-grid span { grid-column: span 1; }
 }
 
 
@@ -255,7 +261,7 @@ td:nth-child(3) {
   }
 
   section {
-    @include h( f );
+    @include h( d-flex );
     height: 300px;
   }
 }
@@ -340,7 +346,7 @@ td:nth-child(3) {
     height: 50px;
   }
 
-  section { @include h( f fw-wrap ); }
+  section { @include h( d-flex fw-wrap ); }
   section.dark { @include h( p05 bg-black75 ); }
 
   // bg-repeat
@@ -362,12 +368,12 @@ td:nth-child(3) {
 
 .demo-opacity {
   div {
-    @include h( f ai-center jc-center mb025 mr025 bg-main c-sub fs-s );
+    @include h( d-flex ai-center jc-center mb025 mr025 bg-main c-sub fs-s );
     width: 75px;
     height: 50px;
   }
 
-  section { @include h( f fw-wrap ); }
+  section { @include h( d-flex fw-wrap ); }
 }
 
 

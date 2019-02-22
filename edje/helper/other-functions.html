@@ -1,0 +1,80 @@
+<h1>Other Functions</h1>
+
+<article>
+
+## Convert to EM
+
+```
+em( $values, [$base] )
+```
+
+- **$values** (px) - Single or Group size to be converted.
+- **$base** (px) - Default: The value of `$font-size`. The wrapper's font-size.
+
+**EXAMPLE**
+
+```scss
+.my-div {
+  font-size: em( 20px );
+  padding: em( 24px 32px 0 32px );
+}
+
+// OUTPUT
+
+.my-div {
+  font-size: 1.25em;
+  padding: 1.5em 2em 0 2em;
+}
+```
+
+-----
+
+## Image and Font URL
+
+```
+image-url( $file );
+font-url( $file );
+```
+
+- **$file** - Path to the file name, starting from "assets/images" or "assets/fonts" respectively.
+
+**EXAMPLE**
+
+```scss
+.my-div {
+  background-image: image-url( 'bg/pattern1.jpg' );
+}
+
+// OUTPUT
+
+.my-div {
+  background-image: url( '../images/bg/pattern1.jpg' );
+}
+```
+
+
+-----
+
+## Encode SVG
+
+```
+svg-uri( $svg )
+```
+
+- **$svg** (string) - Raw data of SVG file.
+
+**EXAMPLE**
+
+```scss
+.my-item {
+  background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg"> ... </svg>');
+}
+
+// OUTPUT
+
+.my-item {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E% ... %3C/svg%3E");
+}
+```
+
+</article>

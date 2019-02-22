@@ -19,6 +19,13 @@
 
 <table> <script>
   [
+    [ 'fw-body', '<div class="fw-body">DEFAULT IS 400 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>',
+      `font-weight: $font-weight`
+    ],
+    [ 'fw-header', '<div class="fw-header">DEFAULT IS 700 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>',
+      `font-weight: $header-weight`
+    ],
+    [],
     [ 'fw300', '<div class="fw300">THIN Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, quibusdam!</div>',
       `font-weight: 300`
     ],
@@ -44,11 +51,12 @@
     [ 'i', '<div class="i">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>',
       `font-style: italic`
     ],
-    [ 'u', '<div class="u">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla porro voluptatem suscipit.</div>',
+    [ 'u / td-underline', '<div class="u">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla porro voluptatem suscipit.</div>',
       `text-decoration: underline`
     ],
-    [ 'strike', '<div class="strike">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>',
+    [ 'strike / td-strike', '<div class="strike">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et sunt eos.</div>',
       `text-decoration: line-through`
     ],
+    [ 'td-none', ``, `text-decoration: none` ]
   ]  
 </script> </table>

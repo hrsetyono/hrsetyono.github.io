@@ -55,8 +55,16 @@
       background-color: $gray-dark`
     ],
 
-    [ 'bg-body', `<div class="bg-body b1">bg-body</div>`,
+    [],
+
+    [ 'bg-body', `<div class="bg-body b1-solid">bg-body</div>`,
       `background-color: $body-background`
+    ],
+    [ 'bg-transparent', ``,
+      `background-color: transparent`
+    ],
+    [ 'bg-inherit', `Inherit from parent`,
+      `background-color: inherit` 
     ],
     
     [],
@@ -182,7 +190,7 @@ Following the snippet above, the class name to use will be `bg-pattern1` and `bg
 
 </script> </table>
 
-<h2>Background Misc</h2>
+<h2>Background Size</h2>
 
 <table class="demo-bg"> <script>
   [
@@ -194,9 +202,13 @@ Following the snippet above, the class name to use will be `bg-pattern1` and `bg
     `<article class="bgs-contain b1-solid bgr-no"></article>`,
       `background-size: contain`
     ],
+  ]
+</script> </table>
 
-    [],
+<h2>Background Repeat</h2>
 
+<table class="demo-bg"> <script>
+  [
     [ 'bgr', `This is default behavior <aside class="bgr"></aside>`,
       `background-repeat: repeat`
     ],

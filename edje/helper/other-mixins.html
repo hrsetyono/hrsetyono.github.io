@@ -2,19 +2,85 @@
 
 <article>
 
-### Triangle
+## Triangle
+
+Create a border that forms a triangle. Commonly used in pseudoselector.
 
 ```
-triangle()
+triangle( $direction, $color, $width, [$height] )
 ```
 
-The parameters in order are:
-
-- `$width` (px)
-- `$direction` (string) - There are 8 keywords: top, right, bottom, left, top-right, top-left, bottom-right, and bottom-left. Default is top.
-- `$color` (hex) - Default is $main color.
-- `$height` (px) - If left empty, triangle become equalateral
+- **$direction** (string) - There are 8 available directions based on Compass: n, e, s, w, ne, se, sw, nw. `n` (North) means the triangle is pointing to top.
+- **$color** (hex)
+- **$width** (px)
+- **$height** (px) - Default: triangle become equalateral.
 
 **EXAMPLE**
+
+```sass
+.my-div::before {
+  content: "";
+  position: absolute;
+  right: 0; bottom: -16px;
+  
+  @include triangle( n, #333, 20px, 16px );
+}
+
+// OUTPUT
+
+.my-div::before {
+  content: "";
+  position: absolute;
+  right: 0; bottom: -16px;
+  
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0%;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0 10px 16px 10px;
+  border-bottom-color: #333;
+}
+```
+
+-----
+
+## Customize Placeholder Style
+
+```
+placeholder( [$base] ) { @content }
+```
+
+- **$base** (bool) - Default: false - If you want to apply it outside any selector, set to true.
+
+**EXAMPLE**
+
+```scss
+.my-input {
+  @include placeholder {
+    color: yellow;
+    font-weight: 700;
+  }
+}
+
+// OUTPUT
+
+.my-input::-webkit-input-placeholder {
+  color: yellow; font-weight: 700;
+}
+
+.my-input::-moz-placeholder {
+  color: yellow; font-weight: 700;
+}
+
+.my-input:-ms-input-placeholder {
+  color: yellow; font-weight: 700;
+}
+
+.my-input:-moz-placeholder {
+  color: yellow; font-weight: 700;
+}
+```
 
 </article>

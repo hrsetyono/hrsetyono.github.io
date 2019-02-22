@@ -5,12 +5,21 @@
     [ 'd-block', '<span class="d-block"> This span becomes a block </span>', [
       'display: block'
     ] ],
-    [ 'd-iblock', '<p class="d-iblock">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
+    [ 'd-inline-block', '<p class="d-inline-block">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
       'display: inline-block'
     ] ],
-    [ 'd-flex / f', '<div class="f"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+    [ 'd-flex', '<div class="d-flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
       `display: -webkit-flex
       display: flex`,
+    ] ],
+    [ 'd-grid',
+    `<div class="d-grid">
+      <span>Column 1</span>
+      <span>Column 2</span>
+      <span>Column 3</span>
+    </div>`, [
+      `display: -ms-grid
+      display: grid`,
     ] ],
     [ 'd-none', '<div class="d-none">Hello there!</div>', [
       'display: none'
@@ -31,17 +40,20 @@
 
 <table> <script>
   [
-    [ 'no-select', `<p class="no-select">You can't select my text!</p>`,
+    [ 'select-none', `<p class="select-none">You can't select my text!</p>`,
       `-webkit-touch-callout: none
       -webkit-user-select: none
       -moz-user-select: none
       user-select: none`
     ],
-    [ 'no-events', `<a href="https://google.com" class="no-events">This is link to Google</a> But pointer event is none, so nothing happened when you click it`,
+    [ 'events-none', `<a href="https://google.com" class="no-events">This is link to Google</a> But pointer event is none, so nothing happened when you click it`,
       `pointer-events: none`
     ],
-    [ 'no-appearance',
-    `<select class="no-appearance">
+    [ 'events-all', `Reset pointer-events to default behavior`,
+      `pointer-events: all`
+    ],
+    [ 'appearance-none',
+    `<select class="appearance-none">
       <option>This is a &lt;select&gt; but...</option>
       <option>But appearance is set to "none"</option>
       <option>So there's no down arrow</option>
