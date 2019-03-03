@@ -17,21 +17,20 @@ triangle( $direction, $color, $width, [$height] )
 
 **EXAMPLE**
 
-```sass
-.my-div::before {
-  content: "";
-  position: absolute;
-  right: 0; bottom: -16px;
-  
-  @include triangle( n, #333, 20px, 16px );
-}
+```scss
+.my-div::before
+  +h( absolute right0 )
+  content: ""
+  bottom: -16px
+  +triangle( n, #333, 20px, 16px )
 
 // OUTPUT
 
 .my-div::before {
   content: "";
   position: absolute;
-  right: 0; bottom: -16px;
+  right: 0;
+  bottom: -16px;
   
   width: 0;
   height: 0;
@@ -57,12 +56,10 @@ placeholder( [$base] ) { @content }
 **EXAMPLE**
 
 ```scss
-.my-input {
-  @include placeholder {
-    color: yellow;
-    font-weight: 700;
-  }
-}
+.my-input
+  +placeholder
+    color: yellow
+    font-weight: 700
 
 // OUTPUT
 

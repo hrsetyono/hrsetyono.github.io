@@ -130,17 +130,14 @@ Column parameters in order are:
 ```
 
 ```scss
-.my-grid {
-  @include grid( $columns:10, $gap:40px );
-}
+.my-grid
+  +grid( $columns:10, $gap:40px )
 
-.sidebar {
-  @include column(3, 4, 10); // 3 on Large, 4 on Small, 10 on XSmall screen
-}
+.sidebar
+  +column(3, 4, 10) // 3 on Large, 4 on Small, 10 on XSmall screen
 
-.main {
-  @include column(7, 6, 10);
-}
+.main
+  +column(7, 6, 10)
 ```
 
 </article>

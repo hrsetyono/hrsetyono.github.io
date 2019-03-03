@@ -1,28 +1,31 @@
 <h1>Media Query</h1>
 
 <article>
-Across the framework, we divide sizing into 4 keywords:
-
-- `xs` - Extra small (480px)
-- `s` - Small (767px)
-- `m` - Medium (960px)
-- `l` - Large (1120px)
-
-These sizes can be customized by changing the variable `$size-xs`, `$size-s`, `$size-m`, and `$size-l` in settings.
-
-Now onto media query, we provide variables that can be used wtihin `@media`:
+We don't like using mixin for media query, instead we use variable within `@media` block like this:
 
 ```scss
-@media ($below-s) {
-  // styling below small screen
-}
+.button
+  +h( p1 )
 
-@media ($below-xs) and ($landscape) {
-  // styling below extra-small screen AND landscape
-}
+  @media ($below-s)
+    +h( p05 )
+
+  @media ($above-m) and ($portrait)
+    +h( p15 )
 ```
 
------
+Those variables are defined in **_settings.scss**. Let me explain what those mean.
+
+First thing first, there are 4 default breakpoints in Edje:
+
+- XS (extra xmall) is 480px
+- S (small) is 767px
+- M (medium) is 960px
+- and L (large) is 1120px.
+
+So the variable `$below-s` means when the screen is below 767px or translated to `max-width: 767px`.
+
+Same thing goes to `$above-m` which translated to `min-width: 961px`. For "$above", we add 1px to the breakpoint so it won't clash with "$below".
 </article>
 
 <h2>Available Variables</h2>
@@ -63,9 +66,8 @@ $above-watch : "min-width: 221px";
 ```
 
 ```scss
-@media ($below-watch) {
+@media ($below-watch)
   ...
-}
 ```
 
 -----
@@ -77,9 +79,8 @@ $above-watch : "min-width: 221px";
 Simply combine two variables using `and`. The example below will target media query between 768px to 960px.
 
 ```scss
-@media ($above-s) and ($below-m) {
+@media ($above-s) and ($below-m)
   ...
-}
 ```
 
 -----
@@ -98,13 +99,11 @@ above( $size )
 **EXAMPLE**
 
 ```scss
-@media (below(512px)) {
+@media (below(512px))
   ...
-}
 
-@media (above(753px)) {
+@media (above(753px))
   ...
-}
 ```
 
 -----
@@ -116,12 +115,10 @@ above( $size )
 There is no need for fancy variables when specifying Print / Screen media query.
 
 ```scss
-@media only print {
+@media only print
   ...
-}
 
-@media only screen and ($below-s) {
+@media only screen and ($below-s)
   ...
-}
 ```
 </article>

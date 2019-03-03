@@ -14,10 +14,9 @@ em( $values, [$base] )
 **EXAMPLE**
 
 ```scss
-.my-div {
-  font-size: em( 20px );
-  padding: em( 24px 32px 0 32px );
-}
+.my-div
+  font-size: em( 20px )
+  padding: em( 24px 32px 0 32px )
 
 // OUTPUT
 
@@ -41,9 +40,8 @@ font-url( $file );
 **EXAMPLE**
 
 ```scss
-.my-div {
-  background-image: image-url( 'bg/pattern1.jpg' );
-}
+.my-div
+  background-image: image-url( 'bg/pattern1.jpg' )
 
 // OUTPUT
 
@@ -58,7 +56,7 @@ font-url( $file );
 ## Encode SVG
 
 ```
-svg-uri( $svg )
+svg-encode( $svg )
 ```
 
 - **$svg** (string) - Raw data of SVG file.
@@ -66,9 +64,8 @@ svg-uri( $svg )
 **EXAMPLE**
 
 ```scss
-.my-item {
-  background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg"> ... </svg>');
-}
+.my-item
+  background-image: svg-encode('<svg xmlns="http://www.w3.org/2000/svg"> ... </svg>')
 
 // OUTPUT
 

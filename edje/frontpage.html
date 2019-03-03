@@ -1,102 +1,186 @@
 <h1>Edje Framework</h1>
 
 <article>
+**TABLE OF CONTENTS**
+
+- [What is Edje?](#what-is-edje)
+- [Why use Edje](#why-use-edje)
+- [How to use Edje?](#how-to-use-edje)
+- [Other Features](#other-features)
+    1. [Grid System](#grid-system)
+    1. [Media Query](#media-query)
+- [What is the Difference with Functional CSS](what-is-the-difference-with-functional-css)
+- [How to Compile Sass](#how-to-compile-sass)
+- [Credit](#credit)
+
+**USEFUL LINKS**
+
+- [Full Documentation](https://hrsetyono.github.io/edje/)
+
+## What is Edje?
 
 Edje is a **Functional Sass framework**. Basically we provide many shorthand styles, so instead of writing `padding: 1em`, we just write `p1`.
 
-To make it clearer, here's an example of a class definition:
+Let's take a look at how we write CSS normally:
 
-```sass
+```css
 .page-thumbnail {
   background-color: red;
-  border: 2px solid rgba(black, 0.5);
+  border: 2px solid black;
   padding: 1em;
+  color: white;
 }
 ```
 
-Using **Edje framework**, we wrote it like this:
+Using **Edje framework**, we will write it like this:
 
-```sass
+```scss
+// Sass syntax
+.page-thumbnail
+  +h( bg-red  b2-solid  b-black  p1  c-white )
+
+// or with SCSS syntax
 .page-thumbnail {
-  @include h( bg-red  b2  b-black50  p1 );
+  @include h( bg-red  b2  b-black50  p1  c-white );
 }
 ```
 
-Those mini styles are defined by Edje and easily customizable by overriding a Sass variable.
+## Why use Edje?
 
-Some of you might think it's a bad practice to add an abstraction layer to CSS. But we've seen benefits such as:
+Some benefits based on our experiences are:
 
 - **Compact Codebase** - Easier to skim through the code.
 
-- **Faster development** - You might say using full-fledged framework like Bootstrap is faster. But from my experience, I spent longer time trying to override or customize their default styling.
+- **Fun**. Yeah I know this is subjective. But if you enjoy writing CSS with Emmet, you are going to like this framework.
 
-- **Fun**. Yeah I know that this is subjective. But for me, combining a bunch of small things to create larger entity is enjoyable.
+- **Instant Styleguide** - All customizable variables are stored in **_settings.scss**, that automatically become a styleguide to your team.
+
+
+## How to Use Edje?
+
+1. Copy (1) `sass/_settings.scss`, (2) `sass/edje/` directory, and (3) `sass/edje.sass`. Organize them to fit your project structure.
+1. Add `@import "edje"` at the top of the Sass files where you want to use Edje.
+1. Compile them. Done!
+
+First time working with Sass? Here's a [short guide](#how-to-compile-sass) on how to compile them.
+
+Also this whole repository can actually be used as a simple boilerplate. Just delete `/demo` directory.
+
+**Note**: If you want to use other framework like Bootstrap, no need to copy `sass/edje.sass` because that contains our Normalizer and Grid System.
 
 -----
 
-## Installation
+# Other Features
+
+## 1. Grid System
+
+We use the new CSS3 Grid. It is divided into 12 columns and you can define the portion using the class `large-x` and `small-x`.
+
+Small column size is applied when the screen is below 767px (customizable in variable `$size-s`).
+
+[Read more about our Grid System](https://hrsetyono.github.io/edje/#/helper/grid)
+
+```html
+<h-grid>
+  <div class="large-8 small-6">
+    ...
+  </div>
+  <div class="large-4 small-6">
+    ...
+  </div>
+</h-grid>
+```
+
+Result:
+
+![Edje Grid Sample](https://cdn.setyono.net/edge/grid-large-small.jpg)
+
+-----
+
+## 2. Media Query
+
+We don't like using mixin for media query, instead we use variable within `@media` block like this:
+
+```scss
+.button
+  +h( p1 )
+
+  @media ($below-s)
+    +h( p05 )
+
+  @media ($above-m) and ($portrait)
+    +h( p15 )
+```
+
+Those variables are defined in **_settings.scss**. Let me explain what those mean.
+
+First thing first, there are 4 default breakpoints in Edje:
+
+- XS (extra xmall) is 480px
+- S (small) is 767px
+- M (medium) is 960px
+- and L (large) is 1120px.
+
+So the variable `$below-s` means when the screen is below 767px or translated to `max-width: 767px`.
+
+Same thing goes to `$above-m` which translated to `min-width: 961px`. For "$above", we add 1px to the breakpoint so it won't clash with "$below".
+
+[Read Media Query documentation here](https://hrsetyono.github.io/edje/#/helper/media-query)
+
+
+-----
+
+## What is the Difference with Functional CSS?
+
+You might recognize Edje's concept from Functional CSS framework such as [Tachyon](https://tachyons.io/). They write the shorthand syntax as HTML class like this:
+
+```html
+<div class="bg-red b2 b-black50 p1 c-white">
+  ...
+</div>
+```
+
+It felt weird when I first saw that, but [this article](https://www.mikecr.it/ramblings/functional-css/) convinced me to give it a try. The idea is not having to write CSS and no need to think about class name.
+
+But in practice, I still need to write CSS for Hover effect, Pseudoselector, Media query, and other advanced CSS like animation. **I ended up going back and forth between my HTML and CSS** which gets messy.
+
+Edje framework solves that.
+
+If you need Hover effect, Pseudoselector, or Media Query:
+
+```scss
+.button
+  +h( bg-red p1 c-white )
+
+  &:hover
+    +h( bg-blue )
+
+  @media ($below-s)
+    +h( p05 ) // padding: 0.5rem
+```
+
+If you need advanced CSS, simply write it old-fashioned way:
+
+```scss
+.button
+  +h( bg-red p1 c-white )
+
+  animation: 1s fadeInUp both
+  transform: rotate(5deg)
+```
+
+----
+
+## How to Compile Sass
 
 1. Install [Node JS](https://nodejs.org/en/download/).
 
-1. Run these 2 commands as administrator:
+1. Open CMD (or Terminal if you're using Mac) and run the command `npm install -g node-sass`.
 
-    ```
-    npm install -g node-sass
-    npm install -g edje
-    ```
-
-1. If you are on Windows, add **NODE_PATH** to your System Variable and set it to **%AppData%/npm/node_modules**.
-
-1. Test whether it's successfully installed by running the command `npm`. If not found, try restarting your PC and double-check your `NODE_PATH`. If still doesn't work, run these [4 commands](http://stackoverflow.com/a/9588052/1318622) one by one.
-
------
-
-## Boilerplate
-
-We have HTML, Wordpress, and WooCommerce template / boilerplate. To use it, install it with these commands:
-
-```
-npm install -g yeoman
-npm install -g generator-edje
-```
-
-To generate the template, open command line **in your project directory** and type:
-
-```
-yo edje
-```
-
-Select the template with arrow key and press Enter.
-
-Alternatively, you can get the template files directly from these repository:
-
-- [HTML](https://github.com/hrsetyono/edje-html-boilerplate)
-- [WordPress](https://github.com/hrsetyono/edje-wp-boilerplate)
-
-
------
-
-## Compiling Sass
-
-Open command line in the theme directory and type `npm run sass`. Now whenever you save the Sass files, it will automatically compile into CSS.
-
-Something to take note of:
-
-- If you create new `.scss` file, you need to restart the command to make it detected.
-- If the variable in `_settings.scss` calls another variable, you need to uncomment the called variable or else it will return "Variable not found" error.
-- If you use unknown Class name, it will put a warning in the command log.
-
------
-
-## Read More
-
-1. [Customization](#/custom)
-1. [The Grid System](#/helper/grid)
-
+1. Open CMD inside your project directory and run the command `npm run sass`. That command is a shortcut we defined in **package.json**.
 
 ### Credit
 
-- [Mike CR](https://www.mikecr.it/ramblings/functional-css/) for convincing me to give this model a try.
-- Adam Moore - For making [Tachyon CSS](https://tachyons.io/) the basis of my framework.
-
+- [Mike CR](https://www.mikecr.it/ramblings/functional-css/) for convincing me to give Functional CSS a try which turned into this framework.
+- [Adam Moore](https://tachyons.io/) - For making Tachyon CSS, which I used as basis of this framework.
 </article>

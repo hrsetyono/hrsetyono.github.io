@@ -2,25 +2,13 @@
 
 <article>
 
-Across the documentation we mentioned whether it is customizable via variable or not. When it does, simply open `_settings.scss`, uncomment it, and add extra item to the list.
-
-**Note**: Since the list might refer to a variable, you need to uncomment that variable too.
+Across the documentation we mentioned whether it is customizable via variable or not. When it does, simply open `_settings.scss`, find the variable, and edit it.
 
 **EXAMPLE:**
 
-We want to add a new font family. As written in the documentation, we need to find and override `$h-font-family`. Find this variable in settings:
+We want to add new font-family "Papyrus". The shorthand is going to be `ff-script`.
 
-``` scss
-// $h-font-family: (
-//  names: ( ff-: font-family ),
-//  values: (
-//    body: $font-family,
-//    header: $font-family-header
-//  )
-//);
-```
-
-**Uncomment it**, and add extra item to `values` argument:
+As written in the documentation, we need to find `$h-font-family`. Then we add new item in the "values" map:
 
 ```scss
 $h-font-family: (
@@ -36,12 +24,9 @@ $h-font-family: (
 Now you can use `ff-script` to apply Papyrus font:
 
 ```scss
-.page-title {
-  @include h( ff-script );
-}
+.page-title
+  +h( ff-script )
 ```
-
-Don't like the shorthand `ff-` for font-family? You can simply change it in `names` argument!
 
 -----
 </article>
@@ -102,23 +87,5 @@ $h-font-size: (
 
 When a value is prefixed with percent sign (%), it will trigger `@extend` command.
 
-In the case of Heading 1 to 6, we already define the style within the framework. If you want to create a new one, add its definition at the **bottom of settings**:
-
-**NOTE**: In settings, you can't use any helper functions
-
-```scss
-...
-
-%subtitle {
-  font-size: 1.25em;
-
-  @media ($below-s) {
-    font-size: 1.125em;
-  }
-
-  @media ($below-xs) {
-    font-size: 1em;
-  }
-}
-```
+For Heading 1 to 6, we already wrote the base styles in the framework.
 </article>
