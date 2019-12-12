@@ -1,6 +1,10 @@
 <h1>Background Color</h1>
 <article>
-  Customizable in variable `$h-background-color`.
+```
+bg-[color]
+```
+
+[Click here](#/edje-colors) for explanation about color variable in Edje.
 </article>
 
 <table class="demo-bg"> <script>
@@ -8,57 +12,28 @@
     [ 'bg-main / bg-main-light / bg-main-dark',
     `<section>
       <div class="bg-main c-white">bg-main</div>
-      <div class="bg-main-light">bg-main-light</div>
+      <div class="bg-main-light c-white">bg-main-light</div>
       <div class="bg-main-dark c-white">bg-main-dark</div>
     </section>`,
-      `background-color: $main
-      background-color: $main-light
-      background-color: $main-dark`
+      `background-color: var(--main)
+      background-color: var(--main-light)
+      background-color: var(--main-dark)`
     ],
-    [ 'bg-main75 / bg-main50 / bg-main25 / bg-main10 / bg-main05',
+    [ 'bg-main_50 / bg-main_25 / bg-main_10',
     `<section>
-      <div class="bg-main75 c-white">bg-main75</div>
-      <div class="bg-main50">bg-main50</div>
-      <div class="bg-main25">bg-main25</div>
-      <div class="bg-main10">bg-main10</div>
-      <div class="bg-main05">bg-main05</div>
+      <div class="bg-main50">bg-main_50</div>
+      <div class="bg-main25">bg-main_25</div>
+      <div class="bg-main10">bg-main_10</div>
     </section>`,
-      `background-color: rgba($main, .75)
-      background-color: rgba($main, .5)
-      background-color: rgba($main, .25)
-      background-color: rgba($main, .1)
-      background-color: rgba($main, .05)`
-    ],
-
-    [],
-    
-    [ 'bg-sub / bg-sub-light / bg-sub-dark',
-    `<section>
-      <div class="bg-sub">bg-sub</div>
-      <div class="bg-sub-light">bg-sub-light</div>
-      <div class="bg-sub-dark">bg-sub-dark</div>
-    </section>`,
-      `background-color: $sub
-      background-color: $sub-light
-      background-color: $sub-dark`
-    ],
-
-    
-    [ 'bg-gray / bg-gray-light / bg-gray-dark',
-    `<section>
-      <div class="bg-gray">bg-gray</div>
-      <div class="bg-gray-light">bg-gray-light</div>
-      <div class="bg-gray-dark">bg-gray-dark</div>
-    </section>`,
-      `background-color: $gray
-      background-color: $gray-light
-      background-color: $gray-dark`
+      `background-color: rgba(var(--mainRGB), .50)
+      background-color: rgba(var(--mainRGB), .25)
+      background-color: rgba(var(--mainRGB), .1)`
     ],
 
     [],
 
     [ 'bg-body', `<div class="bg-body b1-solid">bg-body</div>`,
-      `background-color: $body-background`
+      `background-color: var(--body)`
     ],
     [ 'bg-transparent', ``,
       `background-color: transparent`
@@ -76,44 +51,23 @@
       <div class="bg-blue c-white">bg-blue</div>
       <div class="bg-yellow">bg-yellow</div>
     </section>`,
-      `background-color: $red
-      background-color: $green
-      background-color: $blue
-      background-color: $yellow`
+      `background-color: var(--red)
+      background-color: var(--green)
+      background-color: var(--blue)
+      background-color: var(--yellow)`
     ],
 
-    [ 'bg-black / bg-black75 / bg-black50 / bg-black25 / bg-black10 /  bg-black05', `
-    <section>
-      <div class="bg-black c-white"> bg-black</div>
-      <div class="bg-black75 c-white">75</div>
-      <div class="bg-black50 c-white">50</div>
-      <div class="bg-black25 c-white">25</div>
-      <div class="bg-black10">10</div>
-      <div class="bg-black05">05</div>
-    </section>`,
-      `background-color: black
-      background-color: rgba(black, .75)
-      background-color: rgba(black, .5)
-      background-color: rgba(black, .25)
-      background-color: rgba(black, .1)
-      background-color: rgba(black, .05)`
-    ],
-
-    [ 'bg-white / bg-white75 / bg-white50 / bg-white25 / bg-white10 / bg-white05', `
+    [ 'bg-white bg-white50 / bg-white25 / bg-white05', `
     <section class="dark">
       <div class="bg-white"> bg-white</div>
-      <div class="bg-white75">75</div>
       <div class="bg-white50">50</div>
       <div class="bg-white25">25</div>
-      <div class="bg-white10 c-white">10</div>
       <div class="bg-white05 c-white">05</div>
     </section>`,
-      `background-color: white
-      background-color: rgba(white, .75)
-      background-color: rgba(white, .5)
-      background-color: rgba(white, .25)
-      background-color: rgba(white, .1)
-      background-color: rgba(white, .05)`
+      `background-color: var(--white)
+      background-color: rgba(var(--white), .5)
+      background-color: rgba(var(--white), .25)
+      background-color: rgba(var(--white), .05)`
     ],
   ]
 </script> </table>
@@ -121,24 +75,7 @@
 <h2>Background Image</h2>
 
 <article>
-Customizable in variable `$h-background-image`.
-
-By default this variable is **empty**. You can put either `url()` or any gradient value like `linear-gradient()`.
-
-**EXAMPLE:**
-
-```scss
-$h-background-image: (
-  names: ( bg-: background-image ),
-  values: (
-    pattern1: url('../images/pattern1.png'),
-    gradient1: linear-gradient( to top, #333, #333 50%, #eee 75%, #333 75%)
-  )
-) !default;
-```
-
-Following the snippet above, the class name to use will be `bg-pattern1` and `bg-gradient1`.
-
+There is no helper for this. Define it manually.
 </article>
 
 <hr>

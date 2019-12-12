@@ -1,0 +1,84 @@
+<h1>Edje Color</h1>
+
+<article>
+
+Any colors defined in `$h-colors` (in `_settings.scss`) will be available to use as CSS Variable.
+
+For example:
+
+```sass
+$h-colors: (
+  'red': #d32f2f,
+  'green': #4caf50,
+  'blue': #1976d2,
+  'main': var(--blue),
+  ....
+);
+```
+
+It will output each item into `:root` and it also add the RGB version:
+
+```css
+:root {
+  --red: #d32f2f;
+  --redRGB: 211, 47, 47
+
+  --green: #4caf50;
+  --greenRGB: 76, 175, 80
+
+  --blue: #1976d2;
+  --blueRGB: 25, 118, 210;
+
+  --main: var(--blue);
+  --mainRGB: var(--blueRGB);
+
+  ...
+}
+```
+
+<h2>Color Properties</h2>
+
+Properties that accept color values are:
+
+- `color` shortened to `c`
+- `background-color` shortened to `bg`
+- `border-color` shortened to `bc`
+
+Combine those properties with color values defined above. You can add special syntax for transparency too:
+
+```sass
++h( c-red  bg-black_50 )
+
+// Output
+color: var(--red);
+background-color: rgba(var(--blackRGB), .50);
+```
+
+If the key is not found, it will output it as is:
+
+```sass
++h( c-inherit )
+
+// Output
+color: inherit
+```
+
+</article>
+
+<table class="demo-border"> <script>
+  [
+    [ 'c-black / c-black_50 / bg-main / bg-main_75 / bc-blue / bc-inherit',
+    `<p class="c-black">Black text</p>
+    <p class="c-black50">Black text 50% transparency</p>
+    <p class="bg-main c-white mb05">Main Background</p>
+    <p class="bg-main75 c-white mb05">Main Background 75% transparency</p>
+    <div class="b2-solid bc-blue mb05"></div>`, 
+      `color: var(--black)
+      color: rgba(var(--blackRGB), .50)
+      background-color: var(--main)
+      background-color: rgba(var(--mainRGB), .75)
+      border-color: var(--blue)
+      border-color: inherit`,
+    ],
+  ]
+</script> </table>
