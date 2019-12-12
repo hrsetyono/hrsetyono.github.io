@@ -7,24 +7,14 @@
 <table class="demo-height"> <script>
   [
     [ 'h-auto', ``, `height: auto` ],
-    [ 'h0', ``, `height: 0` ],
-    [ 'h25 / h33 / h50 / h66 / h75 / h100',
-      `<section>
-        <div class="h25">h25</div>
-        <div class="h33">h33</div>
-        <div class="h50">h50</div>
-        <div class="h66">h66</div>
-        <div class="h75">h75</div>
-        <div class="h100">h100</div>
-      </section>`,
-      `height: 25%
-      height: calc(100% / 3)
-      height: 50%
-      height: calc(100% / 1.5)
-      height: 75%
-      height: 100%`
+    [
+      `h75p / h2_5 / h50px / h100vh`,
+      `Accept number with measurement unit. Without unit, it uses "rem".`,
+      `height: 75%
+      height: 2.5rem
+      height: 50px
+      height: 100vh`
     ],
-    [ 'h100vh', ``, `height: 100vh` ]
   ]
 </script> </table>
 
@@ -33,11 +23,19 @@
 <table> <script>
   [
     [ 'maxh-none', ``, `max-height: none` ],
-    [ 'maxh-50', ``, `max-height: 50%` ],
-    [ 'maxh-100', ``, `max-height: 100%` ],
+    [
+      'maxh100p / maxh250px',
+      `Accept number with measurement unit. Without unit, it uses "rem".`,
+      `max-height: 100%
+      max-height: 250px`
+    ],
     [],
     [ 'minh-auto', ``, `min-height: auto` ],
-    [ 'minh-50', ``, `min-height: 50%` ],
-    [ 'minh-100', ``, `min-height: 100%` ]
+    [
+      'minh50p / minh10',
+      `Accept number with measurement unit. Without unit, it uses "rem".`,
+      `min-height: 50%
+      min-hegiht: 10rem`
+    ],
   ]
 </script> </table>

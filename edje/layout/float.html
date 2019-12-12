@@ -29,20 +29,13 @@
 <h2>Clearfix</h2>
 
 <article>
-  Apply it to the container of float elements so it will wrap properly.
+Clearfix is available as mixin.
+
+```
+.my-wrapper
+  +clearfix
+
+.my-wrapper img
+  +h( float-left )
+```
 </article>
-
-<table> <script>
-  [
-    [
-      'clearfix', ``,
-      `::before, ::after {
-      &nbsp content: " "
-      &nbsp display: table
-      }
-
-      ::after { clear: both }
-      `
-    ]
-  ]
-</script> </table>

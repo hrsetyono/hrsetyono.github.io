@@ -1,156 +1,164 @@
 <h1>Flex</h1>
 
 <table class="demo-display  demo-flex">
-  <script>
-    [
-      [ 'd-flex', '<div class="d-flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
-        `display: -webkit-flex
-        display: flex`,
-      ] ],
-      [ 'fd-row', '<div class="fd-row"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
-        'flex-direction: row',
-      ] ],
-      [ 'fd-column', '<div class="fd-column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
-        'flex-direction: column',
-      ] ],
-      [ 'fd-row-reverse', '<div class="fd-row-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
-        'flex-direction: row-reverse',
-      ] ],
-      [ 'fd-column-reverse', '<div class="fd-column-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
-        'flex-direction: column-reverse',
-      ] ],
-      [ 'fw-wrap',
-      `<div class="d-flex fw-wrap">
-        <span class="w30">1</span>
-        <span class="w30">2</span>
-        <span class="w30">3</span>
-        <span class="w30">4</span>
-        <span class="w30">5</span>
-        <span class="w30">6</span>
+<script>
+[
+  [ 'd-flex',
+  '<div class="d-flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>',
+    `display: -webkit-flex
+    display: flex`,
+  ],
+  [ 'fd-row', '<div class="fd-row"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+    'flex-direction: row',
+  ] ],
+  [ 'fd-column', '<div class="fd-column"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+    'flex-direction: column',
+  ] ],
+  [ 'fd-row-reverse', '<div class="fd-row-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+    'flex-direction: row-reverse',
+  ] ],
+  [ 'fd-column-reverse', '<div class="fd-column-reverse"> <span>This is 1st paragraph</span> <span>This is 2nd paragraph, but the order is reversed</span> </div>', [
+    'flex-direction: column-reverse',
+  ] ],
+  [ 'fw-wrap',
+  `<div class="d-flex fw-wrap">
+    <span class="w30">1</span>
+    <span class="w30">2</span>
+    <span class="w30">3</span>
+    <span class="w30">4</span>
+    <span class="w30">5</span>
+    <span class="w30">6</span>
+  </div>
+  Check out <a href="#/helper/tile">Tile System</a> to achieve this format properly`, [
+    'flex-wrap: wrap',
+  ] ],
+  [ 'ai-start / ai-end / ai-center / ai-baseline / ai-stretch',
+    `<h-tile class="tile-3 flex--boxed">
+      <div class="d-flex ai-start" data-title="ai-start"> 
+        <span>.</span><span>.</span><span>.</span>
       </div>
-      Check out <a href="#/helper/tile">Tile System</a> to achieve this format properly`, [
-        'flex-wrap: wrap',
-      ] ],
-      [ 'ai-start / ai-end / ai-center / ai-baseline / ai-stretch',
-        `<h-tile class="tile-3 flex--boxed">
-          <div class="d-flex ai-start" data-title="ai-start"> 
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          
-          <div class="d-flex ai-end" data-title="ai-end">  
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          
-          <div class="d-flex ai-center" data-title="ai-center">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          
-          <div class="d-flex ai-baseline" data-title="ai-baseline">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          
-          <div class="d-flex ai-stretch" data-title="ai-stretch (default)">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-        </h-tile>`, [
-        'align-items: flex-start',
-        'align-items: flex-end',
-        'align-items: center',
-        'align-items: baseline',
-        'align-items: stretch',
-      ] ],
-      [ 'jc-start / jc-end / jc-center / jc-around / jc-between', 
-        `<h-tile class="tile-3 flex--boxed flex--boxed-2">
-          <div class="d-flex jc-start" data-title="jc-start (default)">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          <div class="d-flex jc-end" data-title="jc-end"> 
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          <div class="d-flex jc-center" data-title="jc-center">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          <div class="d-flex jc-around" data-title="jc-around">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-          <div class="d-flex jc-between" data-title="jc-between">
-            <span>.</span><span>.</span><span>.</span>
-          </div>
-        </h-tile>`, [
-        'justify-content: flex-start',
-        'justify-content: flex-end',
-        'justify-content: center',
-        'justify-content: space-between',
-        'justify-content: space-around',
-      ] ],
-    ]
-  </script>
+      
+      <div class="d-flex ai-end" data-title="ai-end">  
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      
+      <div class="d-flex ai-center" data-title="ai-center">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      
+      <div class="d-flex ai-baseline" data-title="ai-baseline">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      
+      <div class="d-flex ai-stretch" data-title="ai-stretch (default)">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+    </h-tile>`, [
+    'align-items: flex-start',
+    'align-items: flex-end',
+    'align-items: center',
+    'align-items: baseline',
+    'align-items: stretch',
+  ] ],
+  [ 'jc-start / jc-end / jc-center / jc-around / jc-between', 
+    `<h-tile class="tile-3 flex--boxed flex--boxed-2">
+      <div class="d-flex jc-start" data-title="jc-start (default)">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      <div class="d-flex jc-end" data-title="jc-end"> 
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      <div class="d-flex jc-center" data-title="jc-center">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      <div class="d-flex jc-around" data-title="jc-around">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      <div class="d-flex jc-between" data-title="jc-between">
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+    </h-tile>`,
+    `justify-content: flex-start
+    justify-content: flex-end
+    justify-content: center
+    justify-content: space-between
+    justify-content: space-around`
+  ],
+  [ 'as-start / as-end / as-center / as-around / as-between', 
+     ``,
+    `align-self: flex-start
+    align-self: flex-end
+    align-self: center
+    align-self: space-between
+    align-self: space-around`
+  ],
+]
+</script>
 </table>
 
 
 <h1>Flex Items</h1>
 
 <table class="demo-display demo-flex">
-  <script>
-    [
-      [ 'flex0 / flex1 / flex2 / flex3 / flex4 / flex5',
-      `<div class="d-flex">
-        <span class="flex2">flex2</span> <span class="flex3">flex3</span>
-      </div>
-      <div class="d-flex">
-        <span class="flex1">flex1</span> <span class="flex4">flex4</span>
-      </div>
-      Don't use this as page layout, use <a href="#/classes/grid">Grid System</a> instead`, [
-        'flex: 0',
-        'flex: 1',
-        'flex: 2',
-        'flex: 3',
-        'flex: 4',
-        'flex: 5',
-      ] ],
-      [ 'as-start / as-end / as-center / as-baseline / as-stretch',
-      `<section class="flex--boxed flex--boxed-2 / f fw-wrap">
-        <div class="d-flex" data-title="as-start">
-          <span>.</span>
-          <span class="as-start">as-start</span>
-          <span>.</span>
-        </div>
-        <div class="d-flex" data-title="as-end">
-          <span>.</span>
-          <span class="as-end">as-end</span>
-          <span>.</span>
-        </div>
-        <div class="d-flex" data-title="as-center">
-          <span>.</span>
-          <span class="as-center">as-center</span>
-          <span>.</span>
-        </div>
-      </section>`, [
-        'align-self: flex-start',
-        'align-self: flex-end',
-        'align-self: center',
-        'align-self: baseline',
-        'align-self: stretch',
-      ] ],
+<script>
+[
+  [ 'flex0 / flex1 / flex2 / ... / flex100',
+  `Accept any plain number (without unit)
+  <div class="d-flex">
+    <span class="flex2">flex2</span> <span class="flex3">flex3</span>
+  </div>
+  <div class="d-flex">
+    <span class="flex1">flex1</span> <span class="flex4">flex4</span>
+  </div>
+  Don't use this as page layout, use <a href="#/classes/grid">Grid System</a> instead`,
+    `flex: 0
+    flex: 1
+    flex: 2
+    ...
+    flex: 100`
+  ],
+  [ 'as-start / as-end / as-center / as-baseline / as-stretch',
+  `<section class="flex--boxed flex--boxed-2 / f fw-wrap">
+    <div class="d-flex" data-title="as-start">
+      <span>.</span>
+      <span class="as-start">as-start</span>
+      <span>.</span>
+    </div>
+    <div class="d-flex" data-title="as-end">
+      <span>.</span>
+      <span class="as-end">as-end</span>
+      <span>.</span>
+    </div>
+    <div class="d-flex" data-title="as-center">
+      <span>.</span>
+      <span class="as-center">as-center</span>
+      <span>.</span>
+    </div>
+  </section>`, [
+    'align-self: flex-start',
+    'align-self: flex-end',
+    'align-self: center',
+    'align-self: baseline',
+    'align-self: stretch',
+  ] ],
 
-      [ 'order-last / order1 / order2 / order3 / order4 / order5',
-        `<section class="flex--boxed flex--boxed-2 / f">
-          <div class="d-flex">
-            <span class="order-last">.order-last</span>
-            <span>.</span> </div>
-          <div class="d-flex">
-            <span class="order2">.order2</span>
-            <span class="order1">.order1</span>
-          </div>
-         </section>`, [
-        'order: 9999',
-        'order: 1',
-        'order: 2',
-        'order: 3',
-        'order: 4',
-        'order: 5',
-      ] ],
-    ]
-  </script>
+  [ 'order1 / order2 / ... / order100',
+    `Accept any plain number (without unit)
+    <section class="flex--boxed flex--boxed-2 / f">
+      <div class="d-flex">
+        <span class="order-last">.order-last</span>
+        <span>.</span> </div>
+      <div class="d-flex">
+        <span class="order2">.order2</span>
+        <span class="order1">.order1</span>
+      </div>
+      </section>`,
+    `order: 1
+    order: 2
+    ...
+    order: 100`
+  ],
+]
+</script>
 </table>
 

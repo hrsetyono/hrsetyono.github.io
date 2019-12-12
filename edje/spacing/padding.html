@@ -9,18 +9,13 @@
 <table class="demo-padding"> <script>
   [
     [ 'px / pvx / phx / ptx / prx / pbx / plx',
-    `Replace x with: <br>
-    <div> <code>0</code> <span>0</span> </div>
-    <div> <code>025</code> <span>0.25rem</span> </div>
-    <div> <code>05</code> <span>0.5rem</span> </div>
-    <div> <code>075</code> <span>0.75rem</span> </div>
-
-    <div> <code>1&nbsp;</code> <span>1rem</span> </div>
-    <div> <code>15</code> <span>1.5rem</span> </div>
-
-    <div> <code>2&nbsp;</code> <span>2rem</span> </div>
-    <div> <code>3&nbsp;</code> <span>3rem</span> </div>
-    <div> <code>4&nbsp;</code> <span>4rem</span> </div>`,
+    `Replace x with a measurement unit. If the number has no unit, it become "rem". <br>
+    <div> <code>1</code> <span>1rem</span> </div>
+    <div> <code>2_5</code> <span>2.5rem</span> </div>
+    <div> <code>50px</code> <span>50px</span> </div>
+    <div> <code>33_33p</code> <span>33.33%</span> </div>
+    <div> <code>100p</code> <span>100%</span> </div>
+    <div> <code>-1</code> <span>-1rem</span> </div>`,
       `padding: x
       padding-top: x; padding-bottom: x
       padding-right: x; padding-left: x

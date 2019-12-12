@@ -70,74 +70,29 @@
 <h2>Border Color</h2>
 
 <article>
-  Must be used in conjuction with Border class above.
+```
+bc-[color]
+```
 
-  Customizable in variable `$h-border-color`.
+[Click here](#/classes/grid) for explanation about using color in Edje.
 </article>
 
 <table class="demo-border"> <script>
   [
-    [ 'bc-main / bc-main-dark / bc-main-light',
+    [ 'bc-main / bc-black / bc-black_50 / bc-red / bc-green / bc-blue / bc-inherit',
     `<div class="b2-solid bc-main mb05"></div>
-    <div class="b2-solid bc-main-dark mb05"></div>
-    <div class="b2-solid bc-main-light"></div>`, 
-      `border-color: $main
-      border-color: $main-dark
-      border-color: $main-light`,
-    ],
-    [ 'bc-sub', '<div class="b2-solid bc-sub"></div>', 
-      'border-color: $sub',
-    ],
-    [ 'bc-transparent', '<div class="b2-solid bc-transparent"></div>', 
-      'border-color: transparent',
-    ],
-    [ 'bc-gray / bc-gray-dark / bc-gray-light',
-    `<div class="b2-solid bc-gray mb05"></div>
-    <div class="b2-solid bc-gray-dark mb05"></div>
-    <div class="b2-solid bc-gray-light"></div>`, 
-      `border-color: $gray
-      border-color: $gray-dark
-      border-color: $gray-light`,
-    ],
-    [ 'bc-red / bc-green / bc-blue / bg-yellow',
-    `<div class="b2-solid bc-red mb05"></div>
-    <div class="b2-solid bc-green mb05"></div>
-    <div class="b2-solid bc-blue mb05"></div>
-    <div class="b2-solid bc-yellow"></div>`, 
-      `border-color: $red
-      border-color: $green
-      border-color: $blue
-      border-color: $yellow`,
-    ],
-    [ 'bc-black / bc-black75 / bc-black50 / bc-black25 / bc-black10 / bc-black05',
-    `<div class="b2-solid bc-black mb05"></div>
-    <div class="b2-solid bc-black75 mb05"></div>
+    <div class="b2-solid bc-black mb05"></div>
     <div class="b2-solid bc-black50 mb05"></div>
-    <div class="b2-solid bc-black25 mb05"></div>
-    <div class="b2-solid bc-black10 mb05"></div>
-    <div class="b2-solid bc-black05"></div>`,
-      `border-color: black
-      border-color: rgba(black, .75)
-      border-color: rgba(black, .50)
-      border-color: rgba(black, .25)
-      border-color: rgba(black, .10)
-      border-color: rgba(black, .05)`
-    ],
-    [ 'bc-white / bc-white75 / bc-white50 / bc-white25 / bc-white10 / bc-white05',
-    `<section class="bg-black75 p05">
-      <div class="b2-solid bc-white mb05"></div>
-      <div class="b2-solid bc-white75 mb05"></div>
-      <div class="b2-solid bc-white50 mb05"></div>
-      <div class="b2-solid bc-white25 mb05"></div>
-      <div class="b2-solid bc-white10 mb05"></div>
-      <div class="b2-solid bc-white05"></div>
-    </section>`,
-      `border-color: white
-      border-color: rgba(white, .75)
-      border-color: rgba(white, .50)
-      border-color: rgba(white, .25)
-      border-color: rgba(white, .10)
-      border-color: rgba(white, .05)`
+    <div class="b2-solid bc-red mb05"></div>
+    <div class="b2-solid bc-green mb05"></div>
+    <div class="b2-solid bc-blue mb05"></div>`, 
+      `border-color: var(--main)
+      border-color: var(--black)
+      border-color: rgba(var(--blackRGB), .50)
+      border-color: var(--red)
+      border-color: var(--green)
+      border-color: var(--blue)
+      border-color: inherit`,
     ],
   ]
 </script> </table>

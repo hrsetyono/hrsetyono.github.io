@@ -5,25 +5,26 @@
     [ 'd-block', '<span class="d-block"> This span becomes a block </span>', [
       'display: block'
     ] ],
-    [ 'd-inline-block', '<p class="d-inline-block">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
+    [ 'd-inline-block / d-iblock', '<p class="d-inline-block">This p become an inline block.</p> <p class="d-iblock">This is another paragraph</p>', [
       'display: inline-block'
     ] ],
-    [ 'd-flex', '<div class="d-flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>', [
+    [ 'd-flex', '<div class="d-flex"> <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, voluptatem?</span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, maiores!</span> </div>',
       `display: -webkit-flex
       display: flex`,
-    ] ],
+    ],
     [ 'd-grid',
     `<div class="d-grid">
       <span>Column 1</span>
       <span>Column 2</span>
       <span>Column 3</span>
-    </div>`, [
+    </div>`,
       `display: -ms-grid
       display: grid`,
-    ] ],
-    [ 'd-none', '<div class="d-none">Hello there!</div>', [
-      'display: none'
-    ] ],
+    ],
+    [ 'd-none',
+      '<div class="d-none">Hello there!</div>',
+      `display: none`
+    ],
   ]
 </script> </table>
 
